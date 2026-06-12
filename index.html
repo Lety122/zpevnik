@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zpěvník - Vyhledávání</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1b2021">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <style>
+      body {
+        background-color: #1b2021;
+        font-family: 'Courier New', monospace;
+        color: #CFC7D2;
+      }
+      h1 {
+        color: #CFC7D2;
+        margin-top: 20px;
+        white-space: nowrap;
+      }
+      .yellow {
+        color: #FEB12C;
+      }
+      .green {
+        color: #59C9A5;
+      }
+      div {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      
+      /* Úprava vyhledávacího pole */
+      #search-container {
+        margin-left: 0px;
+        margin-bottom: 30px;
+      }
+      input[type="text"] {
+        background-color: #1b2021;
+        color: #FEB12C;
+        border: 2px solid #CFC7D2;
+        padding: 12px;
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #FEB12C;
+      }
+      input[type="text"]::placeholder {
+        color: #CFC7D2;
+        opacity: 0.6;
+      }
+
+      /* Stylování seznamu výsledků */
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 15px;
+      }
+      a {
+        color: #CFC7D2;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #FEB12C;
+      }
+      a::before {
+        content: "> ";
+        color: #FEB12C;
+      }
+      .not-found {
+        color: #FEB12C;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1><b>Ultimátní <span class="yellow">Zpěvník</span></b></h1>
+      <button id="installAppBtn" style="display: none; background-color: #FEB12C; color: #1b2021; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 20px;">
+  [+] Nainstalovat jako aplikaci
+</button>
+      <div id="search-container">
+        <input type="text" id="searchInput" placeholder="Hledej, šmudlo!" autocomplete="off">
+      </div>
+
+      <ul id="songList"></ul>
+    </div>
+
+    <script>
+      // 1. Zde je "databáze" tvých písní. 
+      // Při přidání nové písničky na server musíš přidat nový řádek sem.
+      const songs = [
+  { title: "505", path: "2024/505/index.html" },
+  { title: "Anděl", path: "2026/andel/index.html" },
+  { title: "Batalion", path: "2019/batalion/index.html" },
+  { title: "Bedna vod whisky", path: "2019/bedna-od-whisky/index.html" },
+  { title: "Burlaci", path: "2023/burlaci/index.html" },
+  { title: "Co z tebe bude", path: "2023/co-z-tebe-bude/index.html" },
+  { title: "Dej mi víc své lásky", path: "2023/dej-mi-vic-sve-lasky/index.html" },
+  { title: "Dokud se zpívá ještě se neumřelo", path: "2023/dokud-se-zpiva/index.html" },
+  { title: "Drnová chajda", path: "2019/drnova-chajda/index.html" },
+  { title: "Dívka s perlami ve vlasech", path: "2026/divka-s-perlami-ve-vlasech/index.html" },
+  { title: "Frankie Dlouhán", path: "2024/frankie-dlouhan/index.html" },
+  { title: "Hospoda U Tří bernardýnů", path: "2019/hospoda-u-tri-bernardynu/index.html" },
+  { title: "Hrdinský čin", path: "2021/pisnicka/index.html" },
+  { title: "Jasná zpráva", path: "2026/jasna-zprava/index.html" },
+  { title: "Jelen", path: "2022/jelen/index.html" },
+  { title: "Jez", path: "2024/jez/index.html" },
+  { title: "Kdo ví jestli", path: "2025/kdo-vi-jestli/index.html" },
+  { title: "Když mě brali za vojáka", path: "2025/kdyz-me-brali-za-vojaka/index.html" },
+  { title: "Kocábka", path: "2025/kocabka/index.html" },
+  { title: "Kometa", path: "2020/kometa/index.html" },
+  { title: "Krutý krtek Joy", path: "2023/kruty-krtek-joy/index.html" },
+  { title: "Král a klaun", path: "2025/kral-a-klaun/index.html" },
+  { title: "Lemon Tree", path: "2021/lemon-tree/index.html" },
+  { title: "Magdaléna", path: "2020/magdalena/index.html" },
+  { title: "Malá dáma", path: "2024/mala-dama/index.html" },
+  { title: "Mezi horami", path: "2024/mezi-horami/index.html" },
+  { title: "Morituri te salutant", path: "2022/morituri/index.html" },
+  { title: "Mám doma kočku", path: "2021/mam-doma-kocku/index.html" },
+  { title: "Mám jizvu na rtu", path: "2026/mam-jizvu-na-rtu/index.html" },
+  { title: "Na hotelu v Olomouci", path: "2025/na-hotelu-v-olomouci/index.html" },
+  { title: "Plachty", path: "2024/plachty/index.html" },
+  { title: "Pohoda", path: "2026/pohoda/index.html" },
+  { title: "Prodavač", path: "2019/prodavac/index.html" },
+  { title: "Písnička", path: "2020/pisnicka/index.html" },
+  { title: "Slečna závist", path: "2025/slecna-zavist/index.html" },
+  { title: "Snadné je žít", path: "2022/snadne-je-zit/index.html" },
+  { title: "Space Oddity", path: "2020/space-oddity/index.html" },
+  { title: "Stánky", path: "2022/stanky/index.html" },
+  { title: "Síla starejch vín", path: "2025/sila-starejch-vin/index.html" },
+  { title: "Tančící polárník", path: "2024/tancici-polarnik/index.html" },
+  { title: "Tenhle vítr jsem měl rád", path: "2023/tenhle-vitr-jsem-mel-rad/index.html" },
+  { title: "Trh ve Scarborough", path: "2026/trh-ve-scarborough/index.html" },
+  { title: "Tři kříže", path: "2019/tri-krize/index.html" },
+  { title: "V 7:25", path: "2021/v-7:25/index.html" },
+  { title: "V lese", path: "2020/v-lese/index.html" },
+  { title: "Velrybářská výprava", path: "2023/velrybarska-vyprava/index.html" },
+  { title: "Veď mě dál cesto má", path: "2022/ved-me-dal-cesto-ma/index.html" },
+  { title: "Vodácká holka", path: "2026/vodacka-holka/index.html" },
+  { title: "Wellerman", path: "2021/wellerman/index.html" },
+  { title: "Wind of change", path: "2021/wind-of-change/index.html" },
+  { title: "Zafúkané", path: "2022/zafukane/index.html" },
+  { title: "Ďábel a syn", path: "2021/dabel-a-syn/index.html" }
+];
+
+
+      const searchInput = document.getElementById('searchInput');
+      const songList = document.getElementById('songList');
+
+      // Funkce pro odstranění diakritiky (aby "tri krize" našlo "Tři kříže")
+      function removeDiacritics(str) {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      }
+
+      // Funkce pro vykreslení seznamu
+      function renderList(query = '') {
+        songList.innerHTML = ''; // Vyprázdnění seznamu
+        
+        const normalizedQuery = removeDiacritics(query.toLowerCase());
+
+        // Filtrace písní podle hledaného textu
+        const filteredSongs = songs.filter(song => {
+          const normalizedTitle = removeDiacritics(song.title.toLowerCase());
+          return normalizedTitle.includes(normalizedQuery);
+        });
+
+        // Co dělat, když nic nenajdeme
+        if (filteredSongs.length === 0) {
+          const li = document.createElement('li');
+          li.textContent = "Žádná píseň neodpovídá hledání...";
+          li.className = "not-found";
+          songList.appendChild(li);
+          return;
+        }
+
+        // Vykreslení nalezených písní
+        filteredSongs.forEach(song => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = song.path;
+          a.textContent = song.title;
+          li.appendChild(a);
+          songList.appendChild(li);
+        });
+      }
+
+      // Naslouchání změnám v textovém poli (hledání probíhá okamžitě při psaní)
+      searchInput.addEventListener('input', (e) => {
+        renderList(e.target.value);
+      });
+
+      // Vykreslení všech písní při prvním načtení stránky
+      renderList();
+    </script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/zpevnik/sw.js')
+        .then(registration => {
+          console.log('Service Worker byl úspěšně zaregistrován.');
+        })
+        .catch(err => {
+          console.log('Registrace Service Workeru selhala: ', err);
+        });
+    });
+  }
+</script>
+<script>
+  let deferredPrompt;
+  const installAppBtn = document.getElementById('installAppBtn');
+
+  // Posloucháme, jestli prohlížeč povolí instalaci (funguje na Android/PC, ne na iOS)
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Zabráníme prohlížeči ukázat jeho vlastní (často nenápadný) banner
+    e.preventDefault();
+    // Uložíme si událost na později
+    deferredPrompt = e;
+    // Zobrazíme naše vlastní zelené tlačítko
+    installAppBtn.style.display = 'block';
+  });
+
+  // Co se stane po kliknutí na naše tlačítko
+  installAppBtn.addEventListener('click', async () => {
+    if (deferredPrompt !== null) {
+      // Vyvoláme nativní systémový dialog pro instalaci
+      deferredPrompt.prompt();
+      
+      // Počkáme, jak se uživatel rozhodne
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('Uživatel aplikaci nainstaloval');
+        // Schováme tlačítko, už není potřeba
+        installAppBtn.style.display = 'none';
+      }
+      
+      // Událost lze použít jen jednou, takže ji vymažeme
+      deferredPrompt = null;
+    }
+  });
+
+  // Pokud uživatel aplikaci nainstaluje jiným způsobem, tlačítko schováme
+  window.addEventListener('appinstalled', () => {
+    installAppBtn.style.display = 'none';
+    deferredPrompt = null;
+    console.log('PWA byla nainstalována');
+  });
+</script>
+  </body>
+</html>
