@@ -1,15 +1,11 @@
 #!/bin/bash
 # Deploy zpevnik to VPS (https://zpevnik.jelinekp.cz)
+# Regenerates song list + SW cache (py-gen.py bumps cache version), then rsyncs.
 # Prerequisite (one-time): sudo chown -R pavel:pavel /var/www/zpevnik.jelinekp.cz
 set -euo pipefail
 cd "$(dirname "$0")"
 
-if ! grep -q "zpevnik-cache-v" sw.js; then
-  echo "sw.js missing CACHE_NAME?" >&2; exit 1
-fi
-echo "Current cache version: $(grep -o "zpevnik-cache-v[0-9]*" sw.js | head -1)"
-echo "(Did you bump CACHE_NAME after content changes? Ctrl+C to abort)"
-sleep 3
+python3 py-gen.py
 
 rsync -av --delete \
   --exclude '.git' --exclude 'py-gen.py' --exclude 'předloha.html' \
@@ -17,3 +13,4 @@ rsync -av --delete \
   ./ pavel-vps:/var/www/zpevnik.jelinekp.cz/
 
 echo "Deployed: https://zpevnik.jelinekp.cz"
+echo "Nezapomeň commitnout: git add -A && git commit"

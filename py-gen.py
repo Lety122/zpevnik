@@ -2,64 +2,83 @@ import os
 import re
 import json
 
-def generate_pwa_data(root_dir='.'):
+# Aktualizuje seznam písní v index.html, urlsToCache v sw.js
+# a zvedne verzi cache (CACHE_NAME), aby si klienti stáhli nový obsah.
+# Stačí přidat složku s písničkou a spustit: python3 py-gen.py
+
+BASE_PATH = '/'
+ROOT = os.path.dirname(os.path.abspath(__file__))
+
+
+def collect_songs():
     songs = []
-    
-    # TADY JE ZMĚNA: Nastavení základní cesty na serveru
-    BASE_PATH = '/'
-    
-    # Základní soubory pro PWA se správnou cestou
-    urls_to_cache = [
-        f'{BASE_PATH}',
-        f'{BASE_PATH}index.html',
-        f'{BASE_PATH}manifest.json',
-        f'{BASE_PATH}sw.js',
-        f'{BASE_PATH}icon-192.png',
-        f'{BASE_PATH}icon-512.png'
-    ]
-    
     title_pattern = re.compile(r'<title>(.*?)</title>', re.IGNORECASE | re.DOTALL)
-    
-    for dirpath, _, filenames in os.walk(root_dir):
-        if 'index.html' in filenames:
-            filepath = os.path.join(dirpath, 'index.html')
-            rel_path = os.path.relpath(filepath, root_dir).replace('\\', '/')
-            
-            # Vynechání hlavního indexu v poli pro vyhledávání
-            if rel_path == 'index.html':
-                continue
-            
-            try:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    match = title_pattern.search(content)
-                    
-                    if match:
-                        title = match.group(1).strip()
-                        # Do JS databáze (pro vyhledávač) stačí relativní cesta
-                        songs.append({"title": title, "path": rel_path})
-            except Exception as e:
-                print(f"Chyba při čtení {filepath}: {e}")
-            
-            # ZMĚNA: Do SW cache vkládáme cestu i se složkou /zpevnik/
-            urls_to_cache.append(f"{BASE_PATH}{rel_path}")
 
-    songs.sort(key=lambda x: x['title'].lower())
-    urls_to_cache.sort()
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if not d.startswith('.')]
+        if 'index.html' not in filenames:
+            continue
+        filepath = os.path.join(dirpath, 'index.html')
+        rel_path = os.path.relpath(filepath, ROOT).replace('\\', '/')
+        if rel_path == 'index.html':
+            continue
 
-    js_songs = "const songs = [\n"
-    for song in songs:
-        js_songs += f"  {{ title: {json.dumps(song['title'], ensure_ascii=False)}, path: {json.dumps(song['path'])} }},\n"
-    js_songs = js_songs.rstrip(',\n') + "\n];"
+        with open(filepath, encoding='utf-8') as f:
+            match = title_pattern.search(f.read())
+        if not match:
+            print(f'VAROVÁNÍ: {rel_path} nemá <title>, přeskakuji')
+            continue
+        songs.append({'title': match.group(1).strip(), 'path': rel_path})
 
-    js_cache = "const urlsToCache = [\n"
-    for url in urls_to_cache:
-        js_cache += f"  {json.dumps(url)},\n"
-    js_cache = js_cache.rstrip(',\n') + "\n];"
+    songs.sort(key=lambda s: s['title'].lower())
+    return songs
 
-    return js_songs, js_cache
+
+def replace_block(text, start_marker, end_marker, replacement):
+    start = text.index(start_marker)
+    end = text.index(end_marker, start) + len(end_marker)
+    return text[:start] + replacement + text[end:]
+
+
+def update_index(songs):
+    path = os.path.join(ROOT, 'index.html')
+    with open(path, encoding='utf-8') as f:
+        html = f.read()
+
+    lines = [f'  {{ title: {json.dumps(s["title"], ensure_ascii=False)}, '
+             f'path: {json.dumps(s["path"])} }},' for s in songs]
+    block = 'const songs = [\n' + '\n'.join(lines).rstrip(',') + '\n];'
+    html = replace_block(html, 'const songs = [', '];', block)
+
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(html)
+    print(f'index.html: {len(songs)} písní')
+
+
+def update_sw(songs):
+    path = os.path.join(ROOT, 'sw.js')
+    with open(path, encoding='utf-8') as f:
+        sw = f.read()
+
+    urls = [BASE_PATH, f'{BASE_PATH}index.html', f'{BASE_PATH}manifest.json',
+            f'{BASE_PATH}sw.js', f'{BASE_PATH}icon-192.png', f'{BASE_PATH}icon-512.png']
+    urls += [f'{BASE_PATH}{s["path"]}' for s in songs]
+    urls.sort()
+
+    lines = [f'  {json.dumps(u)},' for u in urls]
+    block = 'const urlsToCache = [\n' + '\n'.join(lines).rstrip(',') + '\n];'
+    sw = replace_block(sw, 'const urlsToCache = [', '];', block)
+
+    version_pattern = re.compile(r'(zpevnik-cache-v)(\d+)')
+    old_version = int(version_pattern.search(sw).group(2))
+    sw = version_pattern.sub(f'\\g<1>{old_version + 1}', sw)
+
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(sw)
+    print(f'sw.js: {len(urls)} souborů v cache, verze v{old_version} -> v{old_version + 1}')
+
 
 if __name__ == '__main__':
-    songs_output, cache_output = generate_pwa_data()
-    print("VYHLEDÁVAČ do index.html:\n" + songs_output + "\n")
-    print("CACHE do sw.js:\n" + cache_output)
+    songs = collect_songs()
+    update_index(songs)
+    update_sw(songs)
