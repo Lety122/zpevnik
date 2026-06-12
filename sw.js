@@ -67,6 +67,8 @@ const urlsToCache = [
 
 // Instalace Service Workeru a stažení souborů do mezipaměti
 self.addEventListener('install', event => {
+  // Nová verze se aktivuje hned, nečeká na zavření všech záložek aplikace
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
@@ -88,7 +90,8 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    })
+    // Nový SW převezme i už otevřené stránky
+    }).then(() => self.clients.claim())
   );
 });
 

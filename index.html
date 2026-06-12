@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <title>Zpěvník - Vyhledávání</title>
     <link rel="manifest" href="manifest.json">
@@ -88,6 +88,9 @@
       <button id="installAppBtn" style="display: none; background-color: #FEB12C; color: #1b2021; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 20px;">
   [+] Nainstalovat jako aplikaci
 </button>
+      <p id="iosInstallHint" style="display: none; color: #59C9A5; font-size: 14px; margin-bottom: 20px;">
+  Pro instalaci na iPhone/iPad: Sdílet → „Přidat na plochu“
+</p>
       <div id="search-container">
         <input type="text" id="searchInput" placeholder="Hledej, šmudlo!" autocomplete="off">
       </div>
@@ -254,6 +257,15 @@
     deferredPrompt = null;
     console.log('PWA byla nainstalována');
   });
+
+  // Na iOS beforeinstallprompt nefunguje — ukážeme návod, pokud appka ještě neběží z plochy
+  const jeIos = /iphone|ipad|ipod/i.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPad se hlásí jako Mac
+  const beziJakoAplikace = window.matchMedia('(display-mode: standalone)').matches
+    || window.navigator.standalone === true;
+  if (jeIos && !beziJakoAplikace) {
+    document.getElementById('iosInstallHint').style.display = 'block';
+  }
 </script>
   </body>
 </html>

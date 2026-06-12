@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
   <head>
     <title>Dej mi víc své lásky</title>
     <meta charset="utf-8"> 
@@ -16,7 +17,6 @@
       h1 {
         color: #CFC7D2;
         margin-top: 20px;
-        margin-right: none;
         white-space: nowrap;
       }
       .yellow {
@@ -127,5 +127,20 @@ R: Má drahá, dej mi víc, má drahá, dej mi víc,
    aůůůůůůů, aůůůůůůů, aůůůůůůů, aůůůůůůů
 </pre>
 </div>
+  <script>
+  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+  if ('wakeLock' in navigator) {
+    let zamek = null;
+    const obnovZamek = () => {
+      navigator.wakeLock.request('screen')
+        .then(z => { zamek = z; })
+        .catch(() => {});
+    };
+    obnovZamek();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') obnovZamek();
+    });
+  }
+</script>
   </body>
 </html>

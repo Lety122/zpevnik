@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
   <head>
     <title>Space Oddity</title>
     <meta charset="utf-8"> 
@@ -16,7 +17,6 @@
       h1 {
         color: #CFC7D2;
         margin-top: 20px;
-        margin-right: none;
         white-space: nowrap;
       }
       .yellow {
@@ -193,5 +193,20 @@ Fmaj7 Em A C D E</pre>
   <div class="chord-box"><div class="chord-name">C/G</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-0-<br>D|-2-<br>A|-3-<br>E|-3-</div></div>
 </div>
 
+  <script>
+  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+  if ('wakeLock' in navigator) {
+    let zamek = null;
+    const obnovZamek = () => {
+      navigator.wakeLock.request('screen')
+        .then(z => { zamek = z; })
+        .catch(() => {});
+    };
+    obnovZamek();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') obnovZamek();
+    });
+  }
+</script>
   </body>
 </html>
