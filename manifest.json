@@ -1,7 +1,7 @@
 {
   "name": "Ultimátní zpěvník",
   "short_name": "Zpěvník",
-  "start_url": "/zpevnik/index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#1b2021",
   "theme_color": "#1b2021",

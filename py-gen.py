@@ -6,7 +6,7 @@ def generate_pwa_data(root_dir='.'):
     songs = []
     
     # TADY JE ZMĚNA: Nastavení základní cesty na serveru
-    BASE_PATH = '/zpevnik/'
+    BASE_PATH = '/'
     
     # Základní soubory pro PWA se správnou cestou
     urls_to_cache = [
