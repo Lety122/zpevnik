@@ -1,6 +1,6 @@
 // Název cache - při jakékoliv změně obsahu (např. úpravě textu písně) 
 // bys měl číslo verze (v1) zvýšit, aby se uživatelům stáhla nová verze.
-const CACHE_NAME = 'zpevnik-cache-v9';
+const CACHE_NAME = 'zpevnik-cache-v10';
 
 // Zde definujeme, co se má stáhnout pro offline režim
 const urlsToCache = [
