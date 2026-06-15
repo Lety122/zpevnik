@@ -2,246 +2,168 @@
 <html lang="cs">
   <head>
     <title>V 7:25</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">V <span class="yellow">7:25</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Michal Horák</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Ami</pre>
-V sedm dvacet pět nastupuje do šestnáctky,
-<pre class="yellow">
-G                    E</pre>
-v sedm dvacet pět, ráno v sedm dvacet pět ji
-<pre class="yellow">
-Ami</pre>
-vídám s batohem, mlčky pak jí dávám sbohem,
-<pre class="yellow">
-G</pre>
-protože vždy oněmím,
-<pre class="yellow">
-E</pre>
-oněmím vždy v sedm dvacet
+    <h1>V 7:25</h1>
+    <p class="artist">Michal Horák</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Ami</pre>
-Na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-Ami</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E                       Ami</pre>
-na, na, nanana, oněmím vždy v sedm dvacet pět.
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>V sedm dvacet pět nastupuje do šestnáctky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>v sedm dvacet pět, rá</span><span class="ch"><span class="c" data-chord="E">E</span>no v sedm dvacet pět ji</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>vídám s batohem, mlčky pak jí dávám sbohem,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>protože vždy oněmím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>oněmím vždy v sedm dvacet</span></div>
 
-<pre class="yellow">
-Ami                     C</pre>
-Při ranním vstávání vždy mě raní očekávání
-<pre class="yellow">
-G                               E</pre>
-přecpané šestnáctky, přelidněné šestnáctky, však
-<pre class="yellow">
-Ami                     C</pre>
-v době poslední ranní jízdy mi nezevšední
-<pre class="yellow">
-G                             E</pre>
-ptáte-li se „Cože?“ Tak je to protože –
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, na</span><span class="ch"><span class="c" data-chord="E">E</span>nana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, on</span><span class="ch"><span class="c" data-chord="E">E</span>ěmím vždy v sedm dvacet </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>pět.</span></div>
 
-<pre class="yellow">
-Ami</pre>
-V sedm dvacet pět nastupuje do šestnáctky,
-<pre class="yellow">
-G                    E</pre>
-v sedm dvacet pět, ráno v sedm dvacet pět ji
-<pre class="yellow">
-Ami</pre>
-vídám s batohem, mlčky pak jí dávám sbohem,
-<pre class="yellow">
-G</pre>
-protože vždy oněmím,
-<pre class="yellow">
-E</pre>
-oněmím vždy v sedm dvacet
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Při ranním vstávání vždy</span><span class="ch"><span class="c" data-chord="C">C</span> mě raní očekávání</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>přecpané šestnáctky, přelidněné </span><span class="ch"><span class="c" data-chord="E">E</span>šestnáctky, však</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>v době poslední ranní jí</span><span class="ch"><span class="c" data-chord="C">C</span>zdy mi nezevšední</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>ptáte-li se „Cože?“ Tak je to </span><span class="ch"><span class="c" data-chord="E">E</span>protože –</span></div>
 
-<pre class="yellow">
-Ami</pre>
-Na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-Ami</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E                       Ami</pre>
-na, na, nanana, oněmím vždy v sedm dvacet pět.
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>V sedm dvacet pět nastupuje do šestnáctky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>v sedm dvacet pět, rá</span><span class="ch"><span class="c" data-chord="E">E</span>no v sedm dvacet pět ji</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>vídám s batohem, mlčky pak jí dávám sbohem,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>protože vždy oněmím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>oněmím vždy v sedm dvacet</span></div>
 
-<pre class="yellow">
-Ami                     C</pre>
-Kdyby mi tréma ta nesebrala všechna témata
-<pre class="yellow">
-G                             E</pre>
-jak řeč zavésti beze trapných předzvěstí.
-<pre class="yellow">
-Ami                     C</pre>
-Až bude zatáčka, nenápadně k ní se namačkám,
-<pre class="yellow">
-G                             E</pre>
-pak se jí omluvím, aspoň tak s ní promluvím, když –
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, na</span><span class="ch"><span class="c" data-chord="E">E</span>nana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, on</span><span class="ch"><span class="c" data-chord="E">E</span>ěmím vždy v sedm dvacet </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>pět.</span></div>
 
-<pre class="yellow">
-Ami</pre>
-V sedm dvacet pět nastupuje do šestnáctky,
-<pre class="yellow">
-G                    E</pre>
-v sedm dvacet pět, ráno v sedm dvacet pět ji
-<pre class="yellow">
-Ami</pre>
-vídám s batohem, mlčky pak jí dávám sbohem,
-<pre class="yellow">
-G</pre>
-protože vždy oněmím,
-<pre class="yellow">
-E</pre>
-oněmím vždy v sedm dvacet
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Kdyby mi tréma ta nesebr</span><span class="ch"><span class="c" data-chord="C">C</span>ala všechna témata</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>jak řeč zavésti beze trapných </span><span class="ch"><span class="c" data-chord="E">E</span>předzvěstí.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Až bude zatáčka, nenápad</span><span class="ch"><span class="c" data-chord="C">C</span>ně k ní se namačkám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>pak se jí omluvím, aspoň tak s</span><span class="ch"><span class="c" data-chord="E">E</span> ní promluvím, když –</span></div>
 
-<pre class="yellow">
-Ami</pre>
-Na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-Ami</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E                       Ami</pre>
-na, na, nanana, oněmím vždy v sedm dvacet pět.
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>V sedm dvacet pět nastupuje do šestnáctky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>v sedm dvacet pět, rá</span><span class="ch"><span class="c" data-chord="E">E</span>no v sedm dvacet pět ji</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>vídám s batohem, mlčky pak jí dávám sbohem,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>protože vždy oněmím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>oněmím vždy v sedm dvacet</span></div>
 
-<pre class="yellow">
-Ami                  F</pre>
-Říkáte si, asi jak zafungoval tenhle naviják,
-<pre class="yellow">
-D                  F              Ami</pre>
-řeknu to asi tak – nezafungoval nijak.
-<pre class="yellow">
-Ami                   F</pre>
-Vážení, jsem nesmělý, snažení je zase ztraceno,
-<pre class="yellow">
-D                    F</pre>
-však dřív či později, zeptám se jí na jméno!
-( A pak si ji přidám na fejsbuku)
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, na</span><span class="ch"><span class="c" data-chord="E">E</span>nana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, on</span><span class="ch"><span class="c" data-chord="E">E</span>ěmím vždy v sedm dvacet </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>pět.</span></div>
 
-<pre class="yellow">
-       Ami</pre>
-Když v sedm dvacet pět nastupuje do šestnáctky,
-<pre class="yellow">
-G                    E</pre>
-v sedm dvacet pět, ráno v sedm dvacet pět ji
-<pre class="yellow">
-Ami</pre>
-vídám s batohem, mlčky pak jí dávám sbohem,
-<pre class="yellow">
-G</pre>
-protože vždy oněmím,
-<pre class="yellow">
-E</pre>
-oněmím vždy v sedm dvacet
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Říkáte si, asi jak za</span><span class="ch"><span class="c" data-chord="F">F</span>fungoval tenhle naviják,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>řeknu to asi tak – </span><span class="ch"><span class="c" data-chord="F">F</span>nezafungoval ni</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>jak.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Vážení, jsem nesmělý, </span><span class="ch"><span class="c" data-chord="F">F</span>snažení je zase ztraceno,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>však dřív či později,</span><span class="ch"><span class="c" data-chord="F">F</span> zeptám se jí na jméno!</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>( A pak si ji přidám na fejsbuku)</span></div>
 
-<pre class="yellow">
-Ami</pre>
-Na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-Ami</pre>
-na, na, nanana, nanana, nananana.
-<pre class="yellow">
-G                 E                     Ami</pre>
-na, na, nanana, snad ji potkám v sedm dvacet pět.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Když v </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>sedm dvacet pět nastupuje do šestnáctky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>v sedm dvacet pět, rá</span><span class="ch"><span class="c" data-chord="E">E</span>no v sedm dvacet pět ji</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>vídám s batohem, mlčky pak jí dávám sbohem,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>protože vždy oněmím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>oněmím vždy v sedm dvacet</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, na</span><span class="ch"><span class="c" data-chord="E">E</span>nana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>na, na, nanana, nanana, nananana.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>na, na, nanana, sn</span><span class="ch"><span class="c" data-chord="E">E</span>ad ji potkám v sedm dv</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>acet pět.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

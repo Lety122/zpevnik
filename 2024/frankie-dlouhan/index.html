@@ -2,159 +2,134 @@
 <html lang="cs">
   <head>
     <title>Frankie Dlouhán</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Frankie <span class="yellow">Dlouhán</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Nedvědi</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-            D              G           D</pre>
-   Kolik je smutného, když mraky černé jdou
-<pre class="yellow">
-                A7   G            D</pre>
-   lidem nad hlavou, smutnou dálavou,
-<pre class="yellow">
-      D                    G             D</pre>
-   já slyšel příběh, který velkou pravdu měl,
-<pre class="yellow">
-              A7   G          D</pre>
-   za čas odletěl, každý zapomněl
+    <h1>Frankie Dlouhán</h1>
+    <p class="artist">Nedvědi</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-             A7</pre>
-<pre class="yellow">
-R:</pre> Měl kapsu prázdnou Frankie Dlouhán,
-<pre class="yellow">
-              G             D</pre>
-   po Státech toulal se jen sám,
-<pre class="yellow">
-            G            D             A7</pre>
-   a že byl veselej, tak každej měl ho rád.
-<pre class="yellow">
-            G                      D         Hmi</pre>
-   tam ruce k dílu mlčky přiloží a zase jede dál,
-<pre class="yellow">
-     G                A7</pre>
-   a každý, kdo s ním chvilku byl,
-<pre class="yellow">
-       G      A7      D</pre>      
-   tak dlouho se pak smál
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Kolik je </span><span class="ch"><span class="c" data-chord="D">D</span>smutného, když </span><span class="ch"><span class="c" data-chord="G">G</span>mraky černé </span><span class="ch"><span class="c" data-chord="D">D</span>jdou</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   lidem nad hla</span><span class="ch"><span class="c" data-chord="A7">A7</span>vou, </span><span class="ch"><span class="c" data-chord="G">G</span>smutnou dálav</span><span class="ch"><span class="c" data-chord="D">D</span>ou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   já </span><span class="ch"><span class="c" data-chord="D">D</span>slyšel příběh, který </span><span class="ch"><span class="c" data-chord="G">G</span>velkou pravdu </span><span class="ch"><span class="c" data-chord="D">D</span>měl,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   za čas odle</span><span class="ch"><span class="c" data-chord="A7">A7</span>těl, </span><span class="ch"><span class="c" data-chord="G">G</span>každý zapom</span><span class="ch"><span class="c" data-chord="D">D</span>něl</span></div>
 
-<pre class="yellow">
-                D                 G            D</pre>
-   Tam, kde byl pláč, tam Frankie hezkou píseň měl,
-<pre class="yellow">
-              A7    G              D</pre>
-   slzy neměl rád, chtěl se jenom smát.
-<pre class="yellow">
-     D                    G    D</pre>
-   A když pak večer ranče tiše usínaj,
-<pre class="yellow">
-                    A7    G            D</pre>
-   Frankův zpěv jde dál, nocí s písní dál.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: Měl kapsu </span><span class="ch"><span class="c" data-chord="A7">A7</span>prázdnou Frankie Dlouhán,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   po Státech </span><span class="ch"><span class="c" data-chord="G">G</span>toulal se jen </span><span class="ch"><span class="c" data-chord="D">D</span>sám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   a že byl </span><span class="ch"><span class="c" data-chord="G">G</span>veselej, tak </span><span class="ch"><span class="c" data-chord="D">D</span>každej měl ho </span><span class="ch"><span class="c" data-chord="A7">A7</span>rád.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   tam ruce </span><span class="ch"><span class="c" data-chord="G">G</span>k dílu mlčky přiloží a </span><span class="ch"><span class="c" data-chord="D">D</span>zase jede </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>dál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   a </span><span class="ch"><span class="c" data-chord="G">G</span>každý, kdo s ním </span><span class="ch"><span class="c" data-chord="A7">A7</span>chvilku byl,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   tak </span><span class="ch"><span class="c" data-chord="G">G</span>dlouho </span><span class="ch"><span class="c" data-chord="A7">A7</span>se pak s</span><span class="ch"><span class="c" data-chord="D">D</span>mál</span></div>
 
-<pre class="yellow">
-             A7</pre>
-<pre class="yellow">
-R:</pre> Měl kapsu prázdnou Frankie Dlouhán...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Tam, kde byl </span><span class="ch"><span class="c" data-chord="D">D</span>pláč, tam Frankie </span><span class="ch"><span class="c" data-chord="G">G</span>hezkou píseň </span><span class="ch"><span class="c" data-chord="D">D</span>měl,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   slzy neměl </span><span class="ch"><span class="c" data-chord="A7">A7</span>rád, c</span><span class="ch"><span class="c" data-chord="G">G</span>htěl se jenom s</span><span class="ch"><span class="c" data-chord="D">D</span>mát.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   A </span><span class="ch"><span class="c" data-chord="D">D</span>když pak večer ranče </span><span class="ch"><span class="c" data-chord="G">G</span>tiše </span><span class="ch"><span class="c" data-chord="D">D</span>usínaj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Frankův zpěv jde </span><span class="ch"><span class="c" data-chord="A7">A7</span>dál, n</span><span class="ch"><span class="c" data-chord="G">G</span>ocí s písní d</span><span class="ch"><span class="c" data-chord="D">D</span>ál.</span></div>
 
-<pre class="yellow">
-       D                    G              D</pre>
-   Tak Frankieho vám jednou našli, přestal žít,
-<pre class="yellow">
-              A7    G           D</pre>
-   jeho srdce spí, tiše, smutně spí.
-<pre class="yellow">
-      D                     G            D</pre>
-   Bůhví jak, za co, tenhle smíšek konec měl,
-<pre class="yellow">
-               A7    G        D</pre>
-   farář píseň pěl, umíráček zněl.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: Měl kapsu </span><span class="ch"><span class="c" data-chord="A7">A7</span>prázdnou Frankie Dlouhán...</span></div>
 
-<pre class="yellow">
-             A7</pre>
-<pre class="yellow">
-R:</pre> Měl kapsu prázdnou Frankie Dlouhán…
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Tak </span><span class="ch"><span class="c" data-chord="D">D</span>Frankieho vám jednou </span><span class="ch"><span class="c" data-chord="G">G</span>našli, přestal </span><span class="ch"><span class="c" data-chord="D">D</span>žít,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   jeho srdce </span><span class="ch"><span class="c" data-chord="A7">A7</span>spí, t</span><span class="ch"><span class="c" data-chord="G">G</span>iše, smutně </span><span class="ch"><span class="c" data-chord="D">D</span>spí.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Bůh</span><span class="ch"><span class="c" data-chord="D">D</span>ví jak, za co, tenhle </span><span class="ch"><span class="c" data-chord="G">G</span>smíšek konec </span><span class="ch"><span class="c" data-chord="D">D</span>měl,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   farář píseň </span><span class="ch"><span class="c" data-chord="A7">A7</span>pěl, u</span><span class="ch"><span class="c" data-chord="G">G</span>míráček z</span><span class="ch"><span class="c" data-chord="D">D</span>něl.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: Měl kapsu </span><span class="ch"><span class="c" data-chord="A7">A7</span>prázdnou Frankie Dlouhán…</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

@@ -2,143 +2,143 @@
 <html lang="cs">
   <head>
     <title>Trh ve Scarborough</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Trh ve <span class="yellow">Scarborough</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Spirituál kvintet</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Ami             G           Ami</pre>
-Příteli, máš do Scarborough jít,
-<pre class="yellow">
-C     Ami     C  D       Ami</pre>
-dobře vím, že půjdeš tam rád,
-<pre class="yellow">
-         C           Ami G</pre>
-tam dívku najdi na Market Street,
-<pre class="yellow">
-Ami        D       G        Ami</pre>
-co chtěla dřív mou ženou se stát.
+    <h1>Trh ve Scarborough</h1>
+    <p class="artist">Spirituál kvintet</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Ami                G        Ami</pre>
-Vzkaž ji, ať šátek začne mi šít,
-<pre class="yellow">
-C        Ami       C   D    Ami</pre>
-za jehlu rýč však smí jenom brát
-<pre class="yellow">
-         C      Ami   G</pre>
-a místo příze měsíční svit,
-<pre class="yellow">
-Ami       D        G        Ami</pre>
-bude-li chtít mou ženou se stát.
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Příteli, máš do </span><span class="ch"><span class="c" data-chord="G">G</span>Scarborough </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>jít,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>dobře </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>vím, že </span><span class="ch"><span class="c" data-chord="C">C</span>půj</span><span class="ch"><span class="c" data-chord="D">D</span>deš tam </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>rád,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tam dívku</span><span class="ch"><span class="c" data-chord="C">C</span> najdi na Ma</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>rket</span><span class="ch"><span class="c" data-chord="G">G</span> Street,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>co chtěla d</span><span class="ch"><span class="c" data-chord="D">D</span>řív mou </span><span class="ch"><span class="c" data-chord="G">G</span>ženou se </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>stát.</span></div>
 
-Až přijde máj a zavoní zem,
-šátek v písku přikaž ji prát
-a ždímat v kvítku jabloňovém,
-bude-li chtít mou ženou se stát.
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Vzkaž ji, ať šátek </span><span class="ch"><span class="c" data-chord="G">G</span>začne mi </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>šít,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>za jehlu </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>rýč však s</span><span class="ch"><span class="c" data-chord="C">C</span>mí j</span><span class="ch"><span class="c" data-chord="D">D</span>enom </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>brát</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a místo p</span><span class="ch"><span class="c" data-chord="C">C</span>říze mě</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>síční </span><span class="ch"><span class="c" data-chord="G">G</span>svit,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>bude-li ch</span><span class="ch"><span class="c" data-chord="D">D</span>tít mou ž</span><span class="ch"><span class="c" data-chord="G">G</span>enou se s</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>tát.</span></div>
 
-Z vrkočů svých ať uplete člun,
-v něm se může na cestu dát,
-s tím šátkem pak ať vejde v můj dům,
-bude-li chtít mou ženou se stát.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Až přijde máj a zavoní zem,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>šátek v písku přikaž ji prát</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a ždímat v kvítku jabloňovém,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>bude-li chtít mou ženou se stát.</span></div>
 
-Kde útes ční nad přívaly vln,
-zorej dva sáhy pro růží sad,
-za pluh ať slouží šípkový trn,
-budeš-li chtít mým mužem se stát.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Z vrkočů svých ať uplete člun,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>v něm se může na cestu dát,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>s tím šátkem pak ať vejde v můj dům,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>bude-li chtít mou ženou se stát.</span></div>
 
-Osej ten sad a slzou jej skrop,
-choď těm růžím na loutnu hrát,
-až začnou kvést, tak srpu se chop,
-budeš-li chtít mým mužem se stát.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Kde útes ční nad přívaly vln,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>zorej dva sáhy pro růží sad,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>za pluh ať slouží šípkový trn,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>budeš-li chtít mým mužem se stát.</span></div>
 
-Z trní si lůžko zhotovit dej,
-druhé z růží pro mě nech stlát,
-jen pýchy své a boha se ptej,
-proč nechci víc tvou ženou se stát.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Osej ten sad a slzou jej skrop,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>choď těm růžím na loutnu hrát,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>až začnou kvést, tak srpu se chop,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>budeš-li chtít mým mužem se stát.</span></div>
 
-
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Z trní si lůžko zhotovit dej,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>druhé z růží pro mě nech stlát,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen pýchy své a boha se ptej,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>proč nechci víc tvou ženou se stát.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

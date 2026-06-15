@@ -107,7 +107,7 @@ h1{color:#CFC7D2;margin:20px 20px 4px;}
   font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
 #song{margin:20px;font-size:16px;padding-bottom:80px;}
 .line{margin:0 0 .15em;}
-.ch{display:inline-block;vertical-align:bottom;white-space:nowrap;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
 .ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
 .chordrow{margin:.3em 0;}
 .chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}

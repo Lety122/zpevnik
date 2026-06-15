@@ -2,149 +2,148 @@
 <html lang="cs">
   <head>
     <title>Bedna vod whisky</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <pre style="font-size: 30px;"><b>Bedna</b></pre><b> <pre style="font-size: 30px;" class="yellow">vod whisky</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Miki Ryvola</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
- Ami          C        Ami            E </pre>
-Dneska už mně fóry ňák nejdou přes pysky, 
-<pre class="yellow">
- Ami              C          Ami   E       Ami</pre>
-stojím s dlouhou kravatou na bedně vod whisky, 
-<pre class="yellow">
-                 C        Ami          E </pre>
-stojím s dlouhým vobojkem jak stájovej pinč, 
-<pre class="yellow">
-    Ami        C         Ami     E      A</pre>
-tu kravatu, co nosím, mi navlík' soudce Lynč. 
+    <h1>Bedna vod whisky</h1>
+    <p class="artist">Miki Ryvola</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Refrén:
-    A           D         E           A </pre>
-Tak kopni do tý bedny, ať panstvo nečeká, 
-<pre class="yellow">
-                   D           E        A </pre>
-jsou dlouhý schody do nebe a štreka daleká 
-<pre class="yellow">
-             D        E            A </pre>
-do nebeskýho baru, já sucho v krku mám, 
-<pre class="yellow">
-                D         E           Ami</pre>
-tak kopni do tý bedny, ať na cestu se dám. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>D</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>neska už mně </span><span class="ch"><span class="c" data-chord="C">C</span>fóry ňák </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>nejdou přes pys</span><span class="ch"><span class="c" data-chord="E">E</span>ky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>s</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>tojím s dlouhou k</span><span class="ch"><span class="c" data-chord="C">C</span>ravatou na </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>bedně </span><span class="ch"><span class="c" data-chord="E">E</span>vod whis</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>stojím s dlouhým </span><span class="ch"><span class="c" data-chord="C">C</span>vobojkem </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>jak stájovej </span><span class="ch"><span class="c" data-chord="E">E</span>pinč,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tu k</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ravatu, co </span><span class="ch"><span class="c" data-chord="C">C</span>nosím, mi </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>navlík&#x27; </span><span class="ch"><span class="c" data-chord="E">E</span>soudce </span><span class="ch"><span class="c" data-chord="A">A</span>Lynč.</span></div>
 
-Mít tak všechny bedny od whisky vypitý, 
-postavil bych malej dům na louce ukrytý, 
-postavil bych malej dům a z vokna koukal ven 
-a chlastal bych tam s Bilem a chlastal by tam Ben. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Refrén:</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tak </span><span class="ch"><span class="c" data-chord="A">A</span>kopni do tý </span><span class="ch"><span class="c" data-chord="D">D</span>bedny, ať </span><span class="ch"><span class="c" data-chord="E">E</span>panstvo neče</span><span class="ch"><span class="c" data-chord="A">A</span>ká,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jsou dlouhý schody </span><span class="ch"><span class="c" data-chord="D">D</span>do nebe a št</span><span class="ch"><span class="c" data-chord="E">E</span>reka dale</span><span class="ch"><span class="c" data-chord="A">A</span>ká</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>do nebeskýho </span><span class="ch"><span class="c" data-chord="D">D</span>baru, já </span><span class="ch"><span class="c" data-chord="E">E</span>sucho v krku </span><span class="ch"><span class="c" data-chord="A">A</span>mám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tak kopni do tý </span><span class="ch"><span class="c" data-chord="D">D</span>bedny, ať </span><span class="ch"><span class="c" data-chord="E">E</span>na cestu se </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>dám.</span></div>
 
-<pre class="yellow">
-Ref.</pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Mít tak všechny bedny od whisky vypitý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>postavil bych malej dům na louce ukrytý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>postavil bych malej dům a z vokna koukal ven</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a chlastal bych tam s Bilem a chlastal by tam Ben.</span></div>
 
-Kdyby jsi se, hochu, jen porád nechtěl rvát, 
-nemusel jsi dneska na týhle bedně stát, 
-moh' jsi někde v suchu tu svoji whisku pít, 
-nemusel jsi dneska na krku laso mít. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref.</span></div>
 
-<pre class="yellow">
-Ref.</pre> 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Kdyby jsi se, hochu, jen porád nechtěl rvát,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nemusel jsi dneska na týhle bedně stát,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>moh&#x27; jsi někde v suchu tu svoji whisku pít,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nemusel jsi dneska na krku laso mít.</span></div>
 
-Když jsem štípnul koně a ujel jen pár mil, 
-nechtěl běžet, dokavád se whisky nenapil, 
-zatracená smůla zlá, zatracenej pech, 
-když kůň cucá whisku jak u potoka mech. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref.</span></div>
 
-<pre class="yellow">
-Ref.</pre> 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Když jsem štípnul koně a ujel jen pár mil,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nechtěl běžet, dokavád se whisky nenapil,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>zatracená smůla zlá, zatracenej pech,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>když kůň cucá whisku jak u potoka mech.</span></div>
 
-Až kopneš do tý bedny, jak se to dělává, 
-do krku mi zvostane jen dírka mrňavá, 
-jenom dírka mrňavá a k smrti jenom krok, 
-má to smutnej konec, a whisky ani lok. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref.</span></div>
 
-<pre class="yellow">
-Ref., ti co ví ;)</pre>
-</div>
-    
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Až kopneš do tý bedny, jak se to dělává,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>do krku mi zvostane jen dírka mrňavá,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jenom dírka mrňavá a k smrti jenom krok,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>má to smutnej konec, a whisky ani lok.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>&lt;pre class=&quot;yellow&quot;&gt;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref., ti co ví ;)</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

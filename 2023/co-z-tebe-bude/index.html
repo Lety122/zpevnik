@@ -2,185 +2,145 @@
 <html lang="cs">
   <head>
     <title>Co z tebe bude</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Co z tebe <span class="yellow">bude</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Pokáč</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-C                    Dmi</pre>
-Když jsem byl prcek, tak se mě všude
-<pre class="yellow">
-G                C</pre>
-dospěláci ptali, chlapče, co z tebe bude,
-<pre class="yellow">
-Ami                  Dmi</pre>
-já řek, že nevim a div se nerozbrečel,
-<pre class="yellow">
-G                      C</pre>
-dyť já měl sotva páru, co budu dělat večer.
+    <h1>Co z tebe bude</h1>
+    <p class="artist">Pokáč</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-C              Dmi</pre>
-Ptala se máma, zajímalo to tetu
-<pre class="yellow">
-G                                  C</pre>
-i zoufalýho dějepisáře v kabinetu,
-<pre class="yellow">
-Ami                                       Dmi</pre>
-jo, kdyby na mě dneska stejnej dotaz měl,
-<pre class="yellow">
-G                                 C</pre>
-moc rád bych mu odpověděl - já pane učitel…
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Když jsem byl prcek, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>tak se mě všude</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>dospěláci ptali, </span><span class="ch"><span class="c" data-chord="C">C</span>chlapče, co z tebe bude,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>já řek, že nevim a di</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>v se nerozbrečel,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>dyť já měl sotva páru, </span><span class="ch"><span class="c" data-chord="C">C</span>co budu dělat večer.</span></div>
 
-<pre class="yellow">
-   C                   Dmi</pre>
-R: /: Já chci milovat, já chci poznat svět,
-<pre class="yellow">
-   G                       C</pre>
-   já chci lítat na měsíc a pak zpět,
-<pre class="yellow">
-   Ami                   Dmi</pre>
-   já chci drink a pláž, ne tvou kancelář,
-<pre class="yellow">
-   G                  C</pre>
-   tak proč se mě tak blbě ptáš? :/
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Ptala se máma, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>zajímalo to tetu</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>i zoufalýho dějepisáře v kabinetu, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>jo, kdyby na mě dneska stejnej dotaz měl, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>moc rád bych mu odpověděl - já pan</span><span class="ch"><span class="c" data-chord="C">C</span>e učitel…</span></div>
 
-<pre class="yellow">
-C                           Dmi</pre>
-Občas se zdá, že účel dospívání
-<pre class="yellow">
-G                                         C</pre>
-je úspěšně se vyvinout ve vzorný plátce daní,
-<pre class="yellow">
-Ami                                  Dmi</pre>
-možná by ale někdy stálo za to říct,
-<pre class="yellow">
-G                       C</pre>
-že život je i něco víc.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="C">C</span>/: Já chci milovat, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>já chci poznat svět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>já chci lítat na měsíc a</span><span class="ch"><span class="c" data-chord="C">C</span> pak zpět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>já chci drink a pláž, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>ne tvou kancelář,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>tak proč se mě tak </span><span class="ch"><span class="c" data-chord="C">C</span>blbě ptáš? :/</span></div>
 
-<pre class="yellow">
-C                                           Dmi</pre>
-Víc než do kanclu z kanclu, splácet hypotéku
-<pre class="yellow">
-G                                            C</pre>
-a ke kafi si ráno dát tři cukry a hrst léků,
-<pre class="yellow">
-Ami                                       Dmi</pre>
-život je dar, tak žij ho, než uteče ti,
-<pre class="yellow">
-G                          C</pre>
-čekáním na důchod ve stopěti.
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Občas se zdá, že účel dospív</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>ání</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>je úspěšně se vyvinout ve vzorný plátce da</span><span class="ch"><span class="c" data-chord="C">C</span>ní,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>možná by ale někdy stálo za to říct, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>že život je i něco víc. </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
 
-<pre class="yellow">
-   C                   Dmi</pre>
-R: /: Já chci milovat, já chci poznat svět,
-<pre class="yellow">
-   G                       C</pre>
-   já chci lítat na měsíc a pak zpět,
-<pre class="yellow">
-   Ami                   Dmi</pre>
-   já chci drink a pláž, ne tvou kancelář,
-<pre class="yellow">
-   G                  C</pre>
-   tak proč se mě tak blbě ptáš? :/
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Víc než do kanclu z kanclu, splácet hypotéku</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>a ke kafi si ráno dát tři cukry a hrst léků, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>život je dar, tak žij ho, než uteče ti,   </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>čekáním na důchod ve stopět</span><span class="ch"><span class="c" data-chord="C">C</span>i.</span></div>
 
-<pre class="yellow">
-C                 Dmi      G      C</pre>
-Uo o o o, co z tebe bude...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="C">C</span>/: Já chci milovat, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>já chci poznat svět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>já chci lítat na měsíc a</span><span class="ch"><span class="c" data-chord="C">C</span> pak zpět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>já chci drink a pláž, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>ne tvou kancelář,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>tak proč se mě tak </span><span class="ch"><span class="c" data-chord="C">C</span>blbě ptáš? :/</span></div>
 
-<pre class="yellow">
-   C                   Dmi</pre>
-R: /: Já chci milovat, já chci poznat svět,
-<pre class="yellow">
-   G                       C</pre>
-   já chci lítat na měsíc a pak zpět,
-<pre class="yellow">
-   Ami                   Dmi</pre>
-   já chci drink a pláž, ne tvou kancelář,
-<pre class="yellow">
-   G                  C</pre>
-   tak proč se mě tak blbě ptáš? :/
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Uo o o o, co z teb</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>e bude...</span><span class="ch"><span class="c" data-chord="G">G</span>       </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="C">C</span>/: Já chci milovat, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>já chci poznat svět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>já chci lítat na měsíc a</span><span class="ch"><span class="c" data-chord="C">C</span> pak zpět,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>já chci drink a pláž, </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>ne tvou kancelář,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="G">G</span>tak proč se mě tak </span><span class="ch"><span class="c" data-chord="C">C</span>blbě ptáš? :/</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

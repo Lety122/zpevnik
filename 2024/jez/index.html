@@ -2,140 +2,126 @@
 <html lang="cs">
   <head>
     <title>Jez</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;"><span class="yellow">Jez</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Ivan Mládek</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-C          G7             C         G7</pre>
-Na vodu už jezdím jenom s Vendou, s Vendou,
-<pre class="yellow">
-C        G7           C         A7</pre>
-do kánoe nevlezu už s Bendou, s Bendou,
-<pre class="yellow">
-Dm    G7    C          A7</pre>
-Jenda Benda nemožný je zadák,
-<pre class="yellow">
-D7              G7</pre>
-nemá vlohy a je laj-, laj-, lajdák,
-<pre class="yellow">
-    C                   A7</pre>
-on ví, že šumí les, že vysouší se mez,
-<pre class="yellow">
-     D7                G7            G7+5</pre>
-že v dáli hárá pes, že kvete bílý bez
-<pre class="yellow">
-     C                     A7</pre>
-a že mostem cloumá rez, že říčka jde skrz ves,
-<pre class="yellow">
-    D7                        Ab7   G7   C</pre>
-ale nevšimne si, že se blíží jez, jez, jez.
+    <h1>Jez</h1>
+    <p class="artist">Ivan Mládek</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-C              G7            C       G7</pre>
-Jel jsem tuhle Ohři s Jendou Bendou, Bendou,
-<pre class="yellow">
-C                G7            C       A7</pre>
-proč já, houska, nejel radši s Vendou, Vendou,
-<pre class="yellow">
-Dm    G7    C            A7</pre>
-Jenda Benda sjel na vodu mělkou,
-<pre class="yellow">
-D7                  G7</pre>
-spáchal v lodi díru vel-, vel-, velkou,
-<pre class="yellow">
-   C                    A7</pre>
-já měl náladu zlou, on zničil keňu mou,
-<pre class="yellow">
-   D7                     G7            G7+5</pre>
-už nikdy, houpy hou, s ní nepopluji mhou,
-<pre class="yellow">
-     C                   A7</pre>
-teď šetřím na novou, na laminátovou,
-<pre class="yellow">
-      D7                       Ab7   G7    C</pre>
-už ji chci mít v létě na dovolenou, -nou, -nou.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Na vodu už </span><span class="ch"><span class="c" data-chord="G7">G7</span>jezdím jenom s </span><span class="ch"><span class="c" data-chord="C">C</span>Vendou, s </span><span class="ch"><span class="c" data-chord="G7">G7</span>Vendou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>do kánoe </span><span class="ch"><span class="c" data-chord="G7">G7</span>nevlezu už s </span><span class="ch"><span class="c" data-chord="C">C</span>Bendou, s </span><span class="ch"><span class="c" data-chord="A7">A7</span>Bendou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dm">Dm</span>Jenda </span><span class="ch"><span class="c" data-chord="G7">G7</span>Benda </span><span class="ch"><span class="c" data-chord="C">C</span>nemožný je </span><span class="ch"><span class="c" data-chord="A7">A7</span>zadák,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D7">D7</span>nemá vlohy a je </span><span class="ch"><span class="c" data-chord="G7">G7</span>laj-, laj-, lajdák,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>on v</span><span class="ch"><span class="c" data-chord="C">C</span>í, že šumí les, že v</span><span class="ch"><span class="c" data-chord="A7">A7</span>ysouší se mez,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>že v </span><span class="ch"><span class="c" data-chord="D7">D7</span>dáli hárá pes, že </span><span class="ch"><span class="c" data-chord="G7">G7</span>kvete bílý bez</span><span class="ch"><span class="c" data-chord="G7+5">G7+5</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a že </span><span class="ch"><span class="c" data-chord="C">C</span>mostem cloumá rez, že </span><span class="ch"><span class="c" data-chord="A7">A7</span>říčka jde skrz ves,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>ale </span><span class="ch"><span class="c" data-chord="D7">D7</span>nevšimne si, že se blíží j</span><span class="ch"><span class="c" data-chord="Ab7">Ab7</span>ez, je</span><span class="ch"><span class="c" data-chord="G7">G7</span>z, je</span><span class="ch"><span class="c" data-chord="C">C</span>z.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Jel jsem tuhle </span><span class="ch"><span class="c" data-chord="G7">G7</span>Ohři s Jendou </span><span class="ch"><span class="c" data-chord="C">C</span>Bendou, </span><span class="ch"><span class="c" data-chord="G7">G7</span>Bendou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>proč já, houska, </span><span class="ch"><span class="c" data-chord="G7">G7</span>nejel radši s </span><span class="ch"><span class="c" data-chord="C">C</span>Vendou, </span><span class="ch"><span class="c" data-chord="A7">A7</span>Vendou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dm">Dm</span>Jenda </span><span class="ch"><span class="c" data-chord="G7">G7</span>Benda </span><span class="ch"><span class="c" data-chord="C">C</span>sjel na vodu </span><span class="ch"><span class="c" data-chord="A7">A7</span>mělkou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D7">D7</span>spáchal v lodi díru </span><span class="ch"><span class="c" data-chord="G7">G7</span>vel-, vel-, velkou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>já </span><span class="ch"><span class="c" data-chord="C">C</span>měl náladu zlou, on z</span><span class="ch"><span class="c" data-chord="A7">A7</span>ničil keňu mou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>už </span><span class="ch"><span class="c" data-chord="D7">D7</span>nikdy, houpy hou, s ní </span><span class="ch"><span class="c" data-chord="G7">G7</span>nepopluji mhou</span><span class="ch"><span class="c" data-chord="G7+5">G7+5</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>teď š</span><span class="ch"><span class="c" data-chord="C">C</span>etřím na novou, na l</span><span class="ch"><span class="c" data-chord="A7">A7</span>aminátovou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>už ji </span><span class="ch"><span class="c" data-chord="D7">D7</span>chci mít v létě na dovole</span><span class="ch"><span class="c" data-chord="Ab7">Ab7</span>nou, -</span><span class="ch"><span class="c" data-chord="G7">G7</span>nou, -</span><span class="ch"><span class="c" data-chord="C">C</span>nou.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

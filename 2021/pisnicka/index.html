@@ -2,249 +2,169 @@
 <html lang="cs">
   <head>
     <title>Hrdinský čin</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;" class="yellow">Hrdinský čin</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Pokáč ft. Jakub Ondra</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Emi               Hmi      Emi</pre>
-Řeknu vám příběh, který se stal,
-<pre class="yellow">
-  Emi                          Hmi       G</pre>
-a sním klidně svůj klobouk, kdybych vám lhal,
-<pre class="yellow">
-    Ami          G        D       H</pre>
-jak zpívá pan Tučný a snad to není
-<pre class="yellow">
-Emi              Hmi      Emi</pre>
-autorského práva porušení.
+    <h1>Hrdinský čin</h1>
+    <p class="artist">Pokáč ft. Jakub Ondra</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Emi                 Hmi      Emi</pre>
-Tak si to hasím po Václaváku,
-<pre class="yellow">
-Emi                     Hmi      G</pre>
-nahoře pod koněm jdu z hlaváku,
-<pre class="yellow">
-        Ami     G      D      H</pre>
-když na rameni ucítím ruku něčí
-<pre class="yellow">
-  Emi         Hmi         Emi</pre>
-a neznámý muž spustí cizí řečí:
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Řeknu vám příběh, </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>který se </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>stal,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>sním klidně svůj klobouk, kdy</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>bych vám l</span><span class="ch"><span class="c" data-chord="G">G</span>hal,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jak </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>zpívá pan Tuč</span><span class="ch"><span class="c" data-chord="G">G</span>ný a snad</span><span class="ch"><span class="c" data-chord="D">D</span> to není</span><span class="ch"><span class="c" data-chord="H">H</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>autorského práva </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>porušení.</span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
 
-<pre class="yellow">
-Emi                       Hmi    Emi</pre>
-"Hello my friend, I think I am lost,
-<pre class="yellow">
-Emi                             Hmi      G</pre>
-do you know how I could get to Karlův most?
-<pre class="yellow">
-     Ami          G          D          H</pre>
-I've never been here and my phone is dead,
-<pre class="yellow">
-          Emi              Hmi               Emi</pre>
-could you please help me, 'cause I've got no map."
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Tak si to hasím po V</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>áclaváku,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>nahoře pod koněm jdu z h</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>laváku,  </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>když na </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>rameni u</span><span class="ch"><span class="c" data-chord="G">G</span>cítím r</span><span class="ch"><span class="c" data-chord="D">D</span>uku něč</span><span class="ch"><span class="c" data-chord="H">H</span>í</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>neznámý muž </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>spustí cizí </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>řečí:</span></div>
 
-<pre class="yellow">
-Emi                 Hmi    Emi</pre>
-Chvíli jen zírám nevěřícně,
-<pre class="yellow">
-Emi                     Hmi        G</pre>
-co se to ten podivín snaží říct mně,
-<pre class="yellow">
-    Ami   G          D      H</pre>
-pak povídám: "Hele, já nerozumim,
-<pre class="yellow">
-   Emi           Hmi            Emi</pre>
-já tou tvojí hatmatilkou nemluvim."
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>&quot;Hello my friend, I think </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>I am lo</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>st,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>do you know how I could get to K</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>arlův mos</span><span class="ch"><span class="c" data-chord="G">G</span>t?</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;ve </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>never been he</span><span class="ch"><span class="c" data-chord="G">G</span>re and my p</span><span class="ch"><span class="c" data-chord="D">D</span>hone is dea</span><span class="ch"><span class="c" data-chord="H">H</span>d,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>could you </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>please help me, &#x27;</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>cause I&#x27;ve got no </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>map.&quot;</span></div>
 
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-Ref: Laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         H           Emi</pre>
-     laj-laj-laj, laj-laj-laj, la-laj.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Chvíli jen zírám nev</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>ěřícně,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>co se to ten podivín sna</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>ží říct mně</span><span class="ch"><span class="c" data-chord="G">G</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>pak </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>povídá</span><span class="ch"><span class="c" data-chord="G">G</span>m: &quot;Hele, j</span><span class="ch"><span class="c" data-chord="D">D</span>á neroz</span><span class="ch"><span class="c" data-chord="H">H</span>umim,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>já </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tou tvojí hatm</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>atilkou nemluvi</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>m.&quot;</span></div>
 
-<pre class="yellow">
-Emi                                  Hmi    Emi</pre>
-"Sorry, I don't speak Czech, not a single word,
-<pre class="yellow">
-Emi                              Hmi      G</pre>
-or maybe just one, the one I just heard,
-<pre class="yellow">
-          Ami         G              D             H</pre>
-from this nice young man that I passed by,
-<pre class="yellow">
-  Emi                         Hmi                Emi</pre>
-I think he said 'nečum' and I guess that means 'hi'."
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-laj-laj,</span><span class="ch"><span class="c" data-chord="H">H</span> laj-laj-laj</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, la-laj.</span></div>
 
-<pre class="yellow">
-Emi                              Hmi   Emi</pre>
-Jak to se mnou mluvíš, ty zmetku cizí,
-<pre class="yellow">
-Emi                               Hmi      G</pre>
-říkám: "Uděláš nejlíp, když vodsaď zmizíš,"
-<pre class="yellow">
-        Ami       G           D         H</pre>
-jsem na výsost pohoršen a smutno je mi,
-<pre class="yellow">
-   Emi       Hmi            Emi</pre>
-co za lůzu běhá po naší zemi.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>&quot;Sorry, I don&#x27;t speak Czech, not a si</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>ngle wo</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>rd,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>or maybe just one, the one I just</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span> heard,  </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>from this </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>nice young m</span><span class="ch"><span class="c" data-chord="G">G</span>an that I passe</span><span class="ch"><span class="c" data-chord="D">D</span>d by,         </span><span class="ch"><span class="c" data-chord="H">H</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>think he said &#x27;nečum&#x27; and I </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>guess that means &#x27;h</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>i&#x27;.&quot;</span></div>
 
-<pre class="yellow">
-Emi                               Hmi   Emi</pre>
-"Okay, I think that I'll try this way,
-<pre class="yellow">
-Emi                               Hmi      G</pre>
-thanks for your time and have a nice day,
-<pre class="yellow">
-         Ami             G               D               H</pre>
-you know today it's the birthday of my lovely wife,
-<pre class="yellow">
-     Emi                    Hmi              Emi</pre>
-as a present I got her this beautiful knife, look!"
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Jak to se mnou mluvíš, ty zmetku </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>cizí, </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>říkám: &quot;Uděláš nejlíp, když vodsaď</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span> zmizíš,&quot;</span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jsem na </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>výsost poh</span><span class="ch"><span class="c" data-chord="G">G</span>oršen a smut</span><span class="ch"><span class="c" data-chord="D">D</span>no je mi, </span><span class="ch"><span class="c" data-chord="H">H</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>co </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>za lůzu bě</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>há po naší zemi</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>.</span></div>
 
-<pre class="yellow">
-Emi                     Hmi   Emi</pre>
-V tu chvíli na mě ten cizí muž
-<pre class="yellow">
-Emi                   Hmi     G</pre>
-bez oka mrknutí vytasil nůž,
-<pre class="yellow">
-   Ami          G           D         H</pre>
-já však zachoval klid a o zem švih s ním
-<pre class="yellow">
-  Emi         Hmi                 Emi</pre>
-a tak zatočil s cizákem násilnickým.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>&quot;Okay, I think that I&#x27;ll try this </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>way,  </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>thanks for your time and have a ni</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>ce day,  </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>you know </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>today it&#x27;s the b</span><span class="ch"><span class="c" data-chord="G">G</span>irthday of my lo</span><span class="ch"><span class="c" data-chord="D">D</span>vely wife,      </span><span class="ch"><span class="c" data-chord="H">H</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>as a </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>present I got her this </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>beautiful knife, </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>look!&quot;</span></div>
 
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-Ref: Laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         H           Emi</pre>
-     laj-laj-laj, laj-laj-laj, la-laj.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>V tu chvíli na mě ten ci</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>zí muž</span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>bez oka mrknutí vytasi</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>l nůž,  </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>já </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>však zachoval</span><span class="ch"><span class="c" data-chord="G">G</span> klid a o ze</span><span class="ch"><span class="c" data-chord="D">D</span>m švih s n</span><span class="ch"><span class="c" data-chord="H">H</span>ím</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tak zatočil </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>s cizákem násilnický</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>m.</span></div>
 
-<pre class="yellow">
-Emi                            Hmi    Emi</pre>
-A tak končí příběh, který se stal,
-<pre class="yellow">
-Emi                            Hmi        G</pre>
-a přísahám, že jsem vám fakt nekecal,
-<pre class="yellow">
-          Ami      G           D            H</pre>
-jednou se budou psát písně, to už teď vím,
-<pre class="yellow">
-Emi             Hmi        Emi</pre>
-oslavující můj hrdinský čin
-<pre class="yellow">
-  Ami           H             Emi</pre>
-a nejeden film jistě půjde do kin.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-laj-laj,</span><span class="ch"><span class="c" data-chord="H">H</span> laj-laj-laj</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, la-laj.</span></div>
 
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-Ref: Laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         D         H           Emi</pre>
-     laj-lalala, laj-lalala, laj-lalala, laj-laj-laj,
-<pre class="yellow">
-     Ami         H           Emi</pre>
-     laj-laj-laj, laj-laj-laj, la-laj.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>A tak končí příběh, který se st</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>al,    </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>a přísahám, že jsem vám fakt ne</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>kecal,     </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jednou se </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>budou psá</span><span class="ch"><span class="c" data-chord="G">G</span>t písně, to </span><span class="ch"><span class="c" data-chord="D">D</span>už teď vím,  </span><span class="ch"><span class="c" data-chord="H">H</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>oslavující můj h</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>rdinský čin</span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>nejeden film j</span><span class="ch"><span class="c" data-chord="H">H</span>istě půjde do </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>kin.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-lalala, </span><span class="ch"><span class="c" data-chord="D">D</span>laj-lalala</span><span class="ch"><span class="c" data-chord="H">H</span>, laj-lalala</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, laj-laj-laj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>laj-laj-laj,</span><span class="ch"><span class="c" data-chord="H">H</span> laj-laj-laj</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>, la-laj.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

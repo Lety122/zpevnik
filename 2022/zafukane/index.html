@@ -2,166 +2,140 @@
 <html lang="cs">
   <head>
     <title>Zafúkané</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;" class="yellow">Zafúkané</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Fleret</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-       Ami  Asus2</pre>
-Intro: 
+    <h1>Zafúkané</h1>
+    <p class="artist">Fleret</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-   Ami      Asus2        Ami    Emi</pre>
-1. Větr sněh zanésl z hor do polí,
-<pre class="yellow">
-   Ami    C          G    Ami</pre>
-   já idu přes kopce, přes údolí,
-<pre class="yellow">
-   C          G          C</pre>
-   idu k tvej dědině zatúlanej,
-<pre class="yellow">
-   F        C         E   Ami   Fmaj7 Ami Esus4</pre>
-   cestičky sněhem sú zafúkané. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Intro: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>     </span><span class="ch"><span class="c" data-chord="Asus2">Asus2</span></span></div>
 
-<pre class="yellow">
-   Ami       C         G     C   F         C         Dmi  E</pre>
-R: Zafúkané, zafúkané, kolem mňa všecko je zafúkané.
-<pre class="yellow">
-   Ami       C         G     C   F         C         E    Ami</pre>
-   Zafúkané, zafúkané, kolem mňa všecko je zafúkané.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>1. </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Větr sněh</span><span class="ch"><span class="c" data-chord="Asus2">Asus2</span> zanésl z hor</span><span class="ch"><span class="c" data-chord="Ami">Ami</span> do pol</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>í,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>já idu </span><span class="ch"><span class="c" data-chord="C">C</span>přes kopce,</span><span class="ch"><span class="c" data-chord="G">G</span> přes</span><span class="ch"><span class="c" data-chord="Ami">Ami</span> údolí,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="C">C</span>idu k tvej </span><span class="ch"><span class="c" data-chord="G">G</span>dědině zatú</span><span class="ch"><span class="c" data-chord="C">C</span>lanej,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="F">F</span>cestičky </span><span class="ch"><span class="c" data-chord="C">C</span>sněhem sú </span><span class="ch"><span class="c" data-chord="E">E</span>zafú</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>kané. </span><span class="ch"><span class="c" data-chord="Fmaj7">Fmaj7</span>      </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>    </span><span class="ch"><span class="c" data-chord="Esus4">Esus4</span></span></div>
 
-<pre class="yellow">
-         Emi A D G Hmi7 | Emi A D G Hmi7 Emi</pre>
-MEZIHRA: 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkané, </span><span class="ch"><span class="c" data-chord="C">C</span>zafúkané, </span><span class="ch"><span class="c" data-chord="G">G</span>kolem </span><span class="ch"><span class="c" data-chord="C">C</span>mňa </span><span class="ch"><span class="c" data-chord="F">F</span>všecko je </span><span class="ch"><span class="c" data-chord="C">C</span>zafúkané. </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>     </span><span class="ch"><span class="c" data-chord="E">E</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkané, </span><span class="ch"><span class="c" data-chord="C">C</span>zafúkané, </span><span class="ch"><span class="c" data-chord="G">G</span>kolem </span><span class="ch"><span class="c" data-chord="C">C</span>mňa </span><span class="ch"><span class="c" data-chord="F">F</span>všecko je </span><span class="ch"><span class="c" data-chord="C">C</span>zafúkané. </span><span class="ch"><span class="c" data-chord="E">E</span>     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span></span></div>
 
-<pre class="yellow">
-   Ami     Asus2         Ami    Emi</pre>
-2. Už vašu chalupu z dálky vidím,
-<pre class="yellow">
-   Ami      C        G        Ami</pre>
-   srdce sa ozvalo, bit ho slyším,
-<pre class="yellow">
-   C             G               C</pre>
-   snáď enom pár kroků mi zostává,
-<pre class="yellow">
-   F      C       E      Ami  Fmaj7 Ami Esus4</pre>
-   a budu u tvého okénka stát.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>MEZIHRA: </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     |  </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
 
-<pre class="yellow">
-   Ami    C  G      C    F        C     Dmi    E</pre>
-R: Zafúkané, zafúkané, okénko k tobě je zafúkané.
-<pre class="yellow">
-   Ami    C  G      C    F        C     E    Ami</pre>
-   Zafúkané, zafúkané, okénko k tobě je zafúkané.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>2. </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Už vašu </span><span class="ch"><span class="c" data-chord="Asus2">Asus2</span>chalupu z dálk</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>y vidím</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>srdce sa </span><span class="ch"><span class="c" data-chord="C">C</span>ozvalo, b</span><span class="ch"><span class="c" data-chord="G">G</span>it ho sly</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ším,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="C">C</span>snáď enom pár </span><span class="ch"><span class="c" data-chord="G">G</span>kroků mi zostává</span><span class="ch"><span class="c" data-chord="C">C</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="F">F</span>a budu </span><span class="ch"><span class="c" data-chord="C">C</span>u tvého </span><span class="ch"><span class="c" data-chord="E">E</span>okénka </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>stát.</span><span class="ch"><span class="c" data-chord="Fmaj7">Fmaj7</span>      </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>    </span><span class="ch"><span class="c" data-chord="Esus4">Esus4</span></span></div>
 
-<pre class="yellow">
-         Emi A D G Hmi7 | Emi A D G Hmi7 Emi</pre>
-MEZIHRA: 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, </span><span class="ch"><span class="c" data-chord="G">G</span>zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, ok</span><span class="ch"><span class="c" data-chord="F">F</span>énko k to</span><span class="ch"><span class="c" data-chord="C">C</span>bě je </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>zafúkan</span><span class="ch"><span class="c" data-chord="E">E</span>é.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, </span><span class="ch"><span class="c" data-chord="G">G</span>zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, ok</span><span class="ch"><span class="c" data-chord="F">F</span>énko k to</span><span class="ch"><span class="c" data-chord="C">C</span>bě je </span><span class="ch"><span class="c" data-chord="E">E</span>zafúk</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ané.</span></div>
 
-<pre class="yellow">
-   Ami         Asus2     Ami    Emi</pre>
-3. Od tvého okna sa smutný vracám,
-<pre class="yellow">
-   Ami       C           G     Ami</pre>
-   v závějoch zpátky dom cestu hledám,
-<pre class="yellow">
-   C          G             C</pre>
-   spadl sněh na srdce zatúlané,
-<pre class="yellow">
-   F         C       E    Ami  Fmaj7 Ami Esus4</pre>
-   aj na mé stopy – sú zafúkané.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>MEZIHRA: </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     |  </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
 
-<pre class="yellow">
-   Ami    C  G      C    F        C     Dmi    E</pre>
-R: Zafúkané, zafúkané, okénko k tobě je zafúkané.
-<pre class="yellow">
-   Ami    C  G      C    F        C     E    Ami</pre>
-   Zafúkané, zafúkané, okénko k tobě je zafúkané.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>3. </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Od tvého okn</span><span class="ch"><span class="c" data-chord="Asus2">Asus2</span>a sa smutn</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ý vracá</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>m,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>v závějoch</span><span class="ch"><span class="c" data-chord="C">C</span> zpátky dom </span><span class="ch"><span class="c" data-chord="G">G</span>cestu </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>hledám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="C">C</span>spadl sněh </span><span class="ch"><span class="c" data-chord="G">G</span>na srdce zatúl</span><span class="ch"><span class="c" data-chord="C">C</span>ané,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="F">F</span>aj na mé s</span><span class="ch"><span class="c" data-chord="C">C</span>topy – s</span><span class="ch"><span class="c" data-chord="E">E</span>ú zaf</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>úkané</span><span class="ch"><span class="c" data-chord="Fmaj7">Fmaj7</span>.     </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>    </span><span class="ch"><span class="c" data-chord="Esus4">Esus4</span></span></div>
 
-<pre class="yellow">
-         Emi A D G Hmi7 | Emi A D G Hmi7 Emi</pre>
-MEZIHRA: 
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, </span><span class="ch"><span class="c" data-chord="G">G</span>zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, ok</span><span class="ch"><span class="c" data-chord="F">F</span>énko k to</span><span class="ch"><span class="c" data-chord="C">C</span>bě je </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>zafúkan</span><span class="ch"><span class="c" data-chord="E">E</span>é.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>Zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, </span><span class="ch"><span class="c" data-chord="G">G</span>zafúkan</span><span class="ch"><span class="c" data-chord="C">C</span>é, ok</span><span class="ch"><span class="c" data-chord="F">F</span>énko k to</span><span class="ch"><span class="c" data-chord="C">C</span>bě je </span><span class="ch"><span class="c" data-chord="E">E</span>zafúk</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>ané.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>MEZIHRA: </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     |  </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>    </span><span class="ch"><span class="c" data-chord="A">A</span>  </span><span class="ch"><span class="c" data-chord="D">D</span>  </span><span class="ch"><span class="c" data-chord="G">G</span>  </span><span class="ch"><span class="c" data-chord="Hmi7">Hmi7</span>     </span><span class="ch"><span class="c" data-chord="Emi">Emi</span></span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

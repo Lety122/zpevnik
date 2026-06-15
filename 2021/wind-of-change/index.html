@@ -2,211 +2,155 @@
 <html lang="cs">
   <head>
     <title>Wind of change</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Wind of <span class="yellow">change</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Scorpions</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-F  Dm  F  Dm  Am   Dm  Am  G  C</pre>
- 
-<pre class="yellow">
-(C)                 Dm</pre>
-1. I follow the Moskva
-<pre class="yellow">
-               C</pre>
-   Down to Gorky Park
-<pre class="yellow">
-                Dm      Am   G   C</pre>
-   Listening to the wind of change
-<pre class="yellow">
-(C)                 Dm</pre>
-   An August summer night
-<pre class="yellow">
-                C</pre>
-   Soldiers passing by
-<pre class="yellow">
-                 Dm      Am    G  C</pre>
-   Listening to the wind of change
-  
-<pre class="yellow">
-(C)                     Dm</pre>
-2. The world is closing in
-<pre class="yellow">
-            C</pre>
-   Did you ever think
-<pre class="yellow">
-                    Dm         Am     G   C</pre>
-   That we could be so close, like brothers
-<pre class="yellow">
-(C)                    Dm</pre>
-   The future's in the air
-<pre class="yellow">
-                   C</pre>
-   I can feel it everywhere
-<pre class="yellow">
-                 Dm      Am   G</pre>
-   Blowing with the wind of change
- 
-<pre class="yellow">
-    C    G         Dm           G</pre>
-REF.: Take me to the magic of the moment
-<pre class="yellow">
-     C    G</pre>
-   On a glory night
-<pre class="yellow">
-      Dm           G             Am</pre>
-   Where the children of tomorrow dream away
-<pre class="yellow">
-    F              G         C</pre>
-   In the wind of change
- 
-<pre class="yellow">
-C                   Dm</pre>
-3. Walking down the street
-<pre class="yellow">
-           C</pre>
-   Distant memories
-<pre class="yellow">
-                Dm      Am   G   C</pre>
-   Are buried in the past forever
-<pre class="yellow">
-(C)                Dm</pre>
-   I follow the Moskva
-<pre class="yellow">
-            C</pre>
-   Down to Gorky Park
-<pre class="yellow">
-                 Dm      Am   G</pre>
-   Listening to the wind of change
- 
-<pre class="yellow">
-    C    G         Dm           G</pre>
-REF.: Take me to the magic of the moment
-<pre class="yellow">
-     C    G</pre>
-   On a glory night
-<pre class="yellow">
-      Dm           G             Am</pre>
-   Where the children of tomorrow dream away
-<pre class="yellow">
-    F              G         C</pre>
-   In the wind of change
+    <h1>Wind of change</h1>
+    <p class="artist">Scorpions</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-   Am                       G</pre>
-B: The wind of change blows straight
-<pre class="yellow">
-                 Am</pre>
-   Into the face of time
-<pre class="yellow">
-                        G</pre>
-   Like a stormwind that will ring
-<pre class="yellow">
-                             C</pre>
-   The freedom bell for peace of mind
-<pre class="yellow">
-                  Dm</pre>
-   Let your balalaika sing
-<pre class="yellow">
-                       E</pre>
-   What my guitar wants to say
- 
-<pre class="yellow">
-    C    G         Dm           G</pre>
-REF.: Take me to the magic of the moment
-<pre class="yellow">
-     C    G</pre>
-   On a glory night
-<pre class="yellow">
-      Dm           G             Am</pre>
-   Where the children of tomorrow dream away
-<pre class="yellow">
-    F              G         C</pre>
-   In the wind of change
+<div class="chordrow"><span class="c" data-chord="F">F</span><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="F">F</span><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="Am">Am</span><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="Am">Am</span><span class="c" data-chord="G">G</span><span class="c" data-chord="C">C</span></div>
 
-<pre class="yellow">
-Outro: F  Dm  F  Dm  Am  Dm</pre>
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="(C)">(C)</span>1. I follow the Mosk</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>va</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Down to Gork</span><span class="ch"><span class="c" data-chord="C">C</span>y Park</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Listening to </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>the wind</span><span class="ch"><span class="c" data-chord="Am">Am</span> of c</span><span class="ch"><span class="c" data-chord="G">G</span>hang</span><span class="ch"><span class="c" data-chord="C">C</span>e</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="(C)">(C)</span>   An August summer </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>night</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Soldiers pass</span><span class="ch"><span class="c" data-chord="C">C</span>ing by</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Listening to t</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>he wind </span><span class="ch"><span class="c" data-chord="Am">Am</span>of cha</span><span class="ch"><span class="c" data-chord="G">G</span>nge</span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="(C)">(C)</span>2. The world is closing </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>in</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Did you e</span><span class="ch"><span class="c" data-chord="C">C</span>ver think</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   That we could be </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>so close, l</span><span class="ch"><span class="c" data-chord="Am">Am</span>ike bro</span><span class="ch"><span class="c" data-chord="G">G</span>ther</span><span class="ch"><span class="c" data-chord="C">C</span>s</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="(C)">(C)</span>   The future&#x27;s in the </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>air</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   I can feel it ev</span><span class="ch"><span class="c" data-chord="C">C</span>erywhere</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Blowing with t</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>he wind </span><span class="ch"><span class="c" data-chord="Am">Am</span>of ch</span><span class="ch"><span class="c" data-chord="G">G</span>ange</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>REF.</span><span class="ch"><span class="c" data-chord="C">C</span>: Tak</span><span class="ch"><span class="c" data-chord="G">G</span>e me to th</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>e magic of th</span><span class="ch"><span class="c" data-chord="G">G</span>e moment</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   On</span><span class="ch"><span class="c" data-chord="C">C</span> a gl</span><span class="ch"><span class="c" data-chord="G">G</span>ory night</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Whe</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>re the childr</span><span class="ch"><span class="c" data-chord="G">G</span>en of tomorrow</span><span class="ch"><span class="c" data-chord="Am">Am</span> dream away</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   I</span><span class="ch"><span class="c" data-chord="F">F</span>n the wind of c</span><span class="ch"><span class="c" data-chord="G">G</span>hange     </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>3. Walking down the </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>street</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Distant </span><span class="ch"><span class="c" data-chord="C">C</span>memories</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Are buried in</span><span class="ch"><span class="c" data-chord="Dm">Dm</span> the pas</span><span class="ch"><span class="c" data-chord="Am">Am</span>t for</span><span class="ch"><span class="c" data-chord="G">G</span>ever</span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="(C)">(C)</span>   I follow the Mos</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>kva</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Down to G</span><span class="ch"><span class="c" data-chord="C">C</span>orky Park</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Listening to t</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>he wind </span><span class="ch"><span class="c" data-chord="Am">Am</span>of ch</span><span class="ch"><span class="c" data-chord="G">G</span>ange</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>REF.</span><span class="ch"><span class="c" data-chord="C">C</span>: Tak</span><span class="ch"><span class="c" data-chord="G">G</span>e me to th</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>e magic of th</span><span class="ch"><span class="c" data-chord="G">G</span>e moment</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   On</span><span class="ch"><span class="c" data-chord="C">C</span> a gl</span><span class="ch"><span class="c" data-chord="G">G</span>ory night</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Whe</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>re the childr</span><span class="ch"><span class="c" data-chord="G">G</span>en of tomorrow</span><span class="ch"><span class="c" data-chord="Am">Am</span> dream away</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   I</span><span class="ch"><span class="c" data-chord="F">F</span>n the wind of c</span><span class="ch"><span class="c" data-chord="G">G</span>hange     </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>B: </span><span class="ch"><span class="c" data-chord="Am">Am</span>The wind of change blows </span><span class="ch"><span class="c" data-chord="G">G</span>straight</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Into the face </span><span class="ch"><span class="c" data-chord="Am">Am</span>of time</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Like a stormwind that</span><span class="ch"><span class="c" data-chord="G">G</span> will ring</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   The freedom bell for peace</span><span class="ch"><span class="c" data-chord="C">C</span> of mind</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Let your balala</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ika sing</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   What my guitar wants</span><span class="ch"><span class="c" data-chord="E">E</span> to say</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>REF.</span><span class="ch"><span class="c" data-chord="C">C</span>: Tak</span><span class="ch"><span class="c" data-chord="G">G</span>e me to th</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>e magic of th</span><span class="ch"><span class="c" data-chord="G">G</span>e moment</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   On</span><span class="ch"><span class="c" data-chord="C">C</span> a gl</span><span class="ch"><span class="c" data-chord="G">G</span>ory night</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Whe</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>re the childr</span><span class="ch"><span class="c" data-chord="G">G</span>en of tomorrow</span><span class="ch"><span class="c" data-chord="Am">Am</span> dream away</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   I</span><span class="ch"><span class="c" data-chord="F">F</span>n the wind of c</span><span class="ch"><span class="c" data-chord="G">G</span>hange     </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Outro: </span><span class="ch"><span class="c" data-chord="F">F</span> </span><span class="ch"><span class="c" data-chord="Dm">Dm</span> </span><span class="ch"><span class="c" data-chord="F">F</span> </span><span class="ch"><span class="c" data-chord="Dm">Dm</span> </span><span class="ch"><span class="c" data-chord="Am">Am</span> </span><span class="ch"><span class="c" data-chord="Dm">Dm</span></span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

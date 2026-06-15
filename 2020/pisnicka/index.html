@@ -2,267 +2,177 @@
 <html lang="cs">
   <head>
     <title>Písnička</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;" class="yellow">Písnička</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Pavel Callta ft. Pokáč</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Emi</pre>
-Návrat do rodné země, starší žena vedle mě,
-<pre class="yellow">
-D                           Hmi</pre>
-já sedím, dáma stojí, v MHD kouká chladně.
-<pre class="yellow">
-Emi</pre>
-Ptám se jí gentlemansky: "Máte se dneska hezky?"
-<pre class="yellow">
-D                                 Hmi</pre>
-Dáma jen sklopí oči a na svět dál se mračí.
+    <h1>Písnička</h1>
+    <p class="artist">Pavel Callta ft. Pokáč</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Emi</pre>
-Nesměle povídám jí: "Pojďte si sednout, paní",
-<pre class="yellow">
-D                                 Hmi</pre>
-koukne se na mě z patra, na něco v kapse šmátrá.
-<pre class="yellow">
-Emi</pre>
-Vytáhla na mě placku: "Ukažte mi svou lítačku",
-<pre class="yellow">
-D                             Hmi</pre>
-revizorka, pro dobrotu na žebrotu.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Návrat do rodné země, starší žena vedle mě,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>já sedím, dáma stojí, v MHD </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>kouká chladně.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Ptám se jí gentlemansky: &quot;Máte se dneska hezky?&quot;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Dáma jen sklopí oči a na svět dál </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>se mračí.</span></div>
 
-<pre class="yellow">
-           G              D</pre>
-Ref: A tak zpívám, zpívám dál,
-<pre class="yellow">
-         Hmi                  C     D</pre>
-přijímám všechno, co mi život dal i vzal.
-<pre class="yellow">
-      Emi            D</pre>
-Tyhle tóny zpívám rád,
-<pre class="yellow">
-     Hmi               C  D</pre>
-po písničce v klidu spát.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Nesměle povídám jí: &quot;Pojďte si sednout, paní&quot;,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>koukne se na mě z patra, na něco v</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span> kapse šmátrá.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Vytáhla na mě placku: &quot;Ukažte mi svou lítačku&quot;,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>revizorka, pro dobrotu na žebr</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>otu.</span></div>
 
-<pre class="yellow">
-Emi                 D</pre>
-Na na na na na na na, na na na na na na na,
-<pre class="yellow">
-Hmi                 C  D</pre>
-na na na na na na na...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: A tak </span><span class="ch"><span class="c" data-chord="G">G</span>zpívám, zpívám </span><span class="ch"><span class="c" data-chord="D">D</span>dál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>přijímám </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>všechno, co mi život </span><span class="ch"><span class="c" data-chord="C">C</span>dal i </span><span class="ch"><span class="c" data-chord="D">D</span>vzal.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tyhle </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tóny zpívám rád</span><span class="ch"><span class="c" data-chord="D">D</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>po pí</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>sničce v klidu spá</span><span class="ch"><span class="c" data-chord="C">C</span>t. </span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Občas si říkám, jaký, jaký by bylo asi,
-<pre class="yellow">
-D                                   Hmi</pre>
-vzbudit se a mít ňáký, hej aspoň ňáký vlasy.
-<pre class="yellow">
-Emi</pre>
-Kštici mít jako Pavel, světem bych jezdil travel,
-<pre class="yellow">
-D                               Hmi</pre>
-to byl fakt úchvatnej rým, ó díky bráško, já vím.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Na na na na na na na</span><span class="ch"><span class="c" data-chord="D">D</span>, na na na na na na na,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>na na na na na na na</span><span class="ch"><span class="c" data-chord="C">C</span>...</span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Na pláži na Ibize, by ke mně tulily se,
-<pre class="yellow">
-D                                 Hmi</pre>
-všechny ty místní slečny, jak byl by svět báječný.
-<pre class="yellow">
-Emi</pre>
-Byl bych ten playboy, který má nejsvůdnější kučery.
-<pre class="yellow">
-D                           Hmi</pre>
-Takhle mám jen lysinu, milý synu.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Občas si říkám, jaký, jaký by bylo asi,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>vzbudit se a mít ňáký, hej aspoň ňák</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>ý vlasy.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Kštici mít jako Pavel, světem bych jezdil travel,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>to byl fakt úchvatnej rým, ó dík</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>y bráško, já vím.</span></div>
 
-<pre class="yellow">
-           G              D</pre>
-Ref: A tak zpívám, zpívám dál,
-<pre class="yellow">
-         Hmi                  C     D</pre>
-přijímám všechno, co mi život dal i vzal.
-<pre class="yellow">
-      Emi            D</pre>
-Tyhle tóny zpívám rád,
-<pre class="yellow">
-     Hmi               C  D</pre>
-po písničce v klidu spát.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Na pláži na Ibize, by ke mně tulily se,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>všechny ty místní slečny, jak byl </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>by svět báječný.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Byl bych ten playboy, který má nejsvůdnější kučery.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Takhle mám jen lysinu, milý </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>synu.</span></div>
 
-<pre class="yellow">
-Emi                 D</pre>
-Na na na na na na na, na na na na na na na,
-<pre class="yellow">
-Hmi                 C  D</pre>
-na na na na na na na...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: A tak </span><span class="ch"><span class="c" data-chord="G">G</span>zpívám, zpívám </span><span class="ch"><span class="c" data-chord="D">D</span>dál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>přijímám </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>všechno, co mi život </span><span class="ch"><span class="c" data-chord="C">C</span>dal i </span><span class="ch"><span class="c" data-chord="D">D</span>vzal.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tyhle </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tóny zpívám rád</span><span class="ch"><span class="c" data-chord="D">D</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>po pí</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>sničce v klidu spá</span><span class="ch"><span class="c" data-chord="C">C</span>t. </span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Zpátky do přítomnosti, obrazů složitosti.
-<pre class="yellow">
-D                                  Hmi</pre>
-Každýho potká něco, co nás táhne k zoufalosti.
-<pre class="yellow">
-Emi</pre>
-Potkal jsem krásnou holku, podobnou na Karkulku,
-<pre class="yellow">
-D                                  Hmi</pre>
-oči jak Pokahontas, říkal jsem si: "Kámo, zlom vaz."
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Na na na na na na na</span><span class="ch"><span class="c" data-chord="D">D</span>, na na na na na na na,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>na na na na na na na</span><span class="ch"><span class="c" data-chord="C">C</span>...</span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Táhla nás přitažlivost, jak dvě puzzle, bezprostřednost,
-<pre class="yellow">
-D                                         Hmi</pre>
-spontánnost a bezstarostnost, jako ze snu, něžná bytost.
-<pre class="yellow">
-Emi</pre>
-V noci mě zatáhla na opuštěný místní hřiště,
-<pre class="yellow">
-D                                Hmi</pre>
-a jak to dopadlo, si povíme zas příště...
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Zpátky do přítomnosti, obrazů složitosti.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Každýho potká něco, co nás táhne k </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>zoufalosti.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Potkal jsem krásnou holku, podobnou na Karkulku,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>oči jak Pokahontas, říkal jsem si: </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>&quot;Kámo, zlom vaz.&quot;</span></div>
 
-<pre class="yellow">
-           G              D</pre>
-Ref: A tak zpívám, zpívám dál,
-<pre class="yellow">
-         Hmi                  C     D</pre>
-přijímám všechno, co mi život dal i vzal.
-<pre class="yellow">
-      Emi            D</pre>
-Tyhle tóny zpívám rád,
-<pre class="yellow">
-     Hmi               C  D</pre>
-po písničce v klidu spát.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Táhla nás přitažlivost, jak dvě puzzle, bezprostřednost,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>spontánnost a bezstarostnost, jako ze snu,</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span> něžná bytost.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>V noci mě zatáhla na opuštěný místní hřiště,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>a jak to dopadlo, si povíme zas p</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>říště...</span></div>
 
-<pre class="yellow">
-Emi                 D</pre>
-Na na na na na na na, na na na na na na na,
-<pre class="yellow">
-Hmi                 C  D</pre>
-na na na na na na na...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: A tak </span><span class="ch"><span class="c" data-chord="G">G</span>zpívám, zpívám </span><span class="ch"><span class="c" data-chord="D">D</span>dál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>přijímám </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>všechno, co mi život </span><span class="ch"><span class="c" data-chord="C">C</span>dal i </span><span class="ch"><span class="c" data-chord="D">D</span>vzal.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tyhle </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tóny zpívám rád</span><span class="ch"><span class="c" data-chord="D">D</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>po pí</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>sničce v klidu spá</span><span class="ch"><span class="c" data-chord="C">C</span>t. </span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Bylo nám ještě málo, když se to tenkrát stalo.
-<pre class="yellow">
-D                                  Hmi</pre>
-Holka s níž vprostřed dvora hrával jsem si na doktora.
-<pre class="yellow">
-Emi</pre>
-Jmenovala se Julča, chtěl jsem s ní trávit svůj čas,
-<pre class="yellow">
-D                             Hmi</pre>
-netušil jednoho dne, že se na mě vybodne.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Na na na na na na na</span><span class="ch"><span class="c" data-chord="D">D</span>, na na na na na na na,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>na na na na na na na</span><span class="ch"><span class="c" data-chord="C">C</span>...</span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
 
-<pre class="yellow">
-Emi</pre>
-Přišel jsem na náš dvorek, místo mě stál Liborek,
-<pre class="yellow">
-D                             Hmi</pre>
-Liborek z naší třídy, prstíky měl od křídy.
-<pre class="yellow">
-Emi</pre>
-Kalhoty dole oba, jímala se mě zloba.
-<pre class="yellow">
-D                             Hmi</pre>
-Liborek teď bručí v cele, tenkrát dělal učitele.
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Bylo nám ještě málo, když se to tenkrát stalo.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Holka s níž vprostřed dvora hrával </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>jsem si na doktora.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Jmenovala se Julča, chtěl jsem s ní trávit svůj čas,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>netušil jednoho dne, že se na </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>mě vybodne.</span></div>
 
-<pre class="yellow">
-           G              D</pre>
-Ref: A tak zpívám, zpívám dál,
-<pre class="yellow">
-         Hmi                  C     D</pre>
-přijímám všechno, co mi život dal i vzal.
-<pre class="yellow">
-      Emi            D</pre>
-Tyhle tóny zpívám rád,
-<pre class="yellow">
-     Hmi               C  D</pre>
-po písničce v klidu spát.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Přišel jsem na náš dvorek, místo mě stál Liborek,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Liborek z naší třídy, prstíky </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>měl od křídy.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Emi">Emi</span>Kalhoty dole oba, jímala se mě zloba.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Liborek teď bručí v cele, tenk</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>rát dělal učitele.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: A tak </span><span class="ch"><span class="c" data-chord="G">G</span>zpívám, zpívám </span><span class="ch"><span class="c" data-chord="D">D</span>dál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>přijímám </span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>všechno, co mi život </span><span class="ch"><span class="c" data-chord="C">C</span>dal i </span><span class="ch"><span class="c" data-chord="D">D</span>vzal.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tyhle </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>tóny zpívám rád</span><span class="ch"><span class="c" data-chord="D">D</span>,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>po pí</span><span class="ch"><span class="c" data-chord="Hmi">Hmi</span>sničce v klidu spá</span><span class="ch"><span class="c" data-chord="C">C</span>t. </span><span class="ch"><span class="c" data-chord="D">D</span></span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>
