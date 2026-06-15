@@ -89,3 +89,126 @@ def render_song_body(lines):
             )
         out.append(f'<div class="line">{"".join(spans)}</div>')
     return "\n".join(out)
+
+
+_PAGE = """<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <title>{{TITLE}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
+    <style>
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:nowrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
+    </style>
+  </head>
+  <body>
+    <h1>{{TITLE}}</h1>
+    <p class="artist">{{ARTIST}}</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
+{{BODY}}
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+""" + r"""    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
+        }
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
+      }
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
+      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
+    }
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
+  </body>
+</html>
+"""
+
+
+def render_page(doc):
+    """Parsed ChordPro doc -> full standalone HTML page string."""
+    return (
+        _PAGE
+        .replace("{{TITLE}}", _esc(doc["title"]))
+        .replace("{{ARTIST}}", _esc(doc["artist"]))
+        .replace("{{BODY}}", render_song_body(doc["lines"]))
+    )

@@ -66,6 +66,25 @@ def test_render_leading_text_keeps_empty_chord_slot():
     assert '<span class="c" data-chord=""></span>Z ' in h
 
 
+def test_render_page_has_essentials():
+    doc = chordpro.parse_pro("{title: Anděl}\n{artist: Karel Kryl}\n[D]Ahoj")
+    page = chordpro.render_page(doc)
+    assert "<!DOCTYPE html>" in page and 'lang="cs"' in page
+    assert "<title>Anděl</title>" in page
+    assert "Karel Kryl" in page
+    assert 'id="transUp"' in page and 'id="transDown"' in page
+    assert 'id="fontUp"' in page and 'id="fontDown"' in page and 'id="fontReset"' in page
+    assert 'href="/"' in page
+    assert "serviceWorker" in page and "wakeLock" in page
+    assert 'data-chord="D"' in page
+
+
+def test_render_page_escapes_title():
+    doc = chordpro.parse_pro("{title: A & B}\n{artist: X}\n[C]y")
+    page = chordpro.render_page(doc)
+    assert "<title>A &amp; B</title>" in page
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):
