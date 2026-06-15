@@ -81,12 +81,19 @@ def test_render_page_has_essentials():
     page = chordpro.render_page(doc)
     assert "<!DOCTYPE html>" in page and 'lang="cs"' in page
     assert "<title>Anděl</title>" in page
+    assert '<span class="hy">Anděl</span>' in page  # single-word title -> all yellow
     assert "Karel Kryl" in page
     assert 'id="transUp"' in page and 'id="transDown"' in page
     assert 'id="fontUp"' in page and 'id="fontDown"' in page and 'id="fontReset"' in page
     assert 'href="/"' in page
     assert "serviceWorker" in page and "wakeLock" in page
     assert 'data-chord="D"' in page
+
+
+def test_title_last_word_yellow():
+    doc = chordpro.parse_pro("{title: Na hotelu v Olomouci}\n{artist: X}\n[C]y")
+    page = chordpro.render_page(doc)
+    assert 'Na hotelu v <span class="hy">Olomouci</span>' in page
 
 
 def test_render_page_escapes_title():

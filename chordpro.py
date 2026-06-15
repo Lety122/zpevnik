@@ -73,7 +73,7 @@ def render_song_body(lines):
     out = []
     for ln in lines:
         if ln["type"] == "blank":
-            out.append("")
+            out.append('<div class="br"></div>')
             continue
         if ln["type"] == "chordonly":
             spans = "".join(
@@ -132,12 +132,14 @@ _PAGE = """<!DOCTYPE html>
 html{background:#1b2021;}
 body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;min-height:100vh;}
 h1{color:#CFC7D2;margin:20px 20px 4px;}
+h1 .hy{color:#FEB12C;}
 .artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
 .bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
 .bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
   font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
 #song{margin:20px;font-size:16px;padding-bottom:80px;}
-.line{margin:0 0 .85em;}
+.line{margin:0 0 .4em;}
+.br{height:.9em;}/* blank line in source = stanza break, clearly bigger than line gap */
 .w{display:inline-block;vertical-align:bottom;white-space:pre;}/* whole word = one non-breaking unit */
 .ch{display:inline-block;vertical-align:bottom;white-space:pre;}
 .ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
@@ -148,7 +150,7 @@ a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;bo
     </style>
   </head>
   <body>
-    <h1>{{TITLE}}</h1>
+    <h1>{{H1}}</h1>
     <p class="artist">{{ARTIST}}</p>
     <div class="bar">
       <button id="transDown" title="O půltón níž">&#9837; -1</button>
@@ -236,11 +238,23 @@ a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;bo
 """
 
 
+def _title_h1(title):
+    """Title HTML with the last word in yellow (matches the original songbook style)."""
+    title = title.strip()
+    if not title:
+        return ""
+    head, _, last = title.rpartition(" ")
+    if head:
+        return _esc(head) + ' <span class="hy">' + _esc(last) + '</span>'
+    return '<span class="hy">' + _esc(last) + '</span>'
+
+
 def render_page(doc):
     """Parsed ChordPro doc -> full standalone HTML page string."""
     return (
         _PAGE
         .replace("{{TITLE}}", _esc(doc["title"]))
+        .replace("{{H1}}", _title_h1(doc["title"]))
         .replace("{{ARTIST}}", _esc(doc["artist"]))
         .replace("{{BODY}}", render_song_body(doc["lines"]))
     )
