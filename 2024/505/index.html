@@ -2,173 +2,143 @@
 <html lang="cs">
   <head>
     <title>505</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;"><span class="yellow">505</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Arctic Monkeys</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Dm Em Dm Em</pre>
+    <h1>505</h1>
+    <p class="artist">Arctic Monkeys</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-           Dm                   Em</pre>
-I'm going back to 505 If it's a 7 hour flight
-<pre class="yellow">
-         Dm</pre>
-Or a forty-five minute drive
-<pre class="yellow">
-   Em                             Dm</pre>
-In my imagination you're waiting lying on your side
-<pre class="yellow">
-           Em                       Dm Em</pre>
-With your hands between your thighs
-<pre class="yellow">
-Dm                           Em</pre>
-Stop and wait a sec when you look at me like that
-<pre class="yellow">
-           Dm                     Em</pre>
-My darling what did you expect? I probably still adore you
-<pre class="yellow">
-          Dm                         Em</pre>
-With your hands around my neck or I did last time I checked
+<div class="chordrow"><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="Em">Em</span><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="Em">Em</span></div>
 
-<pre class="yellow">
-Dm Em</pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m going b</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ack to 505 If it&#x27;s a </span><span class="ch"><span class="c" data-chord="Em">Em</span>7 hour flight</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Or a fort</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>y-five minute drive</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>In </span><span class="ch"><span class="c" data-chord="Em">Em</span>my imagination you&#x27;re waiting l</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ying on your side</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>With your h</span><span class="ch"><span class="c" data-chord="Em">Em</span>ands between your thighs </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>   </span><span class="ch"><span class="c" data-chord="Em">Em</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dm">Dm</span>Stop and wait a sec when you </span><span class="ch"><span class="c" data-chord="Em">Em</span>look at me like that</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>My darling </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>what did you expect? I </span><span class="ch"><span class="c" data-chord="Em">Em</span>probably still adore you</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>With your </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>hands around my neck or I d</span><span class="ch"><span class="c" data-chord="Em">Em</span>id last time I checked</span></div>
 
-<pre class="yellow">
-     Dm</pre>
-I'm not shy of a spark
-<pre class="yellow"> 
-    Em                                        Dm</pre>
-The knife twists at the thought that I should fall short of the mark
-<pre class="yellow">
-Em                                    Dm</pre>
-Frightened by the bite though it's no harsher than the bark
-<pre class="yellow">
-     Em                          Dm                      Em</pre>
-The middle of adventure, such a perfect place to start
-<pre class="yellow">
-           Dm                   Em</pre>
-I'm going back to 505 If it's a 7 hour flight
-<pre class="yellow">
-         Dm</pre>
-Or a forty-five minute drive
-<pre class="yellow">
-   Em                             Dm</pre>
-In my imagination you're waiting lying on your side
+<div class="chordrow"><span class="c" data-chord="Dm">Dm</span><span class="c" data-chord="Em">Em</span></div>
 
-<pre class="yellow">
-           Em                       Dm Em</pre>
-With your hands between your thighs
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m n</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ot shy of a spark</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>The </span><span class="ch"><span class="c" data-chord="Em">Em</span>knife twists at the thought that I should </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>fall short of the mark</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Em">Em</span>Frightened by the bite though it&#x27;s no </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>harsher than the bark</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>The m</span><span class="ch"><span class="c" data-chord="Em">Em</span>iddle of adventure, such a p</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>erfect place to start   </span><span class="ch"><span class="c" data-chord="Em">Em</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m going b</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ack to 505 If it&#x27;s a </span><span class="ch"><span class="c" data-chord="Em">Em</span>7 hour flight</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Or a fort</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>y-five minute drive</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>In </span><span class="ch"><span class="c" data-chord="Em">Em</span>my imagination you&#x27;re waiting l</span><span class="ch"><span class="c" data-chord="Dm">Dm</span>ying on your side</span></div>
 
-<pre class="yellow">
- Dm Em Dm Em x2</pre>
- 
-<pre class="yellow">
-                  Dm*</pre>
-But I crumble completely when you cry
-<pre class="yellow">
-    Em*                                 Dm*</pre>
-It seems like once again you've had to greet me with goodbye
-<pre class="yellow">
-     Em*                        Dm*</pre>
-I'm always just about to go and spoil the surprise
-<pre class="yellow">
-         Em*                           Dm*   Em*</pre>
-Take my hands off of your eyes too soon
-<pre class="yellow">
-           Dm*                  Em*</pre>
-I'm going back to 505 If it's a 7 hour flight
-<pre class="yellow">
-     Dm*                Em*                            Dm*</pre>
-Or a 45 minute drive In my imagination you're waiting lying on your side
-<pre class="yellow">
-           Em*                             Dm*     Em*</pre>
-With your hands between your thighs and a smile
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>With your h</span><span class="ch"><span class="c" data-chord="Em">Em</span>ands between your thighs </span><span class="ch"><span class="c" data-chord="Dm">Dm</span>   </span><span class="ch"><span class="c" data-chord="Em">Em</span></span></div>
 
-<pre class="yellow">
-Dm* Em* Dm* Em* x2 
-Dm* Em* Dm* Em*</pre>
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="Dm">Dm</span> </span><span class="ch"><span class="c" data-chord="Em">Em</span> </span><span class="ch"><span class="c" data-chord="Dm">Dm</span> </span><span class="ch"><span class="c" data-chord="Em">Em</span> x2</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>But I crumble comp</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>letely when you cry</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>It s</span><span class="ch"><span class="c" data-chord="Em*">Em*</span>eems like once again you&#x27;ve had to g</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>reet me with goodbye</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m a</span><span class="ch"><span class="c" data-chord="Em*">Em*</span>lways just about to go and </span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>spoil the surprise</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Take my h</span><span class="ch"><span class="c" data-chord="Em*">Em*</span>ands off of your eyes too soon</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>      </span><span class="ch"><span class="c" data-chord="Em*">Em*</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m going b</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>ack to 505 If it&#x27;s a </span><span class="ch"><span class="c" data-chord="Em*">Em*</span>7 hour flight</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Or a </span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>45 minute drive In </span><span class="ch"><span class="c" data-chord="Em*">Em*</span>my imagination you&#x27;re waiting l</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>ying on your side</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>With your h</span><span class="ch"><span class="c" data-chord="Em*">Em*</span>ands between your thighs and a s</span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span>mile    </span><span class="ch"><span class="c" data-chord="Em*">Em*</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="Dm*">Dm*</span> </span><span class="ch"><span class="c" data-chord="Em*">Em*</span> </span><span class="ch"><span class="c" data-chord="Dm*">Dm*</span> </span><span class="ch"><span class="c" data-chord="Em*">Em*</span> x2</span></div>
+<div class="chordrow"><span class="c" data-chord="Dm*">Dm*</span><span class="c" data-chord="Em*">Em*</span><span class="c" data-chord="Dm*">Dm*</span><span class="c" data-chord="Em*">Em*</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

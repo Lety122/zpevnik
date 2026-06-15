@@ -2,239 +2,156 @@
 <html lang="cs">
   <head>
     <title>Space Oddity</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
-      .chords-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        padding-top: 15px;
-        border-top: 1px dashed #59C9A5;
-      }
-      .chord-box {
-        border: 1px solid #CFC7D2;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #2a3132;
-        min-width: 60px;
-      }
-      .chord-name {
-        color: #FEB12C;
-        font-weight: bold;
-        margin-bottom: 5px;
-        text-align: center;
-        font-size: 18px;
-      }
-      .chord-tab {
-        font-family: 'Courier New', monospace;
-        color: #CFC7D2;
-        line-height: 1.2;
-        text-align: center;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b>Space <pre style="font-size: 30px;" class="yellow">Oddity</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">David Bowie</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Fmaj7 Em Fmaj7 Em</pre>
-<pre class="yellow">
-Fmaj7 Em Fmaj7 Em</pre>
+    <h1>Space Oddity</h1>
+    <p class="artist">David Bowie</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-C               Em</pre>
-Ground control to Major Tom
-<pre class="yellow">
-C               Em</pre>
-Ground control to Major Tom
-<pre class="yellow">
-Am        Am/G       D/F#</pre>
-Take your protein pills and put your helmet on
-<pre class="yellow">
-C               Em</pre>
-Ground control to Major Tom
-<pre class="yellow">
-C               Em</pre>
-Commencing countdown engines on
-<pre class="yellow">
-Am    Am/G       D7/F#</pre>
-Check ignition and may God's love be with you
+<div class="chordrow"><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span></div>
+<div class="chordrow"><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span></div>
 
-<pre class="yellow">
-1. C              E7</pre>
-This is ground control to Major Tom
-<pre class="yellow">
-F</pre>
-You've really made the grade
-<pre class="yellow">
-    Fm          C               F</pre>
-And the papers want to know whose shirt you wear
-<pre class="yellow">
-    Fm          C               F</pre>
-Now it's time to leave the capsule if you dare
-<pre class="yellow">
-C                 E7</pre>
-This is Major Tom to ground control
-<pre class="yellow">
-F</pre>
-I'm stepping through the door
-<pre class="yellow">
-    Fm          C               F</pre>
-And I'm floating in a most peculiar way
-<pre class="yellow">
-    Fm          C               F</pre>
-And the stars look very different today
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Ground control t</span><span class="ch"><span class="c" data-chord="Em">Em</span>o Major Tom</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Ground control t</span><span class="ch"><span class="c" data-chord="Em">Em</span>o Major Tom</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Am">Am</span>Take your </span><span class="ch"><span class="c" data-chord="Am/G">Am/G</span>protein pil</span><span class="ch"><span class="c" data-chord="D/F#">D/F#</span>ls and put your helmet on</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Ground control t</span><span class="ch"><span class="c" data-chord="Em">Em</span>o Major Tom</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Commencing count</span><span class="ch"><span class="c" data-chord="Em">Em</span>down engines on</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Am">Am</span>Check </span><span class="ch"><span class="c" data-chord="Am/G">Am/G</span>ignition an</span><span class="ch"><span class="c" data-chord="D7/F#">D7/F#</span>d may God&#x27;s love be with you</span></div>
 
-<pre class="yellow">
-Ref.: Fmaj7         Em</pre>
-For here am I sitting in a tin can
-<pre class="yellow">
-Fmaj7         Em</pre>
-Far above the world
-<pre class="yellow">
-Bb           Am       G              F</pre>
-Planet Earth is blue and there's nothing I can do
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>1.Thi</span><span class="ch"><span class="c" data-chord="C">C</span>s is ground con</span><span class="ch"><span class="c" data-chord="E7">E7</span>trol to Major Tom</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>You&#x27;ve really made the grade</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>And </span><span class="ch"><span class="c" data-chord="Fm">Fm</span>the papers w</span><span class="ch"><span class="c" data-chord="C">C</span>ant to know whos</span><span class="ch"><span class="c" data-chord="F">F</span>e shirt you wear</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Now </span><span class="ch"><span class="c" data-chord="Fm">Fm</span>it&#x27;s time to</span><span class="ch"><span class="c" data-chord="C">C</span> leave the capsu</span><span class="ch"><span class="c" data-chord="F">F</span>le if you dare</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>This is Major Tom </span><span class="ch"><span class="c" data-chord="E7">E7</span>to ground control</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>I&#x27;m stepping through the door</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>And </span><span class="ch"><span class="c" data-chord="Fm">Fm</span>I&#x27;m floating</span><span class="ch"><span class="c" data-chord="C">C</span> in a most pecul</span><span class="ch"><span class="c" data-chord="F">F</span>iar way</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>And </span><span class="ch"><span class="c" data-chord="Fm">Fm</span>the stars lo</span><span class="ch"><span class="c" data-chord="C">C</span>ok very differen</span><span class="ch"><span class="c" data-chord="F">F</span>t today</span></div>
 
-<pre class="yellow">
-C F G A A</pre>
-<pre class="yellow">
-C F G A A</pre>
-<pre class="yellow">
-Fmaj7 Em A C D E</pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref.:For he</span><span class="ch"><span class="c" data-chord="Fmaj7">Fmaj7</span>re am I sittin</span><span class="ch"><span class="c" data-chord="Em">Em</span>g in a tin can</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Fmaj7">Fmaj7</span>Far above the </span><span class="ch"><span class="c" data-chord="Em">Em</span>world</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Bb">Bb</span>Planet Earth </span><span class="ch"><span class="c" data-chord="Am">Am</span>is blue a</span><span class="ch"><span class="c" data-chord="G">G</span>nd there&#x27;s noth</span><span class="ch"><span class="c" data-chord="F">F</span>ing I can do</span></div>
 
-2. Though I'm past one hundred thousand miles
-I'm feeling very still
-And I think my spaceship knows which way to go
-Tell my wife I love her very much she knows
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="G">G</span><span class="c" data-chord="A">A</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="G">G</span><span class="c" data-chord="A">A</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span><span class="c" data-chord="A">A</span><span class="c" data-chord="C">C</span><span class="c" data-chord="D">D</span><span class="c" data-chord="E">E</span></div>
 
-<pre class="yellow">
-G               E7            Am</pre>
-Ground control to Major Tom, your circuit's
-<pre class="yellow">
-C/G</pre>
-dead, there's something wrong
-<pre class="yellow">
-D7/F#</pre>
-Can you hear me Major Tom?
-<pre class="yellow">
-C</pre>
-Can you hear me Major Tom?
-<pre class="yellow">
-G</pre>
-Can you hear me Major Tom? Can you...
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>2. Though I&#x27;m past one hundred thousand miles</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>I&#x27;m feeling very still</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>And I think my spaceship knows which way to go</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Tell my wife I love her very much she knows</span></div>
 
-Ref.
-Here am I floating 'round my tin can
-Far above the Moon
-Planet Earth is blue and there's nothing I can do
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Ground control t</span><span class="ch"><span class="c" data-chord="E7">E7</span>o Major Tom, y</span><span class="ch"><span class="c" data-chord="Am">Am</span>our circuit&#x27;s</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C/G">C/G</span>dead, there&#x27;s something wrong</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D7/F#">D7/F#</span>Can you hear me Major Tom?</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Can you hear me Major Tom?</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Can you hear me Major Tom? Can you...</span></div>
 
-Dohra:
-<pre class="yellow">
-C F G A A</pre>
-<pre class="yellow">
-C F G A A</pre>
-<pre class="yellow">
-Fmaj7 Em A C D E</pre>
-</pre>
-</div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Here am I floating &#x27;round my tin can</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Far above the Moon</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Planet Earth is blue and there&#x27;s nothing I can do</span></div>
 
-<div class="chords-container">
-  <div class="chord-box"><div class="chord-name">Fmaj7</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-2-<br>D|-3-<br>A|-x-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">Em</div><div class="chord-tab">e|-0-<br>B|-0-<br>G|-0-<br>D|-2-<br>A|-2-<br>E|-0-</div></div>
-  <div class="chord-box"><div class="chord-name">C</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-0-<br>D|-2-<br>A|-3-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">Am</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-2-<br>D|-2-<br>A|-0-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">Am/G</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-2-<br>D|-2-<br>A|-0-<br>E|-3-</div></div>
-  <div class="chord-box"><div class="chord-name">D/F#</div><div class="chord-tab">e|-2-<br>B|-3-<br>G|-2-<br>D|-0-<br>A|-x-<br>E|-2-</div></div>
-  <div class="chord-box"><div class="chord-name">D7/F#</div><div class="chord-tab">e|-2-<br>B|-1-<br>G|-2-<br>D|-0-<br>A|-x-<br>E|-2-</div></div>
-  <div class="chord-box"><div class="chord-name">E7</div><div class="chord-tab">e|-0-<br>B|-0-<br>G|-1-<br>D|-0-<br>A|-2-<br>E|-0-</div></div>
-  <div class="chord-box"><div class="chord-name">F</div><div class="chord-tab">e|-1-<br>B|-1-<br>G|-2-<br>D|-3-<br>A|-3-<br>E|-1-</div></div>
-  <div class="chord-box"><div class="chord-name">Fm</div><div class="chord-tab">e|-1-<br>B|-1-<br>G|-1-<br>D|-3-<br>A|-3-<br>E|-1-</div></div>
-  <div class="chord-box"><div class="chord-name">Bb</div><div class="chord-tab">e|-1-<br>B|-3-<br>G|-3-<br>D|-3-<br>A|-1-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">G</div><div class="chord-tab">e|-3-<br>B|-0-<br>G|-0-<br>D|-0-<br>A|-2-<br>E|-3-</div></div>
-  <div class="chord-box"><div class="chord-name">A</div><div class="chord-tab">e|-0-<br>B|-2-<br>G|-2-<br>D|-2-<br>A|-0-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">D</div><div class="chord-tab">e|-2-<br>B|-3-<br>G|-2-<br>D|-0-<br>A|-x-<br>E|-x-</div></div>
-  <div class="chord-box"><div class="chord-name">E</div><div class="chord-tab">e|-0-<br>B|-0-<br>G|-1-<br>D|-2-<br>A|-2-<br>E|-0-</div></div>
-  <div class="chord-box"><div class="chord-name">C/G</div><div class="chord-tab">e|-0-<br>B|-1-<br>G|-0-<br>D|-2-<br>A|-3-<br>E|-3-</div></div>
-</div>
-
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Dohra:</span></div>
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="G">G</span><span class="c" data-chord="A">A</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="G">G</span><span class="c" data-chord="A">A</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="Fmaj7">Fmaj7</span><span class="c" data-chord="Em">Em</span><span class="c" data-chord="A">A</span><span class="c" data-chord="C">C</span><span class="c" data-chord="D">D</span><span class="c" data-chord="E">E</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

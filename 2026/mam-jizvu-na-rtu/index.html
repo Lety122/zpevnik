@@ -2,183 +2,159 @@
 <html lang="cs">
   <head>
     <title>Mám jizvu na rtu</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Mám jizvu na <span class="yellow">rtu</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Jaromír Nohavica</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-C, G, Ami, F, C, G, Ami, F, C</pre>
+    <h1>Mám jizvu na rtu</h1>
+    <p class="artist">Jaromír Nohavica</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-C</pre>                   
-Jsem příliš starý na to abych věřil v revoluci,
-<pre class="yellow">
-G                   </pre>                    
-a svoji velkou hlavu těžko skryju pod kapucí.
-<pre class="yellow">
-Ami                   F</pre>                  
-A nechutná mi když se vaří předvařená rýže, 
-<pre class="yellow">
-C                     G</pre>             
-v náprsní kapse nosím Ventinol na potíže. 
-<pre class="yellow">
-Ami                 </pre>                
-Jak to tak vidím asi těžko projdu uchem jehly, 
-<pre class="yellow">
-F                    C</pre>                   
-a lesem, běhám tak, aby mě vlci nedoběhli.
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="G">G</span><span class="c" data-chord="Ami">Ami</span><span class="c" data-chord="F">F</span><span class="c" data-chord="C">C</span><span class="c" data-chord="G">G</span><span class="c" data-chord="Ami">Ami</span><span class="c" data-chord="F">F</span><span class="c" data-chord="C">C</span></div>
 
-<pre class="yellow">
-   Dmi                    F
-R:</pre> A kdyby se někdo z vás na anděla ptal, 
-<pre class="yellow">
-       C                G              C   G  F  G</pre>
-   tak mám jizvu na rtu, když při mně stál.
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Jsem příliš starý na to abych věřil v revoluci,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>a svoji velkou hlavu těžko skryju pod kapucí.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>A nechutná mi když se </span><span class="ch"><span class="c" data-chord="F">F</span>vaří předvařená rýže,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>v náprsní kapse nosím </span><span class="ch"><span class="c" data-chord="G">G</span>Ventinol na potíže.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Jak to tak vidím asi těžko projdu uchem jehly,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>a lesem, běhám tak, a</span><span class="ch"><span class="c" data-chord="C">C</span>by mě vlci nedoběhli.</span></div>
 
-<pre class="yellow">
-C</pre>
-Sako mám od popílku, na kravatě saze,
-<pre class="yellow">
-G</pre>
-mé hrubé prsty neumí uzly na provaze.
-<pre class="yellow">
-Ami                   F</pre>
-A když mi občas tečou slzy, hned je polykám, 
-<pre class="yellow">
-C                        G</pre>
-a tančím jen tak rychle, jak hraje muzika. 
-<pre class="yellow">
-Ami</pre>
-Mé oči mnohé viděly a ruce mnohé měly, 
-<pre class="yellow">
-F                   C</pre>
-a srdce stydělo se, když salvy slávy zněly. 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>A kdyby se někdo z vás </span><span class="ch"><span class="c" data-chord="F">F</span>na anděla ptal,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   tak </span><span class="ch"><span class="c" data-chord="C">C</span>mám jizvu na rtu,</span><span class="ch"><span class="c" data-chord="G">G</span> když při mně s</span><span class="ch"><span class="c" data-chord="C">C</span>tál.</span><span class="ch"><span class="c" data-chord="G">G</span>   </span><span class="ch"><span class="c" data-chord="F">F</span>   </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
 
-<pre class="yellow">
-R:</pre>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Sako mám od popílku, na kravatě saze,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>mé hrubé prsty neumí uzly na provaze.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>A když mi občas tečou </span><span class="ch"><span class="c" data-chord="F">F</span>slzy, hned je polykám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>a tančím jen tak rychle, </span><span class="ch"><span class="c" data-chord="G">G</span>jak hraje muzika.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Mé oči mnohé viděly a ruce mnohé měly,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>a srdce stydělo se, </span><span class="ch"><span class="c" data-chord="C">C</span>když salvy slávy zněly.</span></div>
 
-Mluvil jsem s prezidenty, potkal jsem vrahy,
-nahý jsem na svět přišel a odejdu nahý. 
-V patnácti viděl jsem jak kolem jely ruské tanky,   
-a v padesáti nechával si věštit od cikánky. 
-A dříve, než mě příjme svatý Petr u komise, 
-básníkům české země chtěl bych uklonit se.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R:</span></div>
 
-<pre class="yellow">
-R:</pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Mluvil jsem s prezidenty, potkal jsem vrahy,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nahý jsem na svět přišel a odejdu nahý.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>V patnácti viděl jsem jak kolem jely ruské tanky,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a v padesáti nechával si věštit od cikánky.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>A dříve, než mě příjme svatý Petr u komise,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>básníkům české země chtěl bych uklonit se.</span></div>
 
-V Paříži četl jsem si ruskou verzi l'Humanité,   
-a z bible zatím pochopil jen věty nerozvité.
-V New Yorku chyt jsem koutek od plastových lžiček, ale 
-nejlepší káva je v Hypernově U Rybiček.
-Trumfové eso v mariáši hážu do talónu, 
-a chtěl bych vidět Baník, jak poráží Barcelonu.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R:</span></div>
 
-<pre class="yellow">
-R: </pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>V Paříži četl jsem si ruskou verzi l&#x27;Humanité,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a z bible zatím pochopil jen věty nerozvité.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>V New Yorku chyt jsem koutek od plastových lžiček, ale</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nejlepší káva je v Hypernově U Rybiček.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Trumfové eso v mariáši hážu do talónu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a chtěl bych vidět Baník, jak poráží Barcelonu.</span></div>
 
-Někteří lidi mají fakt divné chutě, ale 
-já lásko má stále stejně miluju Tě. 
-Když hážeš bílé křemenáče na cibulku,
-když zvedáš prst jako dirigentskou hůlku.
-A i když mě to táhne tam a tebe občas jinam, 
-na špatné věci pro ty dobré zapomínám.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R:</span></div>
 
-<pre class="yellow">
-Dmi                    F
-R:</pre> A kdyby se někdo z vás na anděla ptal, 
-<pre class="yellow">
-   C                G              C   G  F  G</pre>
-tak mám jizvu na rtu, když při mně stál,
-<pre class="yellow">
-G            C   G  F  G</pre> 
-když při mě stál,
-<pre class="yellow">
-          C</pre>
-on při mě stál.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Někteří lidi mají fakt divné chutě, ale</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>já lásko má stále stejně miluju Tě.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Když hážeš bílé křemenáče na cibulku,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>když zvedáš prst jako dirigentskou hůlku.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>A i když mě to táhne tam a tebe občas jinam,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>na špatné věci pro ty dobré zapomínám.</span></div>
 
-
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>R: A kdyby se někdo z v</span><span class="ch"><span class="c" data-chord="F">F</span>ás na anděla ptal,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tak</span><span class="ch"><span class="c" data-chord="C">C</span> mám jizvu na rtu</span><span class="ch"><span class="c" data-chord="G">G</span>, když při mně </span><span class="ch"><span class="c" data-chord="C">C</span>stál</span><span class="ch"><span class="c" data-chord="G">G</span>,  </span><span class="ch"><span class="c" data-chord="F">F</span>   </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>když při mě s</span><span class="ch"><span class="c" data-chord="C">C</span>tál,</span><span class="ch"><span class="c" data-chord="G">G</span>   </span><span class="ch"><span class="c" data-chord="F">F</span>   </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>on při mě </span><span class="ch"><span class="c" data-chord="C">C</span>stál.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

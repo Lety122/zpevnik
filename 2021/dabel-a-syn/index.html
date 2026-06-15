@@ -2,215 +2,153 @@
 <html lang="cs">
   <head>
     <title>Ďábel a syn</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Ďábel a <span class="yellow">syn</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Kabát</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-Dmi                 C</pre>
-Sedím a koukám jak zvrácenej podzim 
-<pre class="yellow">
-Ami               G</pre>
-stromům svlíká jejich šat,
-<pre class="yellow">
-Dmi                 C</pre>
-poslouchám ptáky a jenom tak kouřím,
-<pre class="yellow">
-Ami                  G</pre>
-malinko chce se mi spát.
-<pre class="yellow">
-Dmi               C</pre>
-Padá mi hlava, pak cejtím jak někdo 
-<pre class="yellow">
-Ami                 G</pre>
-lehce mě za ruku vzal.
-<pre class="yellow">
-Dmi                 C</pre>
-Blázen či voják jak maškara divná 
-<pre class="yellow">
-   Ami             Dmi</pre>
-tam stál, já pozval ho dál.
+    <h1>Ďábel a syn</h1>
+    <p class="artist">Kabát</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-Dmi                  C</pre>
-Měl špinavej kabát a v ruce flétnu,
-<pre class="yellow">
-Ami                   G</pre>
-oči, jak z mrtvejch by vstal.
-<pre class="yellow">
-Dmi                 C</pre>
-Na botách bahno snad celýho světa,
-<pre class="yellow">
-Ami                G</pre>
-tuhle tu píseň mi hrál,
-<pre class="yellow">
-Dmi               C</pre>
-tu píseň co zpívám a vůbec vám nevim,
-<pre class="yellow">
-Ami                 G</pre>
-kde na ní akordy vzal.
-<pre class="yellow">
-Dmi                  C</pre>
-Jak sem tam seděl a koukal a kouřil,
-<pre class="yellow">
-   Ami             Dmi</pre>
-to já teprv ji psal.
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Sedím a koukám jak z</span><span class="ch"><span class="c" data-chord="C">C</span>vrácenej podzim</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>stromům svlíká jej</span><span class="ch"><span class="c" data-chord="G">G</span>ich šat,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>poslouchám ptáky a j</span><span class="ch"><span class="c" data-chord="C">C</span>enom tak kouřím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>malinko chce se mi sp</span><span class="ch"><span class="c" data-chord="G">G</span>át.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Padá mi hlava, pak</span><span class="ch"><span class="c" data-chord="C">C</span> cejtím jak někdo</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>lehce mě za ruku vza</span><span class="ch"><span class="c" data-chord="G">G</span>l.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Blázen či voják jak </span><span class="ch"><span class="c" data-chord="C">C</span>maškara divná</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tam</span><span class="ch"><span class="c" data-chord="Ami">Ami</span> stál, já pozval</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span> ho dál.</span></div>
 
-<pre class="yellow">
-Dmi                C</pre>
-Povídá: "Hochu, vracím se z flámu,
-<pre class="yellow">
-Ami                   G</pre>
-hráli jsme karty se zdá,
-<pre class="yellow">
-Dmi               C</pre>
-partii pokra o budoucí vládu,
-<pre class="yellow">
-Ami                 G</pre>
-dík Bohu vyhrál jsem já!
-<pre class="yellow">
-Dmi                  C</pre>
-Já měl z pekla štěstí a nebo pár trumfů
-<pre class="yellow">
-Ami                   G</pre>
-v rukávu, podvod – já vim.
-<pre class="yellow">
-Dmi                 C</pre>
-Chcete mě soudit, tak dejte mě na kříž,
-<pre class="yellow">
-     Ami             Dmi</pre>
-jsem váš - Ďábel a syn."
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Měl špinavej kabát a </span><span class="ch"><span class="c" data-chord="C">C</span>v ruce flétnu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>oči, jak z mrtvejch by</span><span class="ch"><span class="c" data-chord="G">G</span> vstal.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Na botách bahno snad</span><span class="ch"><span class="c" data-chord="C">C</span> celýho světa,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>tuhle tu píseň mi h</span><span class="ch"><span class="c" data-chord="G">G</span>rál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>tu píseň co zpívám</span><span class="ch"><span class="c" data-chord="C">C</span> a vůbec vám nevim,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>kde na ní akordy vza</span><span class="ch"><span class="c" data-chord="G">G</span>l.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Jak sem tam seděl a k</span><span class="ch"><span class="c" data-chord="C">C</span>oukal a kouřil,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>to </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>já teprv ji psal</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>.</span></div>
 
-<pre class="yellow">
-Dmi                  C</pre>
-Pak pomalu mluvil a ničil mě silou,
-<pre class="yellow">
-Ami                 G</pre>
-co od věků v sobě už má.
-<pre class="yellow">
-Dmi                  C</pre>
-Drtil mě pravdou a pouštěl mi žilou
-<pre class="yellow">
-  Ami                  G</pre>
-a na závěr jen povídá:
-<pre class="yellow">
-Dmi                   C</pre>
-"Bůh stvořil lásku a žal taky bolest
-<pre class="yellow">
-Ami                 G</pre>
-a já jenom ubohej chtíč,
-<pre class="yellow">
-Dmi                  C</pre>
-fandim vám lidem, nevim proč nemáš mě rád."
-<pre class="yellow">
-   Ami               Dmi</pre>
-Já poslal ho pryč.
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Povídá: &quot;Hochu, vra</span><span class="ch"><span class="c" data-chord="C">C</span>cím se z flámu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>hráli jsme karty se zd</span><span class="ch"><span class="c" data-chord="G">G</span>á,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>partii pokra o bud</span><span class="ch"><span class="c" data-chord="C">C</span>oucí vládu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>dík Bohu vyhrál jsem</span><span class="ch"><span class="c" data-chord="G">G</span> já!</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Já měl z pekla štěstí</span><span class="ch"><span class="c" data-chord="C">C</span> a nebo pár trumfů</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>v rukávu, podvod – já </span><span class="ch"><span class="c" data-chord="G">G</span>vim.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Chcete mě soudit, ta</span><span class="ch"><span class="c" data-chord="C">C</span>k dejte mě na kříž,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jsem </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>váš - Ďábel a sy</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>n.&quot;</span></div>
 
-<pre class="yellow">
-Dmi                 C</pre>
-Sedím a koukám, jak zvrácenej podzim
-<pre class="yellow">
-Ami               G</pre>
-stromům svlíká jejich šat,
-<pre class="yellow">
-Dmi                 C</pre>
-přemejšlim o tom, co s náma bude
-<pre class="yellow">
-  Ami                  G</pre>
-a malinko chce se mi spát.
-<pre class="yellow">
-Dmi               C</pre>
-Padá mi hlava, pak cejtim jak někdo
-<pre class="yellow">
-Ami                 G</pre>
-lehce mě za ruku vzal.
-<pre class="yellow">
-Dmi                 C</pre>
-Blázen či voják, jak maškara divná
-<pre class="yellow">
-    Ami                Dmi</pre>
-tam stál, tak pozvem ho dál.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Pak pomalu mluvil a n</span><span class="ch"><span class="c" data-chord="C">C</span>ičil mě silou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>co od věků v sobě už</span><span class="ch"><span class="c" data-chord="G">G</span> má.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Drtil mě pravdou a po</span><span class="ch"><span class="c" data-chord="C">C</span>uštěl mi žilou</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>na závěr jen povídá: </span><span class="ch"><span class="c" data-chord="G">G</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>&quot;Bůh stvořil lásku a ž</span><span class="ch"><span class="c" data-chord="C">C</span>al taky bolest</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>a já jenom ubohej ch</span><span class="ch"><span class="c" data-chord="G">G</span>tíč,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>fandim vám lidem, nev</span><span class="ch"><span class="c" data-chord="C">C</span>im proč nemáš mě rád.&quot;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Já </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>poslal ho pryč.   </span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span></span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Sedím a koukám, jak </span><span class="ch"><span class="c" data-chord="C">C</span>zvrácenej podzim</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>stromům svlíká jej</span><span class="ch"><span class="c" data-chord="G">G</span>ich šat,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>přemejšlim o tom, co</span><span class="ch"><span class="c" data-chord="C">C</span> s náma bude</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>malinko chce se mi sp</span><span class="ch"><span class="c" data-chord="G">G</span>át.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Padá mi hlava, pak</span><span class="ch"><span class="c" data-chord="C">C</span> cejtim jak někdo</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>lehce mě za ruku vza</span><span class="ch"><span class="c" data-chord="G">G</span>l.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>Blázen či voják, jak</span><span class="ch"><span class="c" data-chord="C">C</span> maškara divná</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tam </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>stál, tak pozvem ho</span><span class="ch"><span class="c" data-chord="Dmi">Dmi</span> dál.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

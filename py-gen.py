@@ -1,35 +1,41 @@
 import os
 import re
+import glob
 import json
+import chordpro
 
-# Aktualizuje seznam písní v index.html, urlsToCache v sw.js
-# a zvedne verzi cache (CACHE_NAME), aby si klienti stáhli nový obsah.
-# Stačí přidat složku s písničkou a spustit: python3 py-gen.py
+# Vyrenderuje každou píseň ze song.pro do index.html, aktualizuje seznam písní
+# v index.html a urlsToCache v sw.js a zvedne verzi cache (CACHE_NAME).
+# Přidání/úprava písně: edituj song.pro a spusť: python3 py-gen.py
 
 BASE_PATH = '/'
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+def song_pros():
+    return sorted(glob.glob(os.path.join(ROOT, '[0-9][0-9][0-9][0-9]', '*', 'song.pro')))
+
+
+def render_all_songs():
+    n = 0
+    for pro in song_pros():
+        doc = chordpro.parse_pro(open(pro, encoding='utf-8').read())
+        out = os.path.join(os.path.dirname(pro), 'index.html')
+        with open(out, 'w', encoding='utf-8') as f:
+            f.write(chordpro.render_page(doc))
+        n += 1
+    print(f'rendered {n} songs')
+
+
 def collect_songs():
     songs = []
-    title_pattern = re.compile(r'<title>(.*?)</title>', re.IGNORECASE | re.DOTALL)
-
-    for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if not d.startswith('.')]
-        if 'index.html' not in filenames:
+    for pro in song_pros():
+        doc = chordpro.parse_pro(open(pro, encoding='utf-8').read())
+        rel = os.path.relpath(os.path.join(os.path.dirname(pro), 'index.html'), ROOT).replace('\\', '/')
+        if not doc['title']:
+            print(f'VAROVÁNÍ: {rel} nemá {{title}}, přeskakuji')
             continue
-        filepath = os.path.join(dirpath, 'index.html')
-        rel_path = os.path.relpath(filepath, ROOT).replace('\\', '/')
-        if rel_path == 'index.html':
-            continue
-
-        with open(filepath, encoding='utf-8') as f:
-            match = title_pattern.search(f.read())
-        if not match:
-            print(f'VAROVÁNÍ: {rel_path} nemá <title>, přeskakuji')
-            continue
-        songs.append({'title': match.group(1).strip(), 'path': rel_path})
-
+        songs.append({'title': doc['title'], 'path': rel})
     songs.sort(key=lambda s: s['title'].lower())
     return songs
 
@@ -79,6 +85,7 @@ def update_sw(songs):
 
 
 if __name__ == '__main__':
+    render_all_songs()
     songs = collect_songs()
     update_index(songs)
     update_sw(songs)

@@ -2,186 +2,146 @@
 <html lang="cs">
   <head>
     <title>Král a klaun</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Král a <span class="yellow">klaun</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Karel Kryl</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-C F C F C F G
+    <h1>Král a klaun</h1>
+    <p class="artist">Karel Kryl</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-    G    F       C  F C  F      C    F C
-R1:</pre> Král do boje táh, do veliké dálky,
-<pre class="yellow">
-      F           C     G7           C</pre>
-    a s ním do té války jel na mezku klaun.
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="C">C</span><span class="c" data-chord="F">F</span><span class="c" data-chord="G">G</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R1: </span><span class="ch"><span class="c" data-chord="G">G</span>Král </span><span class="ch"><span class="c" data-chord="F">F</span>do boje </span><span class="ch"><span class="c" data-chord="C">C</span>táh</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>do </span><span class="ch"><span class="c" data-chord="F">F</span>veliké </span><span class="ch"><span class="c" data-chord="C">C</span>dálky</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    a </span><span class="ch"><span class="c" data-chord="F">F</span>s ním do té </span><span class="ch"><span class="c" data-chord="C">C</span>války </span><span class="ch"><span class="c" data-chord="G7">G7</span>jel na mezku </span><span class="ch"><span class="c" data-chord="C">C</span>klaun.</span></div>
 
-<pre class="yellow">
-G   F        C   F C   F        C    F C</pre>
-Než hledí si stáh, tak z výrazu tváře,
-<pre class="yellow">
-F            C      G7         C</pre>
-bys nepoznal lháře, co zakrývá strach.
-<pre class="yellow">
-G7                       C</pre>
-Tiše šeptal při té hrůze:"Inter arma silent musae,"
-<pre class="yellow">
-D                       G7 F#7 G7</pre>
-místo zvonku cinkal brněním.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Než </span><span class="ch"><span class="c" data-chord="F">F</span>hledí si </span><span class="ch"><span class="c" data-chord="C">C</span>stáh</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>tak </span><span class="ch"><span class="c" data-chord="F">F</span>z výrazu </span><span class="ch"><span class="c" data-chord="C">C</span>tváře</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>bys nepoznal </span><span class="ch"><span class="c" data-chord="C">C</span>lháře, </span><span class="ch"><span class="c" data-chord="G7">G7</span>co zakrývá </span><span class="ch"><span class="c" data-chord="C">C</span>strach.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G7">G7</span>Tiše šeptal při té hrůze:</span><span class="ch"><span class="c" data-chord="C">C</span>&quot;Inter arma silent musae,&quot;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>místo zvonku cinkal brně</span><span class="ch"><span class="c" data-chord="G7">G7</span>ním</span><span class="ch"><span class="c" data-chord="F#7">F#7</span>.   </span><span class="ch"><span class="c" data-chord="G7">G7</span></span></div>
 
-<pre class="yellow">
-R1:
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R1:</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R2. </span><span class="ch"><span class="c" data-chord="G">G</span>Král </span><span class="ch"><span class="c" data-chord="F">F</span>do boje </span><span class="ch"><span class="c" data-chord="C">C</span>táh</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>a </span><span class="ch"><span class="c" data-chord="F">F</span>sotva se </span><span class="ch"><span class="c" data-chord="C">C</span>vzdálil</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    tak </span><span class="ch"><span class="c" data-chord="F">F</span>vesnice </span><span class="ch"><span class="c" data-chord="C">C</span>pálil </span><span class="ch"><span class="c" data-chord="G7">G7</span>a dobýval </span><span class="ch"><span class="c" data-chord="C">C</span>měst.</span></div>
 
-    G    F       C  F C F        C      F C
-R2.</pre> Král do boje táh, a sotva se vzdálil,
-<pre class="yellow">
-        F       C     G7        C</pre>
-    tak vesnice pálil a dobýval měst.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Klaun </span><span class="ch"><span class="c" data-chord="F">F</span>v očích měl </span><span class="ch"><span class="c" data-chord="C">C</span>hněv</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>když </span><span class="ch"><span class="c" data-chord="F">F</span>sledoval </span><span class="ch"><span class="c" data-chord="C">C</span>žháře</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>jak smývali v </span><span class="ch"><span class="c" data-chord="C">C</span>páře </span><span class="ch"><span class="c" data-chord="G7">G7</span>prach z rukou a </span><span class="ch"><span class="c" data-chord="C">C</span>krev.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G7">G7</span>Tiše šeptal při té hrůze:&quot;</span><span class="ch"><span class="c" data-chord="C">C</span>Inter arma silent musae,&quot;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>místo loutny držel v ruce </span><span class="ch"><span class="c" data-chord="G7">G7</span>meč</span><span class="ch"><span class="c" data-chord="F#7">F#7</span>.   </span><span class="ch"><span class="c" data-chord="G7">G7</span></span></div>
 
-<pre class="yellow">
-G     F           C   F C    F        C    F C</pre>
-Klaun v očích měl hněv, když sledoval žháře,
-<pre class="yellow">
-F             C    G7              C</pre>
-jak smývali v páře prach z rukou a krev.
-<pre class="yellow">
-G7                        C</pre>
-Tiše šeptal při té hrůze:"Inter arma silent musae,"
-<pre class="yellow">
-D                         G7 F#7 G7</pre>
-místo loutny držel v ruce meč.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R2:</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R3. </span><span class="ch"><span class="c" data-chord="G">G</span>Král </span><span class="ch"><span class="c" data-chord="F">F</span>do boje </span><span class="ch"><span class="c" data-chord="C">C</span>táh</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>s </span><span class="ch"><span class="c" data-chord="F">F</span>tou vraždící </span><span class="ch"><span class="c" data-chord="C">C</span>lůzou</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    klaun </span><span class="ch"><span class="c" data-chord="F">F</span>třásl se </span><span class="ch"><span class="c" data-chord="C">C</span>hrůzou </span><span class="ch"><span class="c" data-chord="G7">G7</span>a odvetu </span><span class="ch"><span class="c" data-chord="C">C</span>kul.</span></div>
 
-<pre class="yellow">
-R2:
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Když </span><span class="ch"><span class="c" data-chord="F">F</span>v noci byl </span><span class="ch"><span class="c" data-chord="C">C</span>klid</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>tak </span><span class="ch"><span class="c" data-chord="F">F</span>oklamal </span><span class="ch"><span class="c" data-chord="C">C</span>stráže</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a </span><span class="ch"><span class="c" data-chord="F">F</span>nemaje páže, </span><span class="ch"><span class="c" data-chord="C">C</span>sám </span><span class="ch"><span class="c" data-chord="G7">G7</span>burcoval </span><span class="ch"><span class="c" data-chord="C">C</span>lid.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G7">G7</span>Všude křičel do té hrůzy, </span><span class="ch"><span class="c" data-chord="C">C</span>ve válce že mlčí Múzy,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>muži by však mlčet </span><span class="ch"><span class="c" data-chord="G7">G7</span>neměli.</span><span class="ch"><span class="c" data-chord="F#7">F#7</span>    </span><span class="ch"><span class="c" data-chord="G7">G7</span></span></div>
 
-    G    F       C  F C F            C    F C
-R3.</pre> Král do boje táh, s tou vraždící lůzou,
-<pre class="yellow">
-          F        C      G7       C</pre>
-    klaun třásl se hrůzou a odvetu kul.
-
-<pre class="yellow">
-G    F          C   F C   F       C     F C</pre>
-Když v noci byl klid, tak oklamal stráže,
-<pre class="yellow">
-  F            C   G7       C</pre>
-a nemaje páže, sám burcoval lid.
-<pre class="yellow">
-G7                        C</pre>
-Všude křičel do té hrůzy, ve válce že mlčí Múzy,
-<pre class="yellow">
-D                  G7     F#7 G7</pre>
-muži by však mlčet neměli.
-
-<pre class="yellow">
-R3:
-
-    G    F       C  F C F            C        F C
-4.</pre>  Král do boje táh, a v červáncích vlídných,
-<pre class="yellow">
-          F       C           G7            C</pre>
-    zřel, na čele bídných jak vstříc jde mu klaun.
-<pre class="yellow">
-    G    F         C     F C   F      C      F C</pre>
-    Když západ pak vzplál, tok potoků temněl,
-<pre class="yellow">
-          F            C   G7      C</pre>
-    klaun tušení neměl jak zahynul král.
-<pre class="yellow">
-    G7                          C</pre>
-    Kdekdo křičel při té hrůze:"Inter arma silent musae,"
-<pre class="yellow">
-    D                           G7    F#7 G7</pre>
-    krále z toho strachu trefil šlak.
-<pre class="yellow">
-    G     F       C  F C F        C     F C</pre>
-    Klaun tiše se smál a zem žila dále,
-<pre class="yellow">
-    F               C        G7     C</pre>
-    a neměla krále, klaun na loutnu hrál,
-<pre class="yellow">
-    C        G7     C     C        G7     C</pre>
-    klaun na loutnu hrál, klaun na loutnu hrál …
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R3:</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>4.  </span><span class="ch"><span class="c" data-chord="G">G</span>Král </span><span class="ch"><span class="c" data-chord="F">F</span>do boje </span><span class="ch"><span class="c" data-chord="C">C</span>táh</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>a </span><span class="ch"><span class="c" data-chord="F">F</span>v červáncích </span><span class="ch"><span class="c" data-chord="C">C</span>vlídných,</span><span class="ch"><span class="c" data-chord="F">F</span>  </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    zřel, </span><span class="ch"><span class="c" data-chord="F">F</span>na čele </span><span class="ch"><span class="c" data-chord="C">C</span>bídných jak </span><span class="ch"><span class="c" data-chord="G7">G7</span>vstříc jde mu </span><span class="ch"><span class="c" data-chord="C">C</span>klaun.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="G">G</span>Když </span><span class="ch"><span class="c" data-chord="F">F</span>západ pak </span><span class="ch"><span class="c" data-chord="C">C</span>vzplál</span><span class="ch"><span class="c" data-chord="F">F</span>, </span><span class="ch"><span class="c" data-chord="C">C</span>tok </span><span class="ch"><span class="c" data-chord="F">F</span>potoků </span><span class="ch"><span class="c" data-chord="C">C</span>temněl,</span><span class="ch"><span class="c" data-chord="F">F</span>  </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    klaun </span><span class="ch"><span class="c" data-chord="F">F</span>tušení neměl </span><span class="ch"><span class="c" data-chord="C">C</span>jak </span><span class="ch"><span class="c" data-chord="G7">G7</span>zahynul </span><span class="ch"><span class="c" data-chord="C">C</span>král.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="G7">G7</span>Kdekdo křičel při té hrůze:&quot;</span><span class="ch"><span class="c" data-chord="C">C</span>Inter arma silent musae,&quot;</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="D">D</span>krále z toho strachu trefil </span><span class="ch"><span class="c" data-chord="G7">G7</span>šlak. </span><span class="ch"><span class="c" data-chord="F#7">F#7</span>    </span><span class="ch"><span class="c" data-chord="G7">G7</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="G">G</span>Klaun </span><span class="ch"><span class="c" data-chord="F">F</span>tiše se </span><span class="ch"><span class="c" data-chord="C">C</span>smá</span><span class="ch"><span class="c" data-chord="F">F</span>l </span><span class="ch"><span class="c" data-chord="C">C</span>a </span><span class="ch"><span class="c" data-chord="F">F</span>zem žila </span><span class="ch"><span class="c" data-chord="C">C</span>dále, </span><span class="ch"><span class="c" data-chord="F">F</span>  </span><span class="ch"><span class="c" data-chord="C">C</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="F">F</span>a neměla krále, </span><span class="ch"><span class="c" data-chord="C">C</span>klaun na </span><span class="ch"><span class="c" data-chord="G7">G7</span>loutnu </span><span class="ch"><span class="c" data-chord="C">C</span>hrál,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>    </span><span class="ch"><span class="c" data-chord="C">C</span>klaun na </span><span class="ch"><span class="c" data-chord="G7">G7</span>loutnu </span><span class="ch"><span class="c" data-chord="C">C</span>hrál, </span><span class="ch"><span class="c" data-chord="C">C</span>klaun na </span><span class="ch"><span class="c" data-chord="G7">G7</span>loutnu </span><span class="ch"><span class="c" data-chord="C">C</span>hrál …</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

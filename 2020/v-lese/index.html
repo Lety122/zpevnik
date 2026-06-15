@@ -2,142 +2,148 @@
 <html lang="cs">
   <head>
     <title>V lese</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b>V <pre style="font-size: 30px;" class="yellow">lese</pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Pokáč</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-F              C        G           Ami</pre>
-dneska všichni říkají a všude píše se,
-že prej je moderní a zdravý, jen tak chodit po lese
-a já bych řek že na tom kruci asi něco musí bejt,
-když o tom zpívá na svým albu už i Justin Timberlake.
+    <h1>V lese</h1>
+    <p class="artist">Pokáč</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-já do přírody od přírody vůbec nechodím,
-mám však spoustu přátel hipsterů, ti mi jistě napoví,
-aha tak omlouvám se prý že tam též nikdy nebyli,
-však na cestu mi daj raw guláš a z flanelu košili.
-<pre class="yellow">
-      F                 G</pre>
-A tak šel jsem tam však byl jsem zpátky hned
-páč tam maj fakt marnej internet
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>dneska všichni </span><span class="ch"><span class="c" data-chord="C">C</span>říkají a </span><span class="ch"><span class="c" data-chord="G">G</span>všude píše s</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>e,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>že prej je moderní a zdravý, jen tak chodit po lese</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>a já bych řek že na tom kruci asi něco musí bejt,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>když o tom zpívá na svým albu už i Justin Timberlake.</span></div>
 
-<pre class="yellow">
-2x Ref: F          C        G       Ami</pre>
-Dneska jsem v lese byl a už tam nepudu,
-nikde jsem nezažil takhle ukrutnou nudu.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>já do přírody od přírody vůbec nechodím,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>mám však spoustu přátel hipsterů, ti mi jistě napoví,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>aha tak omlouvám se prý že tam též nikdy nebyli,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>však na cestu mi daj raw guláš a z flanelu košili.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>A tak </span><span class="ch"><span class="c" data-chord="F">F</span>šel jsem tam však </span><span class="ch"><span class="c" data-chord="G">G</span>byl jsem zpátky hned</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>páč tam maj fakt marnej internet</span></div>
 
-Vážně nevím co s tím lesem pořád všichni maj,
-jen jsem tam vlez hned jsem si zasvinil svý boty značky nike,
-žádnej signál žádná wifi žádný data zde nemám,
-teda data jsou tu éčko a to fakt nepočítám.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>2xDneRef:ska j</span><span class="ch"><span class="c" data-chord="F">F</span>sem v lese </span><span class="ch"><span class="c" data-chord="C">C</span>byl a už </span><span class="ch"><span class="c" data-chord="G">G</span>tam nepu</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>du,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>nikde jsem nezažil takhle ukrutnou nudu.</span></div>
 
-Světlo pro selfíčka je zde ultra zoufalý,
-řek bych že kdyby to tu vykáceli líp by uďáli,
-ať postaví tu pro mě za mě třeba další obchoďák,
-tam moh bych shopovat a právě by mě nepotřísnil pták.
-<pre class="yellow">
-      F             Ami            G</pre>
-samá houba čerstvej vzduch a samej hmyz
-do přírody fakt chodit neměl bys
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Vážně nevím co s tím lesem pořád všichni maj,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen jsem tam vlez hned jsem si zasvinil svý boty značky nike,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>žádnej signál žádná wifi žádný data zde nemám,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>teda data jsou tu éčko a to fakt nepočítám.</span></div>
 
-<pre class="yellow">
-2x ref.</pre>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Světlo pro selfíčka je zde ultra zoufalý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>řek bych že kdyby to tu vykáceli líp by uďáli,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>ať postaví tu pro mě za mě třeba další obchoďák,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>tam moh bych shopovat a právě by mě nepotřísnil pták.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>samá h</span><span class="ch"><span class="c" data-chord="F">F</span>ouba čerstvej </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>vzduch a samej </span><span class="ch"><span class="c" data-chord="G">G</span>hmyz</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>do přírody fakt chodit neměl bys</span></div>
 
-<pre class="yellow">
-F       C                G                    Ami</pre>
-oo oo ooo jak se do lesa volá tak se z něj ozývá,
-oooooo tak poslouchej mě lese já mám radši obývák,
-oooooo proč vyrážet na místa lidstvem netknutý,
-ooooooo když tam nejsou žádný zásuvky a žádný bubble tea.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>2x ref.</span></div>
 
-Dneska jsem v lese byl
-bylo to naposled
-abych maily vyřídil
-musel jsem vylízt na posed
-<pre class="yellow">
-ref.</pre>
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="F">F</span>oo oo oo</span><span class="ch"><span class="c" data-chord="C">C</span>o jak se do lesa </span><span class="ch"><span class="c" data-chord="G">G</span>volá tak se z něj ozý</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>vá,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>oooooo tak poslouchej mě lese já mám radši obývák,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>oooooo proč vyrážet na místa lidstvem netknutý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>ooooooo když tam nejsou žádný zásuvky a žádný bubble tea.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Dneska jsem v lese byl</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>bylo to naposled</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>abych maily vyřídil</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>musel jsem vylízt na posed</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>ref.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

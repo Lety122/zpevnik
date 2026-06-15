@@ -2,226 +2,162 @@
 <html lang="cs">
   <head>
     <title>Tančící polárník</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Tančící <span class="yellow">polárník</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Kašpárek v rohlíku</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-C  D  A 
-C  D  A 
-C  D  E 
+    <h1>Tančící polárník</h1>
+    <p class="artist">Kašpárek v rohlíku</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-C    D      A</pre>            
-Za kruhem polárním je hrozná kosa
-<pre class="yellow">
-C    D      A</pre>              
-Zmrznou ti uši, nudle u nosa
-<pre class="yellow">
-C    D      A       </pre>          
-A v prázdném iglú rádio hraje
-<pre class="yellow">
-C    D      A       </pre>          
-Pomalu a je tam hrnek čaje
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="D">D</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="D">D</span><span class="c" data-chord="A">A</span></div>
+<div class="chordrow"><span class="c" data-chord="C">C</span><span class="c" data-chord="D">D</span><span class="c" data-chord="E">E</span></div>
 
-<pre class="yellow">
-D                                E</pre> 
-Ale doma nikdo není a není ani u saní
-<pre class="yellow">
-E</pre>
-Někde ostré zuby cení tahací hafani
-<pre class="yellow">
-D                                E</pre> 
-Ale doma nikdo není a není ani u saní
-<pre class="yellow">
-E </pre>
-Někde ostré zuby cení tahací hafani
-<pre class="yellow">
-A       G</pre>
-Kde je? Kde je? Asi někde tancuje!
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Za kr</span><span class="ch"><span class="c" data-chord="D">D</span>uhem po</span><span class="ch"><span class="c" data-chord="A">A</span>lárním je hrozná kosa</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Zmrzn</span><span class="ch"><span class="c" data-chord="D">D</span>ou ti u</span><span class="ch"><span class="c" data-chord="A">A</span>ši, nudle u nosa</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>A v p</span><span class="ch"><span class="c" data-chord="D">D</span>rázdném</span><span class="ch"><span class="c" data-chord="A">A</span> iglú rádio hraje</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Pomal</span><span class="ch"><span class="c" data-chord="D">D</span>u a je </span><span class="ch"><span class="c" data-chord="A">A</span>tam hrnek čaje</span></div>
 
-<pre class="yellow">
-    G         A             G    A  
-R:</pre> Tančící polárník ožralý jako fík
-<pre class="yellow">
-              G    A</pre> 
-   A scvrklý taky tak
-<pre class="yellow">
-    G       Cmaj7     G             A </pre>
-   Tančící eskymák tancuje na kře ledové
-<pre class="yellow">
-          G        A</pre>  
-   Co vzdaluje se od břehu
-<pre class="yellow">
-    G     A            C         D       E</pre>
-   Na severním pólu vyčůrá svý jméno do sněhu
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Ale doma nikdo není a není ani u </span><span class="ch"><span class="c" data-chord="E">E</span>saní</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>Někde ostré zuby cení tahací hafani</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Ale doma nikdo není a není ani u </span><span class="ch"><span class="c" data-chord="E">E</span>saní</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>Někde ostré zuby cení tahací hafani</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="A">A</span>Kde je? </span><span class="ch"><span class="c" data-chord="G">G</span>Kde je? Asi někde tancuje!</span></div>
 
-<pre class="yellow">
-C    D      A       </pre>          
-Půl roku seděl a z iglú hleděl
-<pre class="yellow">
-C    D      A       </pre>          
-Noc tady trvá dvacet pět neděl
-<pre class="yellow">
-C    D      A       </pre>          
-Drsný je klima, tuhá je zima
-<pre class="yellow">
-C    D      A       </pre>          
-V ledu si pere, kladivem ždímá 
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: T</span><span class="ch"><span class="c" data-chord="G">G</span>ančící pol</span><span class="ch"><span class="c" data-chord="A">A</span>árník ožralý j</span><span class="ch"><span class="c" data-chord="G">G</span>ako f</span><span class="ch"><span class="c" data-chord="A">A</span>ík</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   A scvrklý t</span><span class="ch"><span class="c" data-chord="G">G</span>aky t</span><span class="ch"><span class="c" data-chord="A">A</span>ak</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   T</span><span class="ch"><span class="c" data-chord="G">G</span>ančící e</span><span class="ch"><span class="c" data-chord="Cmaj7">Cmaj7</span>skymák tan</span><span class="ch"><span class="c" data-chord="G">G</span>cuje na kře le</span><span class="ch"><span class="c" data-chord="A">A</span>dové</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Co vzda</span><span class="ch"><span class="c" data-chord="G">G</span>luje se o</span><span class="ch"><span class="c" data-chord="A">A</span>d břehu</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   N</span><span class="ch"><span class="c" data-chord="G">G</span>a seve</span><span class="ch"><span class="c" data-chord="A">A</span>rním pólu vyč</span><span class="ch"><span class="c" data-chord="C">C</span>ůrá svý jm</span><span class="ch"><span class="c" data-chord="D">D</span>éno do s</span><span class="ch"><span class="c" data-chord="E">E</span>něhu</span></div>
 
-<pre class="yellow">
-D                   </pre>             
-Venku by kry byly, bouře nám burácí
-<pre class="yellow">
-E</pre>
-Ještě že mu zbyli tu ňácí tuňáci
-<pre class="yellow">
-D                   </pre>             
-Venku by kry byly, bouře nám burácí
-<pre class="yellow">
-E</pre>
-Ještě že mu zbyli tu ňácí tuňáci
-<pre class="yellow">
-A       G</pre>
-Tak jo! Tak jo! Až to skončí, začne tancovat!
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Půl r</span><span class="ch"><span class="c" data-chord="D">D</span>oku sed</span><span class="ch"><span class="c" data-chord="A">A</span>ěl a z iglú hleděl</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Noc t</span><span class="ch"><span class="c" data-chord="D">D</span>ady trv</span><span class="ch"><span class="c" data-chord="A">A</span>á dvacet pět neděl</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Drsný</span><span class="ch"><span class="c" data-chord="D">D</span> je kli</span><span class="ch"><span class="c" data-chord="A">A</span>ma, tuhá je zima</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>V led</span><span class="ch"><span class="c" data-chord="D">D</span>u si pe</span><span class="ch"><span class="c" data-chord="A">A</span>re, kladivem ždímá</span></div>
 
-<pre class="yellow">
-       G         A             G    A  
-R:</pre> Tančící polárník ožralý jako fík
-<pre class="yellow">
-              G    A</pre> 
-   A scvrklý taky tak
-<pre class="yellow">
-    G       Cmaj7     G             A </pre>
-   Tančící eskymák tancuje na kře ledové
-<pre class="yellow">
-          G        A</pre>  
-   Co vzdaluje se od břehu
-<pre class="yellow">
-    G     A            C         D       E</pre>
-   Na severním pólu vyčůrá svý jméno do sněhu
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Venku by kry byly, bouře nám burácí</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>Ještě že mu zbyli tu ňácí tuňáci</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="D">D</span>Venku by kry byly, bouře nám burácí</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="E">E</span>Ještě že mu zbyli tu ňácí tuňáci</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="A">A</span>Tak jo! </span><span class="ch"><span class="c" data-chord="G">G</span>Tak jo! Až to skončí, začne tancovat!</span></div>
 
-<pre class="yellow">
-C    D      A       </pre>          
-V uších mu znějí písně baby punkový
-<pre class="yellow">
-C    D      A       </pre>          
-Na hlavě zeje číro molitanový
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: Tanč</span><span class="ch"><span class="c" data-chord="G">G</span>ící polárn</span><span class="ch"><span class="c" data-chord="A">A</span>ík ožralý jako</span><span class="ch"><span class="c" data-chord="G">G</span> fík </span><span class="ch"><span class="c" data-chord="A">A</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   A scvrklý t</span><span class="ch"><span class="c" data-chord="G">G</span>aky t</span><span class="ch"><span class="c" data-chord="A">A</span>ak</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   T</span><span class="ch"><span class="c" data-chord="G">G</span>ančící e</span><span class="ch"><span class="c" data-chord="Cmaj7">Cmaj7</span>skymák tan</span><span class="ch"><span class="c" data-chord="G">G</span>cuje na kře le</span><span class="ch"><span class="c" data-chord="A">A</span>dové</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Co vzda</span><span class="ch"><span class="c" data-chord="G">G</span>luje se o</span><span class="ch"><span class="c" data-chord="A">A</span>d břehu</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   N</span><span class="ch"><span class="c" data-chord="G">G</span>a seve</span><span class="ch"><span class="c" data-chord="A">A</span>rním pólu vyč</span><span class="ch"><span class="c" data-chord="C">C</span>ůrá svý jm</span><span class="ch"><span class="c" data-chord="D">D</span>éno do s</span><span class="ch"><span class="c" data-chord="E">E</span>něhu</span></div>
 
-<pre class="yellow">
-C    D      A       </pre>          
-Rampuchy z kníru, pádluje mořem ledovým
-<pre class="yellow">
-C    D      A       </pre>          
-V kajaku díru jak v sýru ementálovým
-<pre class="yellow">
-C                         D</pre>
-Přistane na kře a všem to natře
-<pre class="yellow">
-Ami</pre>
-Ta-rý-ra-rýra-ry-ram-tam
-<pre class="yellow">
-C                </pre>
-Vytáhne běžky
-<pre class="yellow">
-           D                     Ami</pre>
-Až ta kra někam dorazí, zkusí to pěšky!
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>V uší</span><span class="ch"><span class="c" data-chord="D">D</span>ch mu z</span><span class="ch"><span class="c" data-chord="A">A</span>nějí písně baby punkový</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Na hl</span><span class="ch"><span class="c" data-chord="D">D</span>avě zej</span><span class="ch"><span class="c" data-chord="A">A</span>e číro molitanový</span></div>
 
-<pre class="yellow">
-       G         A             G    A  
-R:</pre> Tančící polárník ožralý jako fík
-<pre class="yellow">
-              G    A</pre> 
-   A scvrklý taky tak
-<pre class="yellow">
-    G       Cmaj7     G             A</pre> 
-   Tančící eskymák tancuje na kře ledové
-<pre class="yellow">
-          G        A</pre>  
-   Co vzdaluje se od břehu
-<pre class="yellow">
-    G     A            C         D       E</pre>
-   Na severním pólu vyčůrá svý jméno do sněhu
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Rampu</span><span class="ch"><span class="c" data-chord="D">D</span>chy z k</span><span class="ch"><span class="c" data-chord="A">A</span>níru, pádluje mořem ledovým</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>V kaj</span><span class="ch"><span class="c" data-chord="D">D</span>aku dír</span><span class="ch"><span class="c" data-chord="A">A</span>u jak v sýru ementálovým</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Přistane na kře a všem to </span><span class="ch"><span class="c" data-chord="D">D</span>natře</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Ta-rý-ra-rýra-ry-ram-tam</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Vytáhne běžky</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Až ta kra n</span><span class="ch"><span class="c" data-chord="D">D</span>ěkam dorazí, zkusí to </span><span class="ch"><span class="c" data-chord="Ami">Ami</span>pěšky!</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>R: Tanč</span><span class="ch"><span class="c" data-chord="G">G</span>ící polárn</span><span class="ch"><span class="c" data-chord="A">A</span>ík ožralý jako</span><span class="ch"><span class="c" data-chord="G">G</span> fík </span><span class="ch"><span class="c" data-chord="A">A</span></span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   A scvrklý t</span><span class="ch"><span class="c" data-chord="G">G</span>aky t</span><span class="ch"><span class="c" data-chord="A">A</span>ak</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   T</span><span class="ch"><span class="c" data-chord="G">G</span>ančící e</span><span class="ch"><span class="c" data-chord="Cmaj7">Cmaj7</span>skymák tan</span><span class="ch"><span class="c" data-chord="G">G</span>cuje na kře le</span><span class="ch"><span class="c" data-chord="A">A</span>dové</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   Co vzda</span><span class="ch"><span class="c" data-chord="G">G</span>luje se o</span><span class="ch"><span class="c" data-chord="A">A</span>d břehu</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>   N</span><span class="ch"><span class="c" data-chord="G">G</span>a seve</span><span class="ch"><span class="c" data-chord="A">A</span>rním pólu vyč</span><span class="ch"><span class="c" data-chord="C">C</span>ůrá svý jm</span><span class="ch"><span class="c" data-chord="D">D</span>éno do s</span><span class="ch"><span class="c" data-chord="E">E</span>něhu</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>

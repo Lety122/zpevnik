@@ -2,233 +2,163 @@
 <html lang="cs">
   <head>
     <title>Mám doma kočku</title>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
     <style>
-      body {
-        background-color: #1b2021;
-        font-family: 'Courier New', monospace;
-      }
-      pre {
-        color: #CFC7D2;
-        font-size: 16px;
-        display: inline;
-      }
-      h1 {
-        color: #CFC7D2;
-        margin-top: 20px;
-      }
-      .yellow {
-        color: #FEB12C;
-      }
-      .green {
-        color: #59C9A5;
-      }
-      div {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      iframe {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .15em;}
+.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>
   </head>
   <body>
-    <div>
-    <h1><b><pre style="font-size: 30px;">Mám doma <span class="yellow">kočku</span></pre></b></h1>
-    <p><b><pre class="yellow" style="font-size: 20px;">Pokáč</pre></b></p>
-    <br>
-  </div>
-<div>
-<pre>
-<pre class="yellow">
-G                             Emi</pre>
-Jednou mi drahá říká, miláčku já chci kočku,
-<pre class="yellow">
-C                            D</pre>
-já na to, že chci spíš psa a jeli jsme pro kočku.
-<pre class="yellow">
-G                         Emi</pre>
-V útulku v Měcholupech maj dobrej výběr zdá se,
-<pre class="yellow">
-C                            D</pre>
-kočky jsou zcela zdarma jen očkování za patnáct set.
+    <h1>Mám doma kočku</h1>
+    <p class="artist">Pokáč</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontReset" title="Výchozí velikost">A</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
 
-<pre class="yellow">
-G                        Emi</pre>
-Po dlouhým vybírání, diskuzích a dvou hádkách,
-<pre class="yellow">
-C                           D</pre>
-jedno z koťátek jemně sevře můj prst ve svých drápkách.
-<pre class="yellow">
-G                      Emi</pre>
-A volba byla jasná, má drahá slzy suší,
-<pre class="yellow">
-C                              D</pre>
-co si však vezem domů, to ani jeden z nás netuší.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Jednou mi drahá říká, miláčku </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>já chci kočku,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>já na to, že chci spíš psa a </span><span class="ch"><span class="c" data-chord="D">D</span>jeli jsme pro kočku.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>V útulku v Měcholupech maj</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> dobrej výběr zdá se,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>kočky jsou zcela zdarma jen o</span><span class="ch"><span class="c" data-chord="D">D</span>čkování za patnáct set.</span></div>
 
-<pre class="yellow">
-         G                     Emi</pre>
-Ref: Mám doma kočku mám ji rád, je to skvělý kamarád,
-<pre class="yellow">
-    C                        D</pre>
-jen od tý doby co ji znám, mám ruce nohy samej šrám.
-<pre class="yellow">
-G                       Emi</pre>
-Dávno už se nemazlí, žít s ní je pro zdraví fakt zlý,
-<pre class="yellow">
-C                           D                     G</pre>
-každý den projdu terorem, mám nejspíš kočku s errorem.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Po dlouhým vybírání, disk</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>uzích a dvou hádkách,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>jedno z koťátek jemně sevře </span><span class="ch"><span class="c" data-chord="D">D</span>můj prst ve svých drápkách.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>A volba byla jasná, má </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>drahá slzy suší,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>co si však vezem domů, to ani j</span><span class="ch"><span class="c" data-chord="D">D</span>eden z nás netuší.</span></div>
 
-<pre class="yellow">
-G                           Emi</pre>
-Prvních pár dnů soužití, vše vypadá nevinně,
-<pre class="yellow">
-C                         D</pre>
-koťátko v náručí spí a pak zkadí půlku kuchyně.
-<pre class="yellow">
-G                         Emi</pre>
-Prostě nic co nečekáš, když útulek zaručí,
-<pre class="yellow">
-C                             D</pre>
-že kočička se po pár týdnech na záchůdek naučí.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: Mám </span><span class="ch"><span class="c" data-chord="G">G</span>doma kočku mám ji rád,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> je to skvělý kamarád,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen </span><span class="ch"><span class="c" data-chord="C">C</span>od tý doby co ji znám, má</span><span class="ch"><span class="c" data-chord="D">D</span>m ruce nohy samej šrám.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Dávno už se nemazlí, žít</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> s ní je pro zdraví fakt zlý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>každý den projdu terorem, má</span><span class="ch"><span class="c" data-chord="D">D</span>m nejspíš kočku s erro</span><span class="ch"><span class="c" data-chord="G">G</span>rem.</span></div>
 
-<pre class="yellow">
-G                           Emi</pre>
-Jenže pár měsíců je pryč, záchod zeje prázdnotou,
-<pre class="yellow">
-C                            D</pre>
-Bytem čpí příšernej smrad, za kočkou lítám s lopatou.
-<pre class="yellow">
-G                           Emi</pre>
-Když jí zkusím pomoct sám, na záchod ji přemístit,
-<pre class="yellow">
-C                           D</pre>
-zvládne mi dlaně rozdrásat a ještě potřísnit.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Prvních pár dnů soužití, vše</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> vypadá nevinně,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>koťátko v náručí spí a pak</span><span class="ch"><span class="c" data-chord="D">D</span> zkadí půlku kuchyně.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Prostě nic co nečekáš, kdy</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>ž útulek zaručí,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>že kočička se po pár týdnech n</span><span class="ch"><span class="c" data-chord="D">D</span>a záchůdek naučí.</span></div>
 
-<pre class="yellow">
-         G                     Emi</pre>
-Ref: Mám doma kočku mám ji rád, je to skvělý kamarád,
-<pre class="yellow">
-    C                        D</pre>
-jen od tý doby co ji znám, mám ruce nohy samej šrám.
-<pre class="yellow">
-G                       Emi</pre>
-Dávno už se nemazlí, žít s ní je pro zdraví fakt zlý,
-<pre class="yellow">
-C                           D                     G</pre>
-každý den projdu terorem, mám nejspíš kočku s errorem.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Jenže pár měsíců je pryč, zá</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>chod zeje prázdnotou,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Bytem čpí příšernej smrad, za</span><span class="ch"><span class="c" data-chord="D">D</span> kočkou lítám s lopatou.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Když jí zkusím pomoct sám, n</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>a záchod ji přemístit,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>zvládne mi dlaně rozdrásat a</span><span class="ch"><span class="c" data-chord="D">D</span> ještě potřísnit.</span></div>
 
-<pre class="yellow">
-G                         Emi</pre>
-Za noc nejmíň pětkrát, jí okno otevřít jdu,
-<pre class="yellow">
-C                             D</pre>
-pak v práci šéf se zeptá, proč vždy tak ospalý přijdu.
-<pre class="yellow">
-G                        Emi</pre>
-Že občas hrdě nám dvoum donese zakouslou myš,
-<pre class="yellow">
-C                           D</pre>
-poznáš až ráno když se s torzem myši v ústech vzbouzíš.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: Mám </span><span class="ch"><span class="c" data-chord="G">G</span>doma kočku mám ji rád,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> je to skvělý kamarád,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen </span><span class="ch"><span class="c" data-chord="C">C</span>od tý doby co ji znám, má</span><span class="ch"><span class="c" data-chord="D">D</span>m ruce nohy samej šrám.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Dávno už se nemazlí, žít</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> s ní je pro zdraví fakt zlý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>každý den projdu terorem, má</span><span class="ch"><span class="c" data-chord="D">D</span>m nejspíš kočku s erro</span><span class="ch"><span class="c" data-chord="G">G</span>rem.</span></div>
 
-<pre class="yellow">
-G                            Emi</pre>
-Tak jsme si dobrovolně pořídili katastrofu,
-<pre class="yellow">
-C                          D</pre>
-stálo nás to 15 stovek a jednu z brusu novou sofu.
-<pre class="yellow">
-G                        Emi</pre>
-Kouše, škrábe, drásá, no prostě je to krása,
-<pre class="yellow">
-C                               D</pre>
-tváří se tak roztomile, zvlášť když se mi rejpe v žíle.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Za noc nejmíň pětkrát, jí </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>okno otevřít jdu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>pak v práci šéf se zeptá, proč</span><span class="ch"><span class="c" data-chord="D">D</span> vždy tak ospalý přijdu.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Že občas hrdě nám dvoum d</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>onese zakouslou myš,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>poznáš až ráno když se s tor</span><span class="ch"><span class="c" data-chord="D">D</span>zem myši v ústech vzbouzíš.</span></div>
 
-<pre class="yellow">
-         G                     Emi</pre>
-Ref: Mám doma kočku mám ji rád, je to skvělý kamarád,
-<pre class="yellow">
-    C                        D</pre>
-jen od tý doby co ji znám, mám ruce nohy samej šrám.
-<pre class="yellow">
-G                       Emi</pre>
-Dávno už se nemazlí, žít s ní je pro zdraví fakt zlý,
-<pre class="yellow">
-C                           D                     G</pre>
-každý den projdu terorem, mám nejspíš kočku s errorem.
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Tak jsme si dobrovolně pořídi</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>li katastrofu,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>stálo nás to 15 stovek a je</span><span class="ch"><span class="c" data-chord="D">D</span>dnu z brusu novou sofu.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Kouše, škrábe, drásá, no </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>prostě je to krása,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>tváří se tak roztomile, zvlášť k</span><span class="ch"><span class="c" data-chord="D">D</span>dyž se mi rejpe v žíle.</span></div>
 
-<pre class="yellow">
-G                        Emi</pre>
-Ráda dlouze sedá v okně anebo ve dveřích,
-<pre class="yellow">
-C                              D</pre>
-Bůh ví, proč nejradši v zimě, když venku padá sníh.
-<pre class="yellow">
-G                          Emi</pre>
-Když pak v bytě máme mínus dvacet tak nás zahřívá,
-<pre class="yellow">
-C                           D</pre>
-aspoň pocit, že v tu chvíli naší krev neolízá.
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: Mám </span><span class="ch"><span class="c" data-chord="G">G</span>doma kočku mám ji rád,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> je to skvělý kamarád,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen </span><span class="ch"><span class="c" data-chord="C">C</span>od tý doby co ji znám, má</span><span class="ch"><span class="c" data-chord="D">D</span>m ruce nohy samej šrám.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Dávno už se nemazlí, žít</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> s ní je pro zdraví fakt zlý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>každý den projdu terorem, má</span><span class="ch"><span class="c" data-chord="D">D</span>m nejspíš kočku s erro</span><span class="ch"><span class="c" data-chord="G">G</span>rem.</span></div>
 
-<pre class="yellow">
-         G                     Emi</pre>
-Ref: Mám doma kočku mám ji rád, je to skvělý kamarád,
-<pre class="yellow">
-    C                        D</pre>
-jen od tý doby co ji znám, mám ruce nohy samej šrám.
-<pre class="yellow">
-G                       Emi</pre>
-Dávno už se nemazlí, žít s ní je pro zdraví fakt zlý,
-<pre class="yellow">
-C                           D                     G</pre>
-každý den projdu terorem, mám nejspíš kočku s errorem.
-</pre>
-</div>
-  <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
-<script>
-  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
-  (function () {
-    function fit() {
-      var pres = document.querySelectorAll('pre');
-      for (var i = 0; i < pres.length; i++) {
-        if (!pres[i].dataset.baseFs) {
-          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Ráda dlouze sedá v okně a</span><span class="ch"><span class="c" data-chord="Emi">Emi</span>nebo ve dveřích,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>Bůh ví, proč nejradši v zimě, k</span><span class="ch"><span class="c" data-chord="D">D</span>dyž venku padá sníh.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Když pak v bytě máme mínus </span><span class="ch"><span class="c" data-chord="Emi">Emi</span>dvacet tak nás zahřívá,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>aspoň pocit, že v tu chvíli </span><span class="ch"><span class="c" data-chord="D">D</span>naší krev neolízá.</span></div>
+
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>Ref: Mám </span><span class="ch"><span class="c" data-chord="G">G</span>doma kočku mám ji rád,</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> je to skvělý kamarád,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord=""></span>jen </span><span class="ch"><span class="c" data-chord="C">C</span>od tý doby co ji znám, má</span><span class="ch"><span class="c" data-chord="D">D</span>m ruce nohy samej šrám.</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="G">G</span>Dávno už se nemazlí, žít</span><span class="ch"><span class="c" data-chord="Emi">Emi</span> s ní je pro zdraví fakt zlý,</span></div>
+<div class="line"><span class="ch"><span class="c" data-chord="C">C</span>každý den projdu terorem, má</span><span class="ch"><span class="c" data-chord="D">D</span>m nejspíš kočku s erro</span><span class="ch"><span class="c" data-chord="G">G</span>rem.</span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
         }
-        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
       }
-      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
-      var widest = 0;
-      for (var j = 0; j < pres.length; j++) {
-        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
       }
-      if (widest > avail) {
-        var factor = (avail / widest) * 0.99;
-        for (var k = 0; k < pres.length; k++) {
-          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
-        }
-      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
     }
-    document.body.style.overflowX = 'hidden';
-    window.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
-  })();
-</script>
-<script>
-  // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
-  if ('wakeLock' in navigator) {
-    let zamek = null;
-    const obnovZamek = () => {
-      navigator.wakeLock.request('screen')
-        .then(z => { zamek = z; })
-        .catch(() => {});
-    };
-    obnovZamek();
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') obnovZamek();
-    });
-  }
-</script>
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
   </body>
 </html>
