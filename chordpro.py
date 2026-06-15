@@ -62,3 +62,30 @@ def _split_chunks(line):
         return [{"chord": "", "text": line}]
     chunks[-1]["text"] = line[pos:]
     return chunks
+
+
+def _esc(s):
+    return _html.escape(s, quote=True)
+
+
+def render_song_body(lines):
+    """List of parsed lines -> HTML string for the song body."""
+    out = []
+    for ln in lines:
+        if ln["type"] == "blank":
+            out.append("")
+            continue
+        if ln["type"] == "chordonly":
+            spans = "".join(
+                f'<span class="c" data-chord="{_esc(c)}">{_esc(c)}</span>' for c in ln["chords"]
+            )
+            out.append(f'<div class="chordrow">{spans}</div>')
+            continue
+        spans = []
+        for ch in ln["chunks"]:
+            spans.append(
+                f'<span class="ch"><span class="c" data-chord="{_esc(ch["chord"])}">'
+                f'{_esc(ch["chord"])}</span>{_esc(ch["text"])}</span>'
+            )
+        out.append(f'<div class="line">{"".join(spans)}</div>')
+    return "\n".join(out)
