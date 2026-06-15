@@ -36,7 +36,7 @@
         margin-left: 0px;
         margin-bottom: 30px;
       }
-      input[type="text"] {
+      #searchInput {
         background-color: #1b2021;
         color: #FEB12C;
         border: 2px solid #CFC7D2;
@@ -48,11 +48,11 @@
         border-radius: 4px;
         box-sizing: border-box;
       }
-      input[type="text"]:focus {
+      #searchInput:focus {
         outline: none;
         border-color: #FEB12C;
       }
-      input[type="text"]::placeholder {
+      #searchInput::placeholder {
         color: #CFC7D2;
         opacity: 0.6;
       }
@@ -95,7 +95,9 @@
   Pro instalaci na iPhone/iPad: Sdílet → „Přidat na plochu“
 </p>
       <div id="search-container">
-        <input type="text" id="searchInput" placeholder="Hledej, šmudlo!" autocomplete="off">
+        <input type="search" id="searchInput" name="hledani" placeholder="Hledej, šmudlo!"
+               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+               inputmode="search" enterkeyhint="search" data-1p-ignore data-lpignore="true">
       </div>
 
       <ul id="songList"></ul>
