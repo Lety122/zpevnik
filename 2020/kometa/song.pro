@@ -1,0 +1,44 @@
+{title: Kometa}
+{artist: Jaromír Nohavica}
+
+[Ami]Spatřil jsem kometu, oblohou letěla,
+chtěl jsem jí zazpívat, ona mi zmizela,
+[Dmi]zmizela jako laň u lesa [G7]v remízku,
+[C]v očích mi zbylo jen pár[E7] žlutých penízků.
+
+Penízky ukryl jsem do hlíny pod dubem,
+až příště přiletí, my už tu nebudem,
+my už tu nebudem, ach, pýcho marnivá,
+spatřil jsem kometu, chtěl jsem jí zazpívat.
+
+Ref: O[Ami] vodě, o trávě[Dmi], o lese,
+o s[G7]mrti, se kterou s[C]mířit [E]nejde se,
+o [Ami]lásce, o zradě, [Dmi]o světě
+a o vš[E]ech lidech, co[E7] kdy žili na té[Ami]hle planetě.
+
+Na hvězdném nádraží cinkají vagóny,
+pan Kepler rozepsal nebeské zákony,
+hledal, až nalezl v hvězdářských triedrech
+tajemství, která teď neseme na bedrech.
+
+Velká a odvěká tajemství přírody,
+že jenom z člověka člověk se narodí,
+že kořen s větvemi ve strom se spojuje
+a krev našich nadějí vesmírem putuje.
+
+R: Na na na
+
+Spatřil jsem kometu, byla jak reliéf
+zpod rukou umělce, který už nežije,
+šplhal jsem do nebe, chtěl jsem ji osahat,
+marnost mne vysvlékla celého donaha.
+
+Jak socha Davida z bílého mramoru
+stál jsem a hleděl jsem, hleděl jsem nahoru,
+až příště přiletí, ach, pýcho marnivá,
+my už tu nebudem, ale jiný jí zazpívá.
+
+R: O vodě, o trávě, o lese,
+o smrti, se kterou smířit nejde se,
+o lásce, o zradě, o světě
+a o všech lidech, co kdy žili na téhle planetě.
