@@ -121,25 +121,53 @@ Covers the ChordPro parser and renderer.
 
 ## Deploy
 
+Canonical URL is **https://zpevnik.droplet.cz**; `jelinekp.cz` 301-redirects to it. The rsync/SSH
+target host is `vps.jelinekp.cz` (the CNAME origin of `zpevnik.droplet.cz`).
+
+### Automatic — push to `main` (default)
+
+`.github/workflows/deploy.yml` deploys on every push to `main` (and via the Actions tab's "Run
+workflow" button). It runs `python3 py-gen.py`, forces a unique offline-cache name, then rsyncs the
+static site to the VPS. **Just push — no VPS access needed:**
+
+```bash
+git add -A && git commit && git push
+```
+
+Watch it: repo → **Actions → Deploy to VPS**.
+
+How it's wired (for reference / to reproduce on another repo):
+
+- **Restricted deploy key.** A dedicated SSH key whose VPS `authorized_keys` entry is locked to
+  rsync-into-one-dir via an `rrsync` forced command — it cannot open a shell:
+  ```
+  command="rrsync -wo /var/www/zpevnik.jelinekp.cz",restrict ssh-ed25519 AAAA... gh-actions-zpevnik
+  ```
+- **GitHub Actions secrets:** `DEPLOY_SSH_KEY` (private key), `DEPLOY_HOST` (`vps.jelinekp.cz`),
+  `DEPLOY_USER` (`pavel`), optional `DEPLOY_PORT`.
+- **rsync target is `:/`** — safe *only* because the `rrsync` forced command makes `/` mean the
+  locked web root, not the filesystem root.
+- **Cache busting:** CI rewrites `CACHE_NAME` to `zpevnik-cache-r<run-number>` (the `r` prefix can't
+  collide with the local `v<n>` scheme), so every auto-deploy invalidates the offline cache even
+  when the pushed `sw.js` wasn't rebuilt locally. The committed `sw.js` keeps its `v<n>` format so
+  local `py-gen.py` still works.
+
+A collaborator with repo write access can deploy by pushing — they get no VPS credential at all.
+Revoke by removing them as a collaborator.
+
+### Manual — `deploy.sh` (fallback)
+
 ```bash
 ./deploy.sh
 ```
-
-What it does:
 
 1. Runs `python3 py-gen.py` (re-render songs, rebuild search list + cache list, bump cache version).
 2. `rsync --delete` of the static site to `pavel-vps:/var/www/zpevnik.jelinekp.cz/`, excluding all
    source/build files (`*.pro`, Python scripts, `tests/`, `docs/`, `.git`, `__pycache__`).
 
-Canonical URL is **https://zpevnik.droplet.cz**; `jelinekp.cz` 301-redirects to it.
+Then commit the source + generated files: `git add -A && git commit`.
 
-Then commit the source + generated files:
-
-```bash
-git add -A && git commit
-```
-
-### Prerequisites
+Prerequisites for the manual path:
 
 - SSH access to the VPS via the `pavel-vps` host alias (configure in `~/.ssh/config`).
 - One-time, on the VPS: make the web root writable by your user —
