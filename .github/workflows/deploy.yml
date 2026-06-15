@@ -1,0 +1,57 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # also lets you trigger a deploy by hand from the Actions tab
+
+concurrency:                # never run two deploys at once; newest push wins
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build static site
+        run: python3 py-gen.py
+
+      - name: Force a unique offline-cache version
+        # py-gen bumps CACHE_NAME relative to the committed value, so a push that didn't run
+        # py-gen locally would redeploy the same cache name and clients would keep stale songs.
+        # The service worker invalidates on ANY name change, so a per-run unique name is enough.
+        run: |
+          python3 - <<'PY'
+          import re
+          p = 'sw.js'
+          s = open(p, encoding='utf-8').read()
+          s = re.sub(r"zpevnik-cache-v\d+", "zpevnik-cache-r${{ github.run_number }}", s)
+          open(p, 'w', encoding='utf-8').write(s)
+          PY
+
+      - name: Set up SSH key
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${{ secrets.DEPLOY_PORT || '22' }}" -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy via rsync
+        # Target is ":/" — with the rrsync forced command on the VPS, "/" is the locked web root,
+        # NOT the filesystem root. Excludes mirror deploy.sh: ship only the static site.
+        run: |
+          rsync -av --delete \
+            --exclude '.git' --exclude '.github' \
+            --exclude 'deploy.sh' --exclude 'README.md' \
+            --exclude 'py-gen.py' --exclude 'chordpro.py' \
+            --exclude 'convert_to_chordpro.py' --exclude 'verify_conversion.py' \
+            --exclude '*.pro' --exclude 'tests' --exclude 'docs' \
+            --exclude '__pycache__' --exclude '*.pyc' \
+            -e "ssh -p ${{ secrets.DEPLOY_PORT || '22' }} -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/"
