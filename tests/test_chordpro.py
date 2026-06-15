@@ -43,14 +43,16 @@ def test_parse_plain_text_line():
 def test_render_lyric_chunk():
     doc = chordpro.parse_pro("[D]Ahoj [Hm]světe")
     h = chordpro.render_song_body(doc["lines"])
-    assert '<span class="ch"><span class="c" data-chord="D">D</span>Ahoj </span>' in h
+    # words are grouped; the syllable text no longer carries the trailing space
+    assert '<span class="ch"><span class="c" data-chord="D">D</span>Ahoj</span>' in h
     assert '<span class="c" data-chord="Hm">Hm</span>světe' in h
+    assert '<span class="w">' in h
 
 
 def test_render_escapes_html():
     doc = chordpro.parse_pro("[D]a < b & c")
     h = chordpro.render_song_body(doc["lines"])
-    assert "a &lt; b &amp; c" in h
+    assert "&lt;" in h and "&amp;" in h
 
 
 def test_render_chordonly():
@@ -63,7 +65,15 @@ def test_render_chordonly():
 def test_render_leading_text_keeps_empty_chord_slot():
     doc = chordpro.parse_pro("Z [D]kostela")
     h = chordpro.render_song_body(doc["lines"])
-    assert '<span class="c" data-chord=""></span>Z ' in h
+    assert '<span class="c" data-chord=""></span>Z</span>' in h
+
+
+def test_render_word_not_split_by_midword_chord():
+    # a chord mid-word keeps the whole word inside one <span class="w"> (no break point)
+    doc = chordpro.parse_pro("ne[G]umřelo")
+    h = chordpro.render_song_body(doc["lines"])
+    assert '<span class="w"><span class="ch"><span class="c" data-chord="">' in h
+    assert h.count('<span class="w">') == 1  # single word -> single non-breaking unit
 
 
 def test_render_page_has_essentials():

@@ -87,16 +87,37 @@ def render_song_body(lines):
             chunks.pop(0)
         if chunks and chunks[0]["chord"] == "":
             chunks[0]["text"] = chunks[0]["text"].lstrip()
-        spans = []
+
+        # Split each chunk's text at spaces (chord stays on the first piece), then group pieces
+        # into whole words. Each word is one non-breaking unit so wrapping never splits a word,
+        # even when a chord sits mid-word.
+        segments = []
         for ch in chunks:
-            # Empty text (e.g. a trailing chord) still needs a text line so the chord stays
-            # on the chord row instead of dropping to the lyric baseline.
-            text = _esc(ch["text"]) if ch["text"] else "&nbsp;"
-            spans.append(
-                f'<span class="ch"><span class="c" data-chord="{_esc(ch["chord"])}">'
-                f'{_esc(ch["chord"])}</span>{text}</span>'
-            )
-        out.append(f'<div class="line">{"".join(spans)}</div>')
+            pieces = re.findall(r'\S+|\s+', ch["text"]) or [""]
+            for i, piece in enumerate(pieces):
+                segments.append({"chord": ch["chord"] if i == 0 else "", "text": piece})
+        words, cur = [], []
+        for seg in segments:
+            cur.append(seg)
+            if seg["text"] and not seg["text"].strip():  # whitespace ends the current word
+                words.append(cur)
+                cur = []
+        if cur:
+            words.append(cur)
+
+        whtml = []
+        for word in words:
+            chs = []
+            for seg in word:
+                # Empty text (e.g. a trailing chord) still needs a text line so the chord stays
+                # on the chord row instead of dropping to the lyric baseline.
+                text = _esc(seg["text"]) if seg["text"] else "&nbsp;"
+                chs.append(
+                    f'<span class="ch"><span class="c" data-chord="{_esc(seg["chord"])}">'
+                    f'{_esc(seg["chord"])}</span>{text}</span>'
+                )
+            whtml.append(f'<span class="w">{"".join(chs)}</span>')
+        out.append(f'<div class="line">{"".join(whtml)}</div>')
     return "\n".join(out)
 
 
@@ -116,8 +137,9 @@ h1{color:#CFC7D2;margin:20px 20px 4px;}
 .bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
   font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
 #song{margin:20px;font-size:16px;padding-bottom:80px;}
-.line{margin:0 0 .15em;}
-.ch{display:inline-block;vertical-align:bottom;white-space:pre-wrap;}
+.line{margin:0 0 .85em;}
+.w{display:inline-block;vertical-align:bottom;white-space:pre;}/* whole word = one non-breaking unit */
+.ch{display:inline-block;vertical-align:bottom;white-space:pre;}
 .ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
 .chordrow{margin:.3em 0;}
 .chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
