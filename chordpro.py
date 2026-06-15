@@ -89,9 +89,12 @@ def render_song_body(lines):
             chunks[0]["text"] = chunks[0]["text"].lstrip()
         spans = []
         for ch in chunks:
+            # Empty text (e.g. a trailing chord) still needs a text line so the chord stays
+            # on the chord row instead of dropping to the lyric baseline.
+            text = _esc(ch["text"]) if ch["text"] else "&nbsp;"
             spans.append(
                 f'<span class="ch"><span class="c" data-chord="{_esc(ch["chord"])}">'
-                f'{_esc(ch["chord"])}</span>{_esc(ch["text"])}</span>'
+                f'{_esc(ch["chord"])}</span>{text}</span>'
             )
         out.append(f'<div class="line">{"".join(spans)}</div>')
     return "\n".join(out)
