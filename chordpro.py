@@ -81,8 +81,14 @@ def render_song_body(lines):
             )
             out.append(f'<div class="chordrow">{spans}</div>')
             continue
+        # Drop cosmetic leading indentation from the source so all lines left-align.
+        chunks = [dict(c) for c in ln["chunks"]]
+        while chunks and chunks[0]["chord"] == "" and not chunks[0]["text"].strip():
+            chunks.pop(0)
+        if chunks and chunks[0]["chord"] == "":
+            chunks[0]["text"] = chunks[0]["text"].lstrip()
         spans = []
-        for ch in ln["chunks"]:
+        for ch in chunks:
             spans.append(
                 f'<span class="ch"><span class="c" data-chord="{_esc(ch["chord"])}">'
                 f'{_esc(ch["chord"])}</span>{_esc(ch["text"])}</span>'
@@ -99,7 +105,8 @@ _PAGE = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1b2021">
     <style>
-body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;}
+html{background:#1b2021;}
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;min-height:100vh;}
 h1{color:#CFC7D2;margin:20px 20px 4px;}
 .artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
 .bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
