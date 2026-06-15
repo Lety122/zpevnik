@@ -13,6 +13,7 @@ rsync -av --delete \
   --exclude 'py-gen.py' --exclude 'chordpro.py' \
   --exclude 'convert_to_chordpro.py' --exclude 'verify_conversion.py' \
   --exclude '*.pro' --exclude 'tests' --exclude 'docs' \
+  --exclude '__pycache__' --exclude '*.pyc' \
   ./ pavel-vps:/var/www/zpevnik.jelinekp.cz/
 
 echo "Deployed: https://zpevnik.droplet.cz"
