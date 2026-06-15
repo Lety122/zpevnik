@@ -38,5 +38,4 @@ do krku mi zvostane jen dírka mrňavá,
 jenom dírka mrňavá a k smrti jenom krok,
 má to smutnej konec, a whisky ani lok.
 
-<pre class="yellow">
 Ref., ti co ví ;)

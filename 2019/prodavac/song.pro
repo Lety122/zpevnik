@@ -45,5 +45,4 @@ obchod je věc stále kvetoucí,
 už se vidím, je to krása, ve výloze nápis hlásá:
 Michal Tučný, odpovědný vedoucí.
 
-<pre class="yellow">
 Ref.

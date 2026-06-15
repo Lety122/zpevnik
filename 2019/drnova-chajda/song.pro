@@ -24,7 +24,6 @@ jejíž soucit mě z tý bryndy vyloví,
 jak bych žehnal tomu andělu, že život uznává
 i na mým dílci v starý chajdě drnový.
 
-<pre class="yellow">
 Ref.
 
 Ref.
