@@ -83,8 +83,9 @@ def test_render_page_has_essentials():
     assert "<title>Anděl</title>" in page
     assert '<span class="hy">Anděl</span>' in page  # single-word title -> all yellow
     assert "Karel Kryl" in page
-    assert 'id="transUp"' in page and 'id="transDown"' in page
-    assert 'id="fontUp"' in page and 'id="fontDown"' in page and 'id="fontReset"' in page
+    assert 'id="transUp"' in page and 'id="transDown"' in page and 'id="transReset"' in page
+    assert 'id="fontUp"' in page and 'id="fontDown"' in page
+    assert 'id="fontReset"' not in page
     assert 'href="/"' in page
     assert "serviceWorker" in page and "wakeLock" in page
     assert 'data-chord="D"' in page

@@ -31,9 +31,9 @@ a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;bo
     <p class="artist">Spirituál kvintet</p>
     <div class="bar">
       <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transReset" title="Původní tónina">&#9838; 0</button>
       <button id="transUp" title="O půltón výš">&#9839; +1</button>
       <button id="fontDown" title="Menší písmo">A&minus;</button>
-      <button id="fontReset" title="Výchozí velikost">A</button>
       <button id="fontUp" title="Větší písmo">A+</button>
     </div>
     <div id="song">
@@ -72,6 +72,7 @@ a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;bo
       function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
       document.getElementById("transUp").addEventListener("click", function () { bump(1); });
       document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      document.getElementById("transReset").addEventListener("click", function () { off = 0; apply(); });
       apply();
     })();
     </script>
@@ -88,7 +89,6 @@ a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;bo
       set(get());
       document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
       document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
-      document.getElementById("fontReset").addEventListener("click", function () { set(16); });
     })();
     </script>
     <script>
