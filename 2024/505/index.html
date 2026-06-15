@@ -17,7 +17,6 @@
       h1 {
         color: #CFC7D2;
         margin-top: 20px;
-        white-space: nowrap;
       }
       .yellow {
         color: #FEB12C;
@@ -128,6 +127,34 @@ Dm* Em* Dm* Em*</pre>
 </pre>
 </div>
   <a href="/" style="position: fixed; right: 16px; bottom: 16px; background-color: #FEB12C; color: #1b2021; border: none; border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; text-decoration: none; opacity: 0.85;">&larr; Seznam</a>
+<script>
+  // Zmenší písmo tak, aby nejširší řádek nepřetekl šířku obrazovky (žádný vodorovný posuvník)
+  (function () {
+    function fit() {
+      var pres = document.querySelectorAll('pre');
+      for (var i = 0; i < pres.length; i++) {
+        if (!pres[i].dataset.baseFs) {
+          pres[i].dataset.baseFs = parseFloat(getComputedStyle(pres[i]).fontSize);
+        }
+        pres[i].style.fontSize = pres[i].dataset.baseFs + 'px';
+      }
+      var avail = document.documentElement.clientWidth - 40; // okraje divu 20px vlevo + vpravo
+      var widest = 0;
+      for (var j = 0; j < pres.length; j++) {
+        widest = Math.max(widest, pres[j].getBoundingClientRect().width);
+      }
+      if (widest > avail) {
+        var factor = (avail / widest) * 0.99;
+        for (var k = 0; k < pres.length; k++) {
+          pres[k].style.fontSize = (parseFloat(pres[k].dataset.baseFs) * factor) + 'px';
+        }
+      }
+    }
+    document.body.style.overflowX = 'hidden';
+    window.addEventListener('load', fit);
+    window.addEventListener('resize', fit);
+  })();
+</script>
 <script>
   // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
   if ('wakeLock' in navigator) {
