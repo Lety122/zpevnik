@@ -6,7 +6,7 @@ import html as _html
 
 _TITLE = re.compile(r'<title>(.*?)</title>', re.S | re.I)
 _ARTIST = re.compile(r'<p><b><pre class="yellow"[^>]*>(.*?)</pre>', re.S)
-_INNER_CHORD = re.compile(r'<pre class="yellow"[^>]*>(.*?)</pre>', re.S)
+_INNER_CHORD = re.compile(r'<pre class="yellow"[^>]*>(.*?)</pre>(\n?)', re.S)
 
 
 def extract_title(src):
@@ -24,7 +24,7 @@ def merge(chord_line, lyric_line):
     tokens = [(m.start(), m.group(0)) for m in re.finditer(r'\S+', chord_line)]
     result = list(lyric_line)
     for col, chord in sorted(tokens, reverse=True):  # rightmost first keeps indices valid
-        ins = "[" + chord + "]"
+        ins = "[" + chord.strip(",") + "]"
         if col >= len(result):
             result = result + list(" " * (col - len(result)))
             result.append(ins)
@@ -38,7 +38,27 @@ def _song_body(src):
     after = src.split("</div>", 1)[1] if "</div>" in src else src
     m = re.search(r"<pre>(.*)</pre>\s*</div>", after, re.S)
     body = m.group(1) if m else ""
-    body = _INNER_CHORD.sub(lambda mm: "\x00" + _html.unescape(mm.group(1)), body)
+
+    def _mark(mm):
+        # An inner chord <pre> may hold several chord lines; mark EACH non-blank one with \x00.
+        # Strip blank lines from the block's edges (tag-formatting newlines), keep internal ones.
+        lines = _html.unescape(mm.group(1)).split("\n")
+        while lines and lines[0].strip() == "":
+            lines.pop(0)
+        while lines and lines[-1].strip() == "":
+            lines.pop()
+        if not lines:
+            return mm.group(2)
+        if mm.group(2) == "\n":
+            # Standalone chord block (</pre> on its own line): every non-blank line is a chord line.
+            return "\n".join(("\x00" + ln if ln.strip() else ln) for ln in lines) + "\n"
+        # </pre> followed by same-line lyric text: the last inner line is a lyric-prefix label
+        # (e.g. "R:"); earlier lines are chord lines that merge with label+following text.
+        chord_lines = lines[:-1]
+        marked = "\n".join("\x00" + ln for ln in chord_lines if ln.strip())
+        return (marked + "\n" if marked else "") + lines[-1]
+
+    body = _INNER_CHORD.sub(_mark, body)
     return _html.unescape(body)
 
 
@@ -57,7 +77,7 @@ def convert(src):
                 out.append(merge(chord_line, nxt))
                 i += 2
                 continue
-            chords = re.findall(r'\S+', chord_line)
+            chords = re.findall(r'[^\s,]+', chord_line)
             out.append(" ".join("[" + c + "]" for c in chords))
             i += 1
             continue
