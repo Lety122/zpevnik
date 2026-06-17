@@ -32,7 +32,7 @@ R2: No tak [G]lásko, [D]kdo mi Tě vzal,
 R1:
 
 [Em]Chtěla jsi [D]víc, [Am]pro svoje [Em]touhy, já chudej [D]princ, [Am]mám jen co [Em]mám.
-Co vlastně [D]zbývá, [Am]jen slzy [Em]pouhý,ze svatebních [D]zvonů,[Am]z nebeskejch [C]bran.
+[Em]Co vlastně [D]zbývá, [Am]jen slzy [Em]pouhý,ze svatebních [D]zvonů,[Am]z nebeskejch [C]bran.
 
 R2:
 

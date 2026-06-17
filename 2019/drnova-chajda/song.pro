@@ -12,17 +12,17 @@ kolem kojoti se plíží hlado[D]ví,
 dovnitř [G]vánice mi věje dírou v st[C]řeše prken[G]ný
 na mým dílci v starý c[D]hajdě drno[G]vý.
 
-Když jsem z domova tam na východě vyšel zbohatnout,
-zkusit, jestli potkám štěstí - kdopak ví,
-sotva napadlo mě tenkrát, že kdy potkám tenhle kout
-na mým dílci v starý chajdě drnový.
+Když jsem z [G]domova tam na východě [C]vyšel [G]zbohatnout,
+zkusit, jestli potkám štěstí - kdopak [D]ví,
+sotva [G]napadlo mě tenkrát, že kdy [C]potkám tenhle [G]kout
+na mým dílci v starý c[D]hajdě drnov[G]ý.[G7]
 
 Ref.
 
-Ale rád bych, aby se tu našla dívka laskavá,
-jejíž soucit mě z tý bryndy vyloví,
-jak bych žehnal tomu andělu, že život uznává
-i na mým dílci v starý chajdě drnový.
+Ale [G]rád bych, aby se tu našla [C]dívka laska[G]vá,
+jejíž soucit mě z tý bryndy [D]vyloví,
+jak bych [G]žehnal tomu andělu, že [C]život uzná[G]vá
+i na mým dílci v starý c[D]hajdě drnov[G]ý.[G7]
 
 Ref.
 

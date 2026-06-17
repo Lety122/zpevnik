@@ -12,30 +12,30 @@ jsou dlouhý schody [D]do nebe a št[E]reka dale[A]ká
 do nebeskýho [D]baru, já [E]sucho v krku [A]mám,
 tak kopni do tý [D]bedny, ať [E]na cestu se [Ami]dám.
 
-Mít tak všechny bedny od whisky vypitý,
-postavil bych malej dům na louce ukrytý,
-postavil bych malej dům a z vokna koukal ven
-a chlastal bych tam s Bilem a chlastal by tam Ben.
+[Ami]Mít tak [C]všechny bedny [Ami]od whisky vypi[E]tý,
+[Ami]postavil bych [C]malej dům na [Ami]louce uk[E]ry[Ami]tý,
+postavil bych malej [C]dům a [Ami]z vokna koukal [E]ven
+a [Ami]chlastal bych tam [C]s Bilem a [Ami]chlastal by [E]tam [A]Ben.
 
 Ref.
 
-Kdyby jsi se, hochu, jen porád nechtěl rvát,
-nemusel jsi dneska na týhle bedně stát,
-moh' jsi někde v suchu tu svoji whisku pít,
-nemusel jsi dneska na krku laso mít.
+[Ami]Kdyby jsi se, [C]hochu, jen po[Ami]rád nechtěl [E]rvát,
+[Ami]nemusel jsi [C]dneska na [Ami]týhle bedně [E]stát,
+[Ami]moh' jsi [C]někde v suchu tu [Ami]svoji whisku [E]pít,
+[Ami]nemusel jsi [C]dneska na [Ami]krku [E]laso [A]mít.
 
 Ref.
 
-Když jsem štípnul koně a ujel jen pár mil,
-nechtěl běžet, dokavád se whisky nenapil,
-zatracená smůla zlá, zatracenej pech,
-když kůň cucá whisku jak u potoka mech.
+[Ami]Když jsem [C]štípnul koně a [Ami]ujel jen pár [E]mil,
+[Ami]nechtěl [C]běžet, doka[Ami]vád se whisky [E]nena[Ami]pil,
+[Ami]zatracená [C]smůla zlá, za[Ami]tracenej [E]pech,
+[Ami]když kůň [C]cucá whisku [Ami]jak u [E]potoka [A]mech.
 
 Ref.
 
-Až kopneš do tý bedny, jak se to dělává,
-do krku mi zvostane jen dírka mrňavá,
-jenom dírka mrňavá a k smrti jenom krok,
-má to smutnej konec, a whisky ani lok.
+[Ami]Až kopneš [C]do tý bedny, [Ami]jak se to dě[E]lává,
+[Ami]do krku mi [C]zvostane jen [Ami]dírka [E]mrňa[Ami]vá,
+[Ami]jenom dírka [C]mrňavá a [Ami]k smrti jenom [E]krok,
+[Ami]má to [C]smutnej konec, a [Ami]whisky [E]ani [A]lok.
 
 Ref., ti co ví ;)

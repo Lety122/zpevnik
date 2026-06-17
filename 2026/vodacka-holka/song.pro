@@ -11,10 +11,10 @@ tak [D]řekni, kdo [Emi]pomoct ti[A] u[D]mí.
    že t[Hmi]y jseš ta [F#mi]atrapa, t[G]y jseš ten c[D]vok,
    co z[E]a každý cvaknutí můž[A]e.
 
-Je pěkná jak ráno a voní jak les,
-když na dřevo u ohně hrává,
-je zrádná jak kočka a věrná jak pes,
-ta holka, co při tobě spává.
+[D]Je pěkná [Emi]jak ráno [G]a voní [A]jak les,
+když [D]na dřevo [Emi]u ohně [G]hrá[A]vá,
+je z[D]rádná jak k[Emi]očka a v[G]ěrná jak [A]pes,
+ta h[D]olka, co p[Emi]ři tobě s[A]pá[D]vá.
 
 R: Tu v[G]odáckou [Hmi]holku si [A]navěky [D]nech,
    [G]netop ji, [Hmi]neza[A]há[D]něj,
@@ -23,20 +23,20 @@ R: Tu v[G]odáckou [Hmi]holku si [A]navěky [D]nech,
    jí p[D]octivě [Emi]odevzdáv[A]ej
    [D]a lásku z[Emi]a lásku d[G]áv[A]ej[D].
 
-Kdo připálí rejži a přesolí čaj,
-kdo sůl nechá v posledním kempu,
-kdo ráj změní v peklo a peklo zas v ráj,
-kdo zná všechny písničky trempů.
+[D]Kdo připá[Emi]lí rejži [G]a přeso[A]lí čaj,
+kdo s[D]ůl nechá v [Emi]posledním [G]kem[A]pu,
+kdo r[D]áj změní v [Emi]peklo a [G]peklo zas v [A]ráj,
+kdo z[D]ná všechny p[Emi]ísničky t[A]rem[D]pů.
 
-*: Kdo přeje ti štěstí a kope ti hrob
-   kdo sladce hned šeptá, hned vříská,
-   a koho bys roztrh' a praštil a kop'
-   a po kom se celej den stýská.
+*: Kdo p[Hmi]řeje ti š[F#mi]těstí a [G]kope ti [D]hrob
+   kdo s[Hmi]ladce hned š[F#mi]eptá, hned v[A]řís[D]ká,
+   a k[Hmi]oho bys r[F#mi]oztrh' a p[G]raštil a [D]kop'
+   a p[E]o kom se celej den s[A]týská.
 
-Až vlasy nám odbarví nebeskej král
-a vrásky nám počmáraj' kůži,
-svý holce dej pusu a řekni "jdem dál"
-a na pádlo polož jí růži.
+[D]Až vlasy [Emi]nám odbar[G]ví nebes[A]kej král
+a v[D]rásky nám [Emi]počmáraj' [G]ků[A]ži,
+svý h[D]olce dej p[Emi]usu a ř[G]ekni "jdem d[A]ál"
+a n[D]a pádlo p[Emi]olož jí r[A]ů[D]ži.
 
 R: Tu v[G]odáckou [Hmi]holku si [A]navěky [D]nech,
    [G]netop ji, [Hmi]neza[A]há[D]něj,

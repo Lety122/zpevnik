@@ -12,32 +12,32 @@ někdo [Dm]do písku [Am]posklá[Dm]dal,
 slzy v[F] očích měl a v [C]ruce, znave[Am]ný,
 lodní [Dm]deník, co [Am]sám do něj [Dm]psal.
 
-První kříž má pod sebou jen hřích,
-samý pití a rvačky jen,
-chřestot nožů, při kterým přejde smích,
-srdce-kámen a jméno Stan.
+[Dm]První kříž má [C]pod sebou jen [Am]hřích,
+[Dm]samý pití a [Am]rvačky [Dm]jen,
+chřestot nožů, při [C]kterým přejde [Am]smích,
+[Dm]srdce-kámen a [Am]jméno [Dm]Stan.
 
 Ref.
 
-Já, Bob Green, mám tváře zjizvený,
-štěkot psa zněl, když jsem se smál,
-druhej kříž mám a spím pod zemí,
-že jsem falešný karty hrál.
+[Dm]Já, Bob Green, [C]mám tváře [Am]zjizvený,
+[Dm]štěkot psa zněl, [Am]když jsem se [Dm]smál,
+druhej kříž mám a [C]spím pod [Am]zemí,
+že jsem [Dm]falešný [Am]karty [Dm]hrál.
 
 Ref.
 
-Třetí kříž snad vyvolá jen vztek,
-Fatty Rogers těm dvoum život vzal,
-svědomí měl, vedle nich si klek'
+[Dm]Třetí kříž snad [C]vyvolá jen [Am]vztek,
+[Dm]Fatty Rogers těm [Am]dvoum život [Dm]vzal,
+svědomí měl, vedle [C]nich si [Am]klek'
 
 Recitál:
-Snad se chtěl modlit:
+[Dm]Snad se chtěl modlit:
 "Vím, trestat je lidský,
-ale odpouštět božský,
-snad mi tedy Bůh odpustí ..."
+ale [Dm]odpouštět božský,
+snad mi [Am]tedy Bůh [Dm]odpustí ..."
 
 Refrén 2:
-Jen tři kříže z bílýho kamení
-jsem jim do písku poskládal,
-slzy v očích měl a v ruce, znavený,
-lodní deník,a v něm, co jsem psal ...
+Jen tři k[F]říže z bí[C]lýho kame[Am]ní
+jsem jim [Dm]do písku [Am]posklá[Dm]dal,
+slzy v[F] očích měl a v [C]ruce, znave[Am]ný,
+lodní [Dm]deník,a v něm, co [Am]jsem [Dm]psal ...

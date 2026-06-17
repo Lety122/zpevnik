@@ -16,15 +16,15 @@ páč tam maj fakt marnej internet
 2xDneRef:ska j[F]sem v lese [C]byl a už [G]tam nepu[Ami]du,
 nikde jsem nezažil takhle ukrutnou nudu.
 
-Vážně nevím co s tím lesem pořád všichni maj,
-jen jsem tam vlez hned jsem si zasvinil svý boty značky nike,
-žádnej signál žádná wifi žádný data zde nemám,
-teda data jsou tu éčko a to fakt nepočítám.
+[F]Vážně nevím [C]co s tím lesem [G]pořád všichni [Ami]maj,
+jen jsem tam [F]vlez hned jsem si [C]zasvinil svý [G]boty značky [Ami]nike,
+žádnej [F]signál žádná [C]wifi žádný [G]data zde ne[Ami]mám,
+teda [F]data jsou tu [C]éčko a to [G]fakt nepočí[Ami]tám.
 
-Světlo pro selfíčka je zde ultra zoufalý,
-řek bych že kdyby to tu vykáceli líp by uďáli,
-ať postaví tu pro mě za mě třeba další obchoďák,
-tam moh bych shopovat a právě by mě nepotřísnil pták.
+[F]Světlo pro sel[C]fíčka je zde [G]ultra zoufa[Ami]lý,
+řek bych že [F]kdyby to tu [C]vykáceli [G]líp by uďá[Ami]li,
+ať posta[F]ví tu pro mě [C]za mě třeba [G]další obcho[Ami]ďák,
+tam moh bych [F]shopovat a [C]právě by mě [G]nepotřísnil [Ami]pták.
 samá h[F]ouba čerstvej [Ami]vzduch a samej [G]hmyz
 do přírody fakt chodit neměl bys
 
@@ -35,8 +35,8 @@ oooooo tak poslouchej mě lese já mám radši obývák,
 oooooo proč vyrážet na místa lidstvem netknutý,
 ooooooo když tam nejsou žádný zásuvky a žádný bubble tea.
 
-Dneska jsem v lese byl
-bylo to naposled
-abych maily vyřídil
-musel jsem vylízt na posed
+Dneska [F]jsem v lese [C]byl
+bylo [G]to napo[Ami]sled
+abych [F]maily vyří[C]dil
+musel jsem [G]vylízt na po[Ami]sed
 ref.

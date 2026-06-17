@@ -16,10 +16,10 @@ Nápěv:
 [Ami]víno na ku[C]ráž a k [G]ránu dvě hodiny s[Ami]pánku,
 [Ami]díky, díky [C]vám, královš[G]tí [Ami]verb[Emi]íři.[Ami]
 
-Rozprášen je batalion, poslední vojáci se k zemi hroutí,
-na polštáři z kopretin budou věčně spát,
-neplač, sladká Marion, verbíři nové chlapce přivedou ti,
-za královský hermelín padne každý rád.
+[Ami]Rozprášen je batalion, poslední [C]vojáci [G]se k zemi [Ami]hrou[Emi]tí,
+[Ami]na polštáři z kopretin [C]budou [G]věčně [Ami]spát,
+[Ami]neplač, sladká Marion, verbíři [C]nové [G]chlapce [Ami]přivedou [Emi]ti,
+[Ami]za královský hermelín [C]padne [G]každý [Ami]rád.
 
 Nápěv
 Ref.

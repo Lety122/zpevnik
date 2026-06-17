@@ -22,30 +22,30 @@ R: [Dmi]A kdyby se někdo z vás [F]na anděla ptal,
 
 R:
 
-Mluvil jsem s prezidenty, potkal jsem vrahy,
-nahý jsem na svět přišel a odejdu nahý.
-V patnácti viděl jsem jak kolem jely ruské tanky,
-a v padesáti nechával si věštit od cikánky.
-A dříve, než mě příjme svatý Petr u komise,
-básníkům české země chtěl bych uklonit se.
+[C]Mluvil jsem s prezidenty, potkal jsem vrahy,
+[G]nahý jsem na svět přišel a odejdu nahý.
+[Ami]V patnácti viděl jsem jak [F]kolem jely ruské tanky,
+[C]a v padesáti nechával si [G]věštit od cikánky.
+[Ami]A dříve, než mě příjme svatý Petr u komise,
+[F]básníkům české země [C]chtěl bych uklonit se.
 
 R:
 
-V Paříži četl jsem si ruskou verzi l'Humanité,
-a z bible zatím pochopil jen věty nerozvité.
-V New Yorku chyt jsem koutek od plastových lžiček, ale
-nejlepší káva je v Hypernově U Rybiček.
-Trumfové eso v mariáši hážu do talónu,
-a chtěl bych vidět Baník, jak poráží Barcelonu.
+[C]V Paříži četl jsem si ruskou verzi l'Humanité,
+[G]a z bible zatím pochopil jen věty nerozvité.
+[Ami]V New Yorku chyt jsem koutek [F]od plastových lžiček, ale
+[C]nejlepší káva je v [G]Hypernově U Rybiček.
+[Ami]Trumfové eso v mariáši hážu do talónu,
+[F]a chtěl bych vidět Baník, [C]jak poráží Barcelonu.
 
 R:
 
-Někteří lidi mají fakt divné chutě, ale
-já lásko má stále stejně miluju Tě.
-Když hážeš bílé křemenáče na cibulku,
-když zvedáš prst jako dirigentskou hůlku.
-A i když mě to táhne tam a tebe občas jinam,
-na špatné věci pro ty dobré zapomínám.
+[C]Někteří lidi mají fakt divné chutě, ale
+[G]já lásko má stále stejně miluju Tě.
+[Ami]Když hážeš bílé křemenáče [F]na cibulku,
+[C]když zvedáš prst jako [G]dirigentskou hůlku.
+[Ami]A i když mě to táhne tam a tebe občas jinam,
+[F]na špatné věci pro ty [C]dobré zapomínám.
 
 [Dmi]R: A kdyby se někdo z v[F]ás na anděla ptal,
 tak[C] mám jizvu na rtu[G], když při mně [C]stál[G],  [F]   [G]

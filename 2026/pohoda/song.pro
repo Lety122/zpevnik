@@ -9,9 +9,9 @@
 [F#mi]Kolem louky, lesy,[C#mi] hejna vran
 [F#mi]Všude samá [E]kráva, samej [Hmi]vůl
 
-Máme kino máme hospodu
-V obci všeobecnou pohodu
-Máme hujer, žito, chléb i sůl
+[F#mi]Máme kino máme [C#mi]hospodu
+[F#mi]V obci všeobecnou [C#mi]pohodu
+[F#mi]Máme hujer, [E]žito, chléb i [Hmi]sůl
 
 R: [D]Když se u nás chlapi [A]poperou,
    tak jenom [E]nožem anebo [Hmi]sekerou.
@@ -25,9 +25,9 @@ R: [D]Když se u nás chlapi [A]poperou,
 [F#mi]Holky s motykama t[C#mi]ancujou
 [F#mi]S ranní rosou [E]táhnou do p[Hmi]olí
 
-Nikdo se tam nikam nežene
-Máme traktory a ne že ne
-Až to spatříš, ledy povolí
+[F#mi]Nikdo se tam nikam [C#mi]nežene
+[F#mi]Máme traktory a [C#mi]ne že ne
+[F#mi]Až to spatříš, [E]ledy [Hmi]povolí
 
 R: Když se u nás chlapi poperou...
 
@@ -37,9 +37,9 @@ R: Když se u nás chlapi poperou...
 [F#mi]Hoří velkostatek s[C#mi]ousedům
 [F#mi]To je smůla[E], drahá podív[Hmi]ej
 
-Hasiči to stejně přejedou
-Oni si moc dobře nevedou
-Schovej sirky, ať je neviděj!
+[F#mi]Hasiči to stejně [C#mi]přejedou
+[F#mi]Oni si moc dobře [C#mi]nevedou
+[F#mi]Schovej sirky, [E]ať je [Hmi]neviděj!
 
 R: Když se u nás chlapi poperou...
 

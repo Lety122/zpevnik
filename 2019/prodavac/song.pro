@@ -25,24 +25,24 @@ Refrén:
 [G]navážíme, zabalíme, klaníme se, to by bylo,
 [A]prosím pěkně, mohu nechat o jedenáct deka[D] víc?
 
-Já nezapomněl na svůj cíl a záhy jsem se vyučil
-a moh' být ze mě prodavačů král,
-jenomže, jak běžel čas, náhle zaslechl jsem hudby hlas
-a znenadání na jevišti stál,
-i když nejsem králem zpěváků, teď zpívám s partou Fešáků
-a nikdo vlastně neví, co jsem zač,
-mě potlesk hřeje do uší a mnohý divák netuší,
-že mu vlastně zpívá prodavač.
+[D]Já nezapomněl na svůj cíl a [G]záhy jsem se vyučil
+a [A]moh' být ze mě prodavačů [D]král,
+jenomže, jak běžel čas, [G]náhle zaslechl jsem hudby hlas
+a [A]znenadání na jevišti s[D]tál,
+i [G]když nejsem králem zpěváků, teď [D]zpívám s partou Fešáků
+a [E7]nikdo vlastně neví, co jsem [A]zač,
+mě [D]potlesk hřeje do uší a [G]mnohý divák netuší,
+že mu [A]vlastně zpívá [D]prodavač.
 
 Ref.
 
-Vím, že se život rozletí, a sním o konci století,
-kdy nikdo neví, co je chvat a shon,
-a dětem líčí babička, jak vypadala elpíčka
-a co byl vlastně starý gramofon,
-i kdyby v roce dva tisíce byla veta po muzice,
-obchod je věc stále kvetoucí,
-už se vidím, je to krása, ve výloze nápis hlásá:
-Michal Tučný, odpovědný vedoucí.
+[D]Vím, že se život rozletí, a [G]sním o konci století,
+kdy [A]nikdo neví, co je chvat a [D]shon,
+a dětem líčí babička, [G]jak vypadala elpíčka
+a [A]co byl vlastně starý [D]gramofon,
+i [G]kdyby v roce dva tisíce byla [D]veta po muzice,
+[E7]obchod je věc stále [A]kvetoucí,
+už se [D]vidím, je to krása, ve [G]výloze nápis hlásá:
+Michal [A]Tučný, odpovědný [D]vedoucí.
 
 Ref.

@@ -11,27 +11,27 @@ tam dívku[C] najdi na Ma[Ami]rket[G] Street,
 a místo p[C]říze mě[Ami]síční [G]svit,
 [Ami]bude-li ch[D]tít mou ž[G]enou se s[Ami]tát.
 
-Až přijde máj a zavoní zem,
-šátek v písku přikaž ji prát
-a ždímat v kvítku jabloňovém,
-bude-li chtít mou ženou se stát.
+[Ami]Až přijde máj a za[G]voní [Ami]zem,
+[C]šátek v [Ami]písku při[C]kaž j[D]i [Ami]prát
+a žd[C]ímat v kvítku jab[Ami]loňo[G]vém,
+[Ami]bude-li ch[D]tít mou ž[G]enou se s[Ami]tát.
 
-Z vrkočů svých ať uplete člun,
-v něm se může na cestu dát,
-s tím šátkem pak ať vejde v můj dům,
-bude-li chtít mou ženou se stát.
+[Ami]Z vrkočů svých ať [G]uplete [Ami]člun,
+[C]v něm se [Ami]může na c[C]es[D]tu [Ami]dát,
+s tím š[C]átkem pak ať v[Ami]ejde v můj [G]dům,
+[Ami]bude-li ch[D]tít mou ž[G]enou se s[Ami]tát.
 
-Kde útes ční nad přívaly vln,
-zorej dva sáhy pro růží sad,
-za pluh ať slouží šípkový trn,
-budeš-li chtít mým mužem se stát.
+[Ami]Kde útes ční nad [G]přívaly [Ami]vln,
+[C]zorej dva [Ami]sáhy pro r[C]ů[D]ží [Ami]sad,
+za pluh [C]ať slouží š[Ami]ípkový [G]trn,
+[Ami]budeš-li ch[D]tít mým m[G]užem se s[Ami]tát.
 
-Osej ten sad a slzou jej skrop,
-choď těm růžím na loutnu hrát,
-až začnou kvést, tak srpu se chop,
-budeš-li chtít mým mužem se stát.
+[Ami]Osej ten sad a [G]slzou jej [Ami]skrop,
+[C]choď těm [Ami]růžím na l[C]ou[D]tnu [Ami]hrát,
+až z[C]ačnou kvést, tak s[Ami]rpu se [G]chop,
+[Ami]budeš-li ch[D]tít mým m[G]užem se s[Ami]tát.
 
-Z trní si lůžko zhotovit dej,
-druhé z růží pro mě nech stlát,
-jen pýchy své a boha se ptej,
-proč nechci víc tvou ženou se stát.
+[Ami]Z trní si lůžko z[G]hotovit [Ami]dej,
+[C]druhé z [Ami]růží pro m[C]ě n[D]ech [Ami]stlát,
+jen p[C]ýchy své a b[Ami]oha se [G]ptej,
+[Ami]proč nechci v[D]íc tvou ž[G]enou se s[Ami]tát.

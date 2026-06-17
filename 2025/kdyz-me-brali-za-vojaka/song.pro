@@ -26,13 +26,13 @@ p[Dmi]o chodbě furt někdo c[Ami]hodil,
 [E]tak si k lásce pom[F]ohla, -[G]hla, -[C]hla, -[G]hla,
 [Ami]tak si k lásce[E] pom[Ami]ohla.
 
-Major nosí velkou hvězdu, před branou ho potkala,
-řek' jí, že má zrovna volnej kvartýr,
-tak se sbalit nechala, -la, -la, -la,
-tak se sbalit nechala.
+[Ami]Major nosí [C]velkou hvězdu, [G]před branou ho pot[C]kala,
+[Dmi]řek' jí, že má zrovna volnej [Ami]kvartýr,
+[E]tak se sbalit ne[F]chala, [G]-la, [C]-la, [G]-la,
+[Ami]tak se sbalit ne[E]cha[Ami]la.
 
-Co je komu do vojáčka, když ho holka zradila,
-na shledanou, pane Fráňo Šrámku,
-písnička už skončila, -la, -la, -la,
+[Ami]Co je komu [C]do vojáčka, [G]když ho holka z[C]radila,
+[Dmi]na shledanou, pane Fráňo [Ami]Šrámku,
+[E]písnička už skon[F]čila, [G]-la, [C]-la, [G]-la,
 jakpak se vám líbila, -la, -la, -la?
 No nic moc extra nebyla.

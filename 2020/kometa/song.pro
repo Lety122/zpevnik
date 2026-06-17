@@ -6,39 +6,39 @@ chtěl jsem jí zazpívat, ona mi zmizela,
 [Dmi]zmizela jako laň u lesa [G7]v remízku,
 [C]v očích mi zbylo jen pár[E7] žlutých penízků.
 
-Penízky ukryl jsem do hlíny pod dubem,
+[Ami]Penízky ukryl jsem do hlíny pod dubem,
 až příště přiletí, my už tu nebudem,
-my už tu nebudem, ach, pýcho marnivá,
-spatřil jsem kometu, chtěl jsem jí zazpívat.
+[Dmi]my už tu nebudem, ach, pýcho [G7]marnivá,
+[C]spatřil jsem kometu, chtěl jsem [E7]jí zazpívat.
 
 Ref: O[Ami] vodě, o trávě[Dmi], o lese,
 o s[G7]mrti, se kterou s[C]mířit [E]nejde se,
 o [Ami]lásce, o zradě, [Dmi]o světě
 a o vš[E]ech lidech, co[E7] kdy žili na té[Ami]hle planetě.
 
-Na hvězdném nádraží cinkají vagóny,
+[Ami]Na hvězdném nádraží cinkají vagóny,
 pan Kepler rozepsal nebeské zákony,
-hledal, až nalezl v hvězdářských triedrech
-tajemství, která teď neseme na bedrech.
+[Dmi]hledal, až nalezl v hvězdářských [G7]triedrech
+[C]tajemství, která teď neseme [E7]na bedrech.
 
-Velká a odvěká tajemství přírody,
+[Ami]Velká a odvěká tajemství přírody,
 že jenom z člověka člověk se narodí,
-že kořen s větvemi ve strom se spojuje
-a krev našich nadějí vesmírem putuje.
+[Dmi]že kořen s větvemi ve strom se [G7]spojuje
+[C]a krev našich nadějí [E7]vesmírem putuje.
 
 R: Na na na
 
-Spatřil jsem kometu, byla jak reliéf
+[Ami]Spatřil jsem kometu, byla jak reliéf
 zpod rukou umělce, který už nežije,
-šplhal jsem do nebe, chtěl jsem ji osahat,
-marnost mne vysvlékla celého donaha.
+[Dmi]šplhal jsem do nebe, chtěl jsem ji [G7]osahat,
+[C]marnost mne vysvlékla [E7]celého donaha.
 
-Jak socha Davida z bílého mramoru
+[Ami]Jak socha Davida z bílého mramoru
 stál jsem a hleděl jsem, hleděl jsem nahoru,
-až příště přiletí, ach, pýcho marnivá,
-my už tu nebudem, ale jiný jí zazpívá.
+[Dmi]až příště přiletí, ach, pýcho [G7]marnivá,
+[C]my už tu nebudem, ale jiný [E7]jí zazpívá.
 
-R: O vodě, o trávě, o lese,
-o smrti, se kterou smířit nejde se,
-o lásce, o zradě, o světě
-a o všech lidech, co kdy žili na téhle planetě.
+R: O[Ami] vodě, o trávě[Dmi], o lese,
+o s[G7]mrti, se kterou s[C]mířit [E]nejde se,
+o [Ami]lásce, o zradě, [Dmi]o světě
+a o vš[E]ech lidech, co[E7] kdy žili na té[Ami]hle planetě.
