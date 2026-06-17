@@ -2,9 +2,9 @@
 {artist: Hop Trop}
 
 [Dm]Dávám sbohem všem [C]břehům prokla[Am]tejm,
-který v [Dm]drápech má [C]ďá[Am]bel [Dm]sám,
+který v [Dm]drápech má ďá[Am]bel [Dm]sám,
 [Dm]bílou přídí [C]šalupa "My [Am]Grave"
-míří k[Dm] útesům, [C]kt[Am]erý [Dm]znám.
+míří k[Dm] útesům, kt[Am]erý [Dm]znám.
 
 Refrén:
 Jen tři k[F]říže z bí[C]lýho kame[Am]ní

@@ -34,5 +34,5 @@ p[Dmi]o chodbě furt někdo c[Ami]hodil,
 [Ami]Co je komu [C]do vojáčka, [G]když ho holka z[C]radila,
 [Dmi]na shledanou, pane Fráňo [Ami]Šrámku,
 [E]písnička už skon[F]čila, [G]-la, [C]-la, [G]-la,
-jakpak se vám líbila, -la, -la, -la?
-No nic moc extra nebyla.
+[E]jakpak se vám lí[F]bila, [G]-la, [C]-la, [G]-la?
+[Ami]No nic moc extra ne[E]by[Ami]la.
