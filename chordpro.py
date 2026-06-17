@@ -5,6 +5,20 @@ import html as _html
 _DIRECTIVE = re.compile(r'^\{(\w+):\s*(.*?)\s*\}$')
 _CHORD = re.compile(r'\[([^\]]*)\]')
 
+# A section marker (Refrén, Nápěv, R:, 2x ref., Recitál:, …). Used to render these consistently
+# in their own style instead of as plain lyric text. A line counts as a label only when EVERY
+# whitespace-separated token is one of these markers (and the line carries no chords).
+_LABEL_TOKEN = re.compile(
+    r'^(?:ref\.?:?|refr[eé]n:?|n[áa]p[eě]v:?|recit[áa]l:?|sloka:?|coda:?|intro:?|outro:?|'
+    r'dohra:?|p[řr]edehra:?|mezihra:?|bridge:?|fin[áa]le:?|'
+    r'r[123]?[.:]?|b[.:]?|o[.:]?|\*:?|\(?\d+x\)?|do|ztracena)$',
+    re.I | re.U)
+
+
+def _is_label(text):
+    toks = text.split()
+    return bool(toks) and all(_LABEL_TOKEN.match(t) for t in toks)
+
 
 def parse_pro(text):
     """ChordPro text -> {'title','artist','lines':[...]}.
@@ -31,6 +45,10 @@ def parse_pro(text):
             continue
         if line.strip() == "":
             lines.append({"type": "blank"})
+            continue
+        # section label (Refrén:, Nápěv:, R:, 2x ref., …): no chords, only marker tokens
+        if not _CHORD.search(line) and _is_label(line.strip()):
+            lines.append({"type": "label", "text": line.strip()})
             continue
         # chord-only line: removing all [..] tokens leaves only whitespace/punctuation
         stripped = _CHORD.sub("", line)
@@ -74,6 +92,9 @@ def render_song_body(lines):
     for ln in lines:
         if ln["type"] == "blank":
             out.append('<div class="br"></div>')
+            continue
+        if ln["type"] == "label":
+            out.append(f'<div class="lbl">{_esc(ln["text"])}</div>')
             continue
         if ln["type"] == "chordonly":
             spans = "".join(
@@ -145,6 +166,7 @@ h1 .hy{color:#FEB12C;}
 .ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
 .chordrow{margin:.3em 0;}
 .chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+.lbl{color:#59C9A5;font-weight:bold;margin:.7em 0 .15em;}/* section labels: Refrén, R:, 2x ref. … */
 a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
   padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>

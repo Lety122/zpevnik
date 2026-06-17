@@ -21,7 +21,7 @@ R: [G]Archa má cíl, archa má směr, plaví se k Araratu [D7]na se[G]ver.
 
 [G] [D7] [G] [D7] [G]
 |:Já mám kocábku náram-náram-náram, kocábku náram-náramnou:|
-R:A[G]rcha má cíl, archa má směr, plaví se k Araratu n[D7]a sev[G]er.
+R: [G]Archa má cíl, archa má směr, plaví se k Araratu n[D7]a sev[G]er.
 [G] [D7] [G] [D7] [G]
 |:Já mám kocábku náram-náram-náram, kocábku náram-náramnou:|
 

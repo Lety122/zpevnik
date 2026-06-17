@@ -11,7 +11,7 @@
 [C]Commencing count[Em]down engines on
 [Am]Check [Am/G]ignition an[D7/F#]d may God's love be with you
 
-1.Thi[C]s is ground con[E7]trol to Major Tom
+1. Thi[C]s is ground con[E7]trol to Major Tom
 [F]You've really made the grade
 And [Fm]the papers w[C]ant to know whos[F]e shirt you wear
 Now [Fm]it's time to[C] leave the capsu[F]le if you dare
@@ -20,7 +20,8 @@ Now [Fm]it's time to[C] leave the capsu[F]le if you dare
 And [Fm]I'm floating[C] in a most pecul[F]iar way
 And [Fm]the stars lo[C]ok very differen[F]t today
 
-Ref.:For he[Fmaj7]re am I sittin[Em]g in a tin can
+Ref.:
+For he[Fmaj7]re am I sittin[Em]g in a tin can
 [Fmaj7]Far above the [Em]world
 [Bb]Planet Earth [Am]is blue a[G]nd there's noth[F]ing I can do
 
