@@ -1,6 +1,6 @@
 // Název cache - při jakékoliv změně obsahu (např. úpravě textu písně) 
 // bys měl číslo verze (v1) zvýšit, aby se uživatelům stáhla nová verze.
-const CACHE_NAME = 'zpevnik-cache-v41';
+const CACHE_NAME = 'zpevnik-cache-v42';
 
 // Zde definujeme, co se má stáhnout pro offline režim
 const urlsToCache = [
@@ -53,9 +53,14 @@ const urlsToCache = [
   "/2026/andel/index.html",
   "/2026/divka-s-perlami-ve-vlasech/index.html",
   "/2026/jasna-zprava/index.html",
+  "/2026/jericho/index.html",
+  "/2026/lasko/index.html",
   "/2026/mam-jizvu-na-rtu/index.html",
   "/2026/pohoda/index.html",
+  "/2026/prazce/index.html",
+  "/2026/tajemstvi/index.html",
   "/2026/trh-ve-scarborough/index.html",
+  "/2026/variace-na-renesancni-tema/index.html",
   "/2026/vodacka-holka/index.html",
   "/icon-192.png",
   "/icon-512.png",

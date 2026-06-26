@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <title>Lásko</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b2021">
+    <style>
+html{background:#1b2021;}
+body{background:#1b2021;font-family:'Courier New',monospace;color:#CFC7D2;overflow-x:hidden;margin:0;min-height:100vh;}
+h1{color:#CFC7D2;margin:20px 20px 4px;}
+h1 .hy{color:#FEB12C;}
+.artist{color:#FEB12C;font-weight:bold;font-size:20px;margin:0 20px 12px;}
+.bar{margin:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.bar button{background:#1b2021;color:#FEB12C;border:2px solid #FEB12C;border-radius:6px;
+  font-family:inherit;font-weight:bold;font-size:16px;padding:6px 12px;cursor:pointer;}
+#song{margin:20px;font-size:16px;padding-bottom:80px;}
+.line{margin:0 0 .4em;}
+.br{height:2em;}/* blank line in source = stanza break, clearly bigger than line gap */
+.w{display:inline-block;vertical-align:bottom;white-space:pre;}/* whole word = one non-breaking unit */
+.ch{display:inline-block;vertical-align:bottom;white-space:pre;}
+.ch .c{display:block;color:#FEB12C;font-weight:bold;font-size:.8em;line-height:1;height:1.15em;}
+.chordrow{margin:.3em 0;}
+.chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
+.lbl{color:#59C9A5;font-weight:bold;margin:.7em 0 .15em;}/* section labels: Refrén, R:, 2x ref. … */
+a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
+  padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
+    </style>
+  </head>
+  <body>
+    <h1><span class="hy">Lásko</span></h1>
+    <p class="artist">Karel Kryl</p>
+    <div class="bar">
+      <button id="transDown" title="O půltón níž">&#9837; -1</button>
+      <button id="transReset" title="Původní tónina">&#9838; 0</button>
+      <button id="transUp" title="O půltón výš">&#9839; +1</button>
+      <button id="fontDown" title="Menší písmo">A&minus;</button>
+      <button id="fontUp" title="Větší písmo">A+</button>
+    </div>
+    <div id="song">
+<div class="br"></div>
+<div class="chordrow"><span class="c" data-chord="Ami">Ami</span><span class="c" data-chord="E7">E7</span><span class="c" data-chord="Ami">Ami</span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Pár</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>zbytků</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pro</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>krysy</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>misce</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>od</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>guláše,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>milostný</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>dopisy</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>s</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="E7">E7</span>partií</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>mariáše,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>před</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>cestou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>dalekou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>zpocený</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>boty</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>zujem</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="C">C</span>a</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>potom</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pod</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>dekou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>sníme,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>když</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>onanujem.</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord=""></span>R:</span><span class="ch"><span class="c" data-chord=""></span>  </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>zavři</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>do</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pokoje,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>válka</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>je</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>holka</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>moje,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="C">C</span>s</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>ní</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G">G</span>mi</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>luji,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>když</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G">G</span>noci</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>si</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>krát</span><span class="ch"><span class="c" data-chord="E">E</span>ím.</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>slunce</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>máš</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>vějíři,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>dvě</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>třešně</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>talíři,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="C">C</span>ty</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>Ti</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G">G</span>dar</span><span class="ch"><span class="c" data-chord="Ami">Ami</span>uji,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>až</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>jednou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>vrátím.</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Dvacet</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>let</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>necelých,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>odznáček</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>baretu,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>s</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>úsměvem</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>dospělých</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>v</span><span class="ch"><span class="c" data-chord="E7">E7</span>ytáhnem</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>cigaretu,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>v</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>opasku</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>u</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>boku</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>nabitou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>parabelu,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="C">C</span>zpíváme</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>do</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>kroku</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>pár</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>metrů</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>od</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>bordelu.</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord=""></span>R:</span><span class="ch"><span class="c" data-chord=""></span>  </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>zavři</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>do</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pokoje....</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Pár</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>zbytků</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pro</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>krysy</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>a</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>taška</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>patrony,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>latrína</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>s</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>nápisy,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>jež</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>n</span><span class="ch"><span class="c" data-chord="E7">E7</span>ejsou</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>pro</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>matróny,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="Dmi">Dmi</span>není</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>čas</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>spaní,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>smrtka</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>nám</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>drtí</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>palce,</span></span></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="C">C</span>nežli</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>zchlastaní</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>s</span><span class="ch"><span class="c" data-chord="E">E</span>valíme</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>na</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>kavalce.</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord=""></span>R:</span><span class="ch"><span class="c" data-chord=""></span>  </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>zavři</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>do</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pokoje....</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord="E">E</span>Levá!</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>Dva!</span></span></div>
+<div class="br"></div>
+<div class="line"><span class="w"><span class="ch"><span class="c" data-chord=""></span>R:</span><span class="ch"><span class="c" data-chord=""></span>  </span></span><span class="w"><span class="ch"><span class="c" data-chord="Ami">Ami</span>Lásko,</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord="G7">G7</span>zavři</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>se</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>do</span><span class="ch"><span class="c" data-chord=""></span> </span></span><span class="w"><span class="ch"><span class="c" data-chord=""></span>pokoje....</span></span></div>
+    </div>
+    <a class="back" href="/">&larr; Seznam</a>
+    <script>
+    // Transpozice akordů (zná české značení: H = B, B = Bb)
+    (function () {
+      var SCALE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"];
+      // Czech notation: B = Bb, H = B natural. English "Bb" (-> key "BB") must map to 10 too,
+      // otherwise it isn't found and won't transpose.
+      var IDX = {"C":0,"C#":1,"DB":1,"D":2,"D#":3,"EB":3,"E":4,"FB":4,"F":5,"F#":6,
+                 "GB":6,"G":7,"G#":8,"AB":8,"A":9,"A#":10,"BB":10,"B":10,"HB":10,"H":11,"CB":11};
+      function one(tok, n) {
+        var m = tok.match(/^([A-H][b#]?)(.*)$/);
+        if (!m) return tok;
+        var key = m[1].toUpperCase();
+        if (!(key in IDX)) return tok;
+        var rest = m[2].replace(/\/([A-H][b#]?)/, function (_, b) {
+          var bk = b.toUpperCase();
+          return (bk in IDX) ? "/" + SCALE[((IDX[bk] + n) % 12 + 12) % 12] : "/" + b;
+        });
+        return SCALE[((IDX[key] + n) % 12 + 12) % 12] + rest;
+      }
+      window.__shift = one;
+      var off = 0, key = "trans:" + location.pathname;
+      try { off = parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch (e) {}
+      function apply() {
+        var els = document.querySelectorAll(".c[data-chord]");
+        for (var i = 0; i < els.length; i++) {
+          var orig = els[i].getAttribute("data-chord");
+          els[i].textContent = orig ? one(orig, off) : "";
+        }
+        try { localStorage.setItem(key, String(off)); } catch (e) {}
+      }
+      function bump(d) { off = ((off + d) % 12 + 12) % 12; apply(); }
+      document.getElementById("transUp").addEventListener("click", function () { bump(1); });
+      document.getElementById("transDown").addEventListener("click", function () { bump(-1); });
+      document.getElementById("transReset").addEventListener("click", function () { off = 0; apply(); });
+      apply();
+    })();
+    </script>
+    <script>
+    // Uživatelská velikost písma (ukládá se globálně)
+    (function () {
+      var el = document.getElementById("song"), key = "fontpx";
+      function get() { try { return parseInt(localStorage.getItem(key) || "16", 10) || 16; } catch (e) { return 16; } }
+      function set(px) {
+        px = Math.max(9, Math.min(40, px));
+        el.style.fontSize = px + "px";
+        try { localStorage.setItem(key, String(px)); } catch (e) {}
+      }
+      set(get());
+      document.getElementById("fontUp").addEventListener("click", function () { set(get() + 1); });
+      document.getElementById("fontDown").addEventListener("click", function () { set(get() - 1); });
+    })();
+    </script>
+    <script>
+    // Drží rozsvícenou obrazovku, dokud je píseň otevřená (hraní podle textu)
+    if ('wakeLock' in navigator) {
+      let zamek = null;
+      const obnovZamek = () => {
+        navigator.wakeLock.request('screen').then(z => { zamek = z; }).catch(() => {});
+      };
+      obnovZamek();
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') obnovZamek();
+      });
+    }
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+    </script>
+  </body>
+</html>
