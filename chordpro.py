@@ -20,6 +20,16 @@ def _is_label(text):
     return bool(toks) and all(_LABEL_TOKEN.match(t) for t in toks)
 
 
+# A section marker at the very start of a lyric line (R:, R1:, *:, Nápěv:, …) followed by the
+# verse text/chords. Captured so it renders in the same green as standalone label lines, instead
+# of looking like plain lyric. Requires a trailing colon + whitespace + content so plain words
+# never trigger it.
+_LEADING_LABEL = re.compile(
+    r'^((?:ref\.?:|refr[eé]n:|n[áa]p[eě]v:|recit[áa]l:|sloka:|coda:|intro:|outro:|'
+    r'dohra:|p[řr]edehra:|mezihra:|bridge:|fin[áa]le:|r[123]?:|b:|o:|\*:)\s+)(?=\S)',
+    re.I | re.U)
+
+
 def parse_pro(text):
     """ChordPro text -> {'title','artist','lines':[...]}.
 
@@ -58,7 +68,14 @@ def parse_pro(text):
                 flat.extend(p.strip() for p in c.split(",") if p.strip())
             lines.append({"type": "chordonly", "chords": flat})
             continue
-        lines.append({"type": "lyric", "chunks": _split_chunks(line)})
+        # leading section marker (R:, R1:, *:, …) -> split off so it renders green like a label
+        lyric = {"type": "lyric"}
+        lm = _LEADING_LABEL.match(line)
+        if lm:
+            lyric["label"] = lm.group(1).strip()
+            line = line[lm.end():]
+        lyric["chunks"] = _split_chunks(line)
+        lines.append(lyric)
     return {"title": title, "artist": artist, "lines": lines}
 
 
@@ -138,7 +155,8 @@ def render_song_body(lines):
                     f'{_esc(seg["chord"])}</span>{text}</span>'
                 )
             whtml.append(f'<span class="w">{"".join(chs)}</span>')
-        out.append(f'<div class="line">{"".join(whtml)}</div>')
+        label_html = f'<span class="lbl-in">{_esc(ln["label"])}</span> ' if ln.get("label") else ""
+        out.append(f'<div class="line">{label_html}{"".join(whtml)}</div>')
     return "\n".join(out)
 
 
@@ -167,6 +185,7 @@ h1 .hy{color:#FEB12C;}
 .chordrow{margin:.3em 0;}
 .chordrow .c{color:#FEB12C;font-weight:bold;display:inline-block;margin-right:1.5ch;}
 .lbl{color:#59C9A5;font-weight:bold;margin:.7em 0 .15em;}/* section labels: Refrén, R:, 2x ref. … */
+.lbl-in{color:#59C9A5;font-weight:bold;}/* inline leading marker (R: text…) — same green as .lbl */
 a.back{position:fixed;right:16px;bottom:16px;background:#FEB12C;color:#1b2021;border-radius:8px;
   padding:10px 14px;font-family:'Courier New',monospace;font-weight:bold;text-decoration:none;opacity:.85;}
     </style>

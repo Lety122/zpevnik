@@ -36,8 +36,16 @@ def test_parse_chord_only_comma():
 
 
 def test_parse_plain_text_line():
-    doc = chordpro.parse_pro("R: refrén")
-    assert doc["lines"][0] == {"type": "lyric", "chunks": [{"chord": "", "text": "R: refrén"}]}
+    doc = chordpro.parse_pro("Tady jen text")
+    assert doc["lines"][0] == {"type": "lyric", "chunks": [{"chord": "", "text": "Tady jen text"}]}
+
+
+def test_parse_leading_label_marker():
+    # "R:" before verse text -> split off as a green label, rest stays lyric
+    doc = chordpro.parse_pro("R: a já jdu")
+    assert doc["lines"][0] == {
+        "type": "lyric", "label": "R:", "chunks": [{"chord": "", "text": "a já jdu"}]
+    }
 
 
 def test_render_lyric_chunk():
